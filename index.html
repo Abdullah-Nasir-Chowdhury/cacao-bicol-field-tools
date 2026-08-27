@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cacao Bicol Field Tools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EEF1EC; --surface: #FFFFFF; --surface-sunken: #E4E9E2; --line: #C7D0C4;
+    --ink: #1B2320; --ink-soft: #56645C; --ink-faint: #86928A;
+    --accent: #16746C; --accent-ink: #0B403C; --accent-soft: #DCEAE7;
+    --shadow: 0 1px 0 rgba(27,35,32,0.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #101613; --surface: #182120; --surface-sunken: #0E1614; --line: #2B3733;
+      --ink: #E7EDE9; --ink-soft: #A8B6AF; --ink-faint: #71807A;
+      --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #101613; --surface: #182120; --surface-sunken: #0E1614; --line: #2B3733;
+    --ink: #E7EDE9; --ink-soft: #A8B6AF; --ink-faint: #71807A;
+    --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
+    --shadow: 0 1px 0 rgba(0,0,0,0.4);
+  }
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg); color: var(--ink);
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .wrap{ max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft);
+    display: inline-flex; width: fit-content; padding: 0.28rem 0.6rem; border-radius: 3px;
+  }
+  h1{
+    font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    margin: 0.6rem 0 0.5rem; text-wrap: balance; letter-spacing: -0.02em;
+  }
+  p.dek{ max-width: 62ch; color: var(--ink-soft); margin: 0 0 2rem; }
+  .cards{ display: grid; gap: 1rem; }
+  a.card{
+    display: block; background: var(--surface); border: 1px solid var(--line);
+    box-shadow: var(--shadow); padding: 1.25rem 1.4rem; text-decoration: none; color: inherit;
+  }
+  a.card:hover{ border-color: var(--accent); }
+  a.card .k{
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem;
+    letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  a.card h2{ margin: 0.3rem 0 0.35rem; font-size: 1.2rem; font-weight: 700; }
+  a.card p{ margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+  footer{ margin-top: 2rem; font-size: 0.78rem; color: var(--ink-faint); }
+  footer a{ color: var(--accent-ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Bicol cacao field tools</span>
+  <h1>Cacao Bicol Field Tools</h1>
+  <p class="dek">Field tools built from interviews with cacao farmers and processors in Bicol, Philippines. Water pressure &mdash; not water scarcity &mdash; came up as the concrete, solvable engineering problem, so these tools focus there.</p>
+
+  <div class="cards">
+    <a class="card" href="./drip-pressure-planner.html">
+      <span class="k">Calculator</span>
+      <h2>Drip Pressure Planner</h2>
+      <p>Turns a farm's size and water source into tree count, flow demand, required pressure, irrigation zones, and buffer tank size.</p>
+    </a>
+    <a class="card" href="./drip-system-schematic.html">
+      <span class="k">Diagram</span>
+      <h2>Drip System Schematic</h2>
+      <p>A P&amp;ID-style diagram of the same drip system, toggling between a gravity-fed source and a source below the field.</p>
+    </a>
+  </div>
+
+  <footer>Source and slide-ready SVGs on <a href="https://github.com/Abdullah-Nasir-Chowdhury/cacao-bicol-field-tools">GitHub</a>.</footer>
+</div>
+</body>
+</html>
