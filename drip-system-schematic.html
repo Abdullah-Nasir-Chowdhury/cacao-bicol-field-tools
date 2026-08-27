@@ -4,12 +4,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #EEF1EC; --surface: #FFFFFF; --surface-sunken: #E4E9E2; --line: #C7D0C4;
-    --ink: #1B2320; --ink-soft: #56645C; --ink-faint: #86928A;
-    --accent: #16746C; --accent-ink: #0B403C; --accent-soft: #DCEAE7;
-    --good: #4B7A3B; --good-soft: #E3EEDD; --warn: #9A6B15; --warn-soft: #F3E7CB;
-    --critical: #8C3B2E; --critical-soft: #F3DED9; --focus: #16746C;
-    --grid-dot: #D4DBD1;
+    --bg: #EEF1EC;
+    --surface: #FFFFFF;
+    --surface-sunken: #E4E9E2;
+    --line: #C7D0C4;
+    --ink: #1B2320;
+    --ink-soft: #56645C;
+    --ink-faint: #86928A;
+    --accent: #16746C;
+    --accent-ink: #0B403C;
+    --accent-soft: #DCEAE7;
+    --good: #4B7A3B;
+    --good-soft: #E3EEDD;
+    --warn: #9A6B15;
+    --warn-soft: #F3E7CB;
+    --critical: #8C3B2E;
+    --critical-soft: #F3DED9;
+    --focus: #16746C;
     --shadow: 0 1px 0 rgba(27,35,32,0.06);
   }
   @media (prefers-color-scheme: dark){
@@ -19,7 +30,6 @@
       --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
       --good: #8FC77A; --good-soft: #1F3220; --warn: #E0B04B; --warn-soft: #3A2E14;
       --critical: #E08A78; --critical-soft: #3B211D; --focus: #4FBDB0;
-      --grid-dot: #26302B;
       --shadow: 0 1px 0 rgba(0,0,0,0.4);
     }
   }
@@ -29,603 +39,327 @@
     --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
     --good: #8FC77A; --good-soft: #1F3220; --warn: #E0B04B; --warn-soft: #3A2E14;
     --critical: #E08A78; --critical-soft: #3B211D; --focus: #4FBDB0;
-    --grid-dot: #26302B;
     --shadow: 0 1px 0 rgba(0,0,0,0.4);
   }
 
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; }
   body{
-    background: var(--bg); color: var(--ink);
+    background: var(--bg);
+    color: var(--ink);
     font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.5; -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
   @media (prefers-reduced-motion: reduce){ *{ transition-duration: 0.001ms !important; } }
 
-  .wrap{ max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .wrap{ max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
 
-  header{ display:flex; flex-direction: column; gap: 0.6rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
-  .header-top{ display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-  .eyebrow{
-    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
-    color: var(--accent-ink); background: var(--accent-soft); display: inline-flex; width: fit-content; padding: 0.28rem 0.6rem; border-radius: 3px;
+  header{
+    display:flex; flex-direction: column; gap: 0.6rem;
+    padding-bottom: 1.75rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem;
   }
-  .crosslink{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.78rem; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+  .header-top{
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; flex-wrap: wrap;
+  }
+  .header-links{ display:flex; gap: 1rem; flex-wrap: wrap; }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft);
+    display: inline-flex; width: fit-content; padding: 0.28rem 0.6rem; border-radius: 3px;
+  }
+  .crosslink{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem; color: var(--accent-ink); text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 1px;
+  }
   .crosslink:hover{ color: var(--accent); }
   .crosslink:focus-visible{ outline: 2px solid var(--focus); outline-offset: 2px; }
-  h1{ font-family: "Inter", ui-sans-serif, system-ui, sans-serif; font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin: 0.15rem 0 0; text-wrap: balance; letter-spacing: -0.02em; }
-  .dek{ max-width: 70ch; color: var(--ink-soft); font-size: 1rem; margin: 0; }
+  h1{
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    margin: 0.15rem 0 0; text-wrap: balance; letter-spacing: -0.02em;
+  }
+  .dek{ max-width: 66ch; color: var(--ink-soft); font-size: 1rem; margin: 0; }
   .dek b{ color: var(--ink); font-weight: 600; }
 
   .panel{ background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
-  .panel-head{ display:flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-  .panel-head h2{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-soft); margin: 0; font-weight: 600; }
-
-  /* ---- Toolbar ---- */
-  .toolbar{ padding: 0.9rem 1.1rem; display: grid; gap: 0.85rem; border-bottom: 1px solid var(--line); }
-  .tool-row{ display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
-  .tool-row .row-label{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); width: 6.5rem; flex: none; }
-
-  .palette-btn, .action-btn{
-    font: inherit; font-family: "Inter", sans-serif; font-size: 0.8rem; font-weight: 500;
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft);
-    padding: 0.3rem 0.6rem; cursor: pointer; border-radius: 3px;
+  .panel-head{
+    display:flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--line); flex-wrap: wrap;
   }
-  .palette-btn svg, .action-btn svg{ flex: none; width: 18px; height: 18px; overflow: visible; }
-  .palette-btn:hover, .action-btn:hover{ border-color: var(--accent); color: var(--accent-ink); }
-  .palette-btn[aria-pressed="true"]{ background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
-  .palette-btn:focus-visible, .action-btn:focus-visible{ outline: 2px solid var(--focus); outline-offset: 1px; }
+  .panel-head h2{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0; font-weight: 600;
+  }
 
-  .mode-group{ display:flex; border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
-  .mode-group button{
+  .mode-toggle{ display:flex; border: 1px solid var(--line); }
+  .mode-toggle button{
     font: inherit; font-family: "Inter", sans-serif; font-size: 0.8rem; font-weight: 600;
-    background: var(--surface); color: var(--ink-soft); border: none; padding: 0.35rem 0.75rem; cursor: pointer;
+    background: var(--surface); color: var(--ink-soft);
+    border: none; padding: 0.4rem 0.75rem; cursor: pointer;
   }
-  .mode-group button + button{ border-left: 1px solid var(--line); }
-  .mode-group button[aria-pressed="true"]{ background: var(--accent-soft); color: var(--accent-ink); }
-  .mode-group button:focus-visible{ outline: 2px solid var(--focus); outline-offset: -2px; }
+  .mode-toggle button + button{ border-left: 1px solid var(--line); }
+  .mode-toggle button[aria-pressed="true"]{ background: var(--accent-soft); color: var(--accent-ink); }
+  .mode-toggle button:focus-visible{ outline: 2px solid var(--focus); outline-offset: -2px; }
 
-  .action-btn.danger:hover{ border-color: var(--critical); color: var(--critical); }
+  figure{ margin: 0; padding: 1.25rem 1.1rem 0.5rem; overflow-x: auto; }
+  figure svg{ width: 100%; height: auto; display:block; min-width: 480px; }
+  figcaption{
+    padding: 0.9rem 1.1rem 1.1rem; font-size: 0.86rem; color: var(--ink-soft);
+    border-top: 1px solid var(--line); margin-top: 1rem;
+  }
+  figcaption b{ color: var(--ink); }
 
-  /* ---- Canvas ---- */
-  .canvas-wrap{ padding: 0; overflow: hidden; background: var(--surface); }
-  svg#canvas{ width: 100%; height: auto; display:block; touch-action: none; }
-  svg#canvas.mode-connect{ cursor: crosshair; }
-  svg#canvas.mode-delete{ cursor: not-allowed; }
-  svg#canvas.mode-place{ cursor: copy; }
+  .sch-text{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; fill: var(--ink-soft); }
+  .sch-text.title{ fill: var(--ink); font-weight: 600; font-size: 11.5px; }
+  .sch-pipe{ stroke: var(--ink-faint); stroke-width: 2.5; fill: none; }
+  .sch-pipe.tank-line{ stroke: var(--accent); stroke-dasharray: 4 3; }
+  .sch-node{ fill: var(--surface); stroke: var(--ink-faint); stroke-width: 1.6; }
+  .sch-fill{ fill: var(--surface-sunken); }
+  .sch-junction{ fill: var(--ink-faint); }
+  .sch-tank{ fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.6; }
+  .sch-tank-label{ fill: var(--accent-ink); }
+  .sch-tree-canopy{ fill: var(--good); opacity: 0.88; }
+  .sch-tree-trunk{ stroke: var(--ink-faint); stroke-width: 2; }
+  .sch-instrument{ fill: var(--surface); stroke: var(--ink-soft); stroke-width: 1.4; }
 
-  .node{ cursor: grab; }
-  .node:active{ cursor: grabbing; }
-  .node .hit{ fill: transparent; }
-  .node .icon-fill{ fill: var(--surface-sunken); stroke: var(--ink-faint); stroke-width: 1.6; }
-  .node .icon-line{ stroke: var(--ink-soft); stroke-width: 1.6; fill: none; }
-  .node .node-label{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; fill: var(--ink); text-anchor: middle; }
-  .node.selected .icon-fill{ stroke: var(--accent); stroke-width: 2.2; }
-  .node.anchor .icon-fill{ stroke: var(--warn); stroke-width: 2.4; }
+  .pump-group .sch-node{ stroke: var(--warn); }
+  .pump-group .sch-fill{ fill: var(--warn-soft); }
+  .pump-group .sch-text{ fill: var(--warn); font-weight: 600; }
+  .gravity-note .sch-pipe{ stroke: var(--good); }
+  .gravity-note .sch-text{ fill: var(--good); font-weight: 600; }
 
-  .node[data-type="pump"] .icon-fill{ fill: var(--warn-soft); stroke: var(--warn); }
-  .node[data-type="pump"] .icon-line{ fill: var(--warn); stroke: none; }
-  .node[data-type="tank"] .icon-fill{ fill: var(--accent-soft); stroke: var(--accent); }
-  .node[data-type="tank"] .icon-line{ stroke: var(--accent); }
-  .node[data-type="tree"] .canopy{ fill: var(--good); opacity: 0.88; }
-  .node[data-type="tree"] .trunk{ stroke: var(--ink-faint); stroke-width: 2; }
-  .node[data-type="instrument"] .icon-fill{ fill: var(--surface); }
-  .node[data-type="instrument"] .node-label.tag{ font-weight: 700; font-size: 12px; fill: var(--ink); }
-  .node[data-type="junction"] .icon-fill{ fill: var(--ink-faint); stroke: none; }
-  .node[data-type="label"] .icon-fill{ fill: var(--surface); stroke: var(--line); }
-  .node[data-type="label"] .node-label{ font-family: "Inter", sans-serif; font-size: 12px; font-weight: 600; }
-  .node[data-type="text"] .node-label{ font-family: "Inter", sans-serif; font-size: 14px; font-weight: 600; }
+  svg[data-mode="gravity"] .pump-group{ display:none; }
+  svg[data-mode="gravity"] .gravity-note{ display:block; }
+  svg[data-mode="pump"] .pump-group{ display:block; }
+  svg[data-mode="pump"] .gravity-note{ display:none; }
 
-  .edge{ stroke: var(--ink-faint); stroke-width: 2.5; fill: none; }
-  .edge.dashed{ stroke-dasharray: 5 4; stroke: var(--accent); }
-  .edge-hit{ stroke: transparent; stroke-width: 14; fill: none; cursor: pointer; }
-  svg#canvas.mode-delete .edge-hit:hover + .edge{ stroke: var(--critical); }
-  .arrowhead{ fill: var(--ink-faint); }
+  .legend{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 0.6rem 1.2rem; padding: 1.1rem; border-top: 1px solid var(--line);
+  }
+  .legend-item{ display:flex; align-items:center; gap: 0.55rem; font-size: 0.82rem; color: var(--ink-soft); }
+  .legend-item svg{ flex: none; width: 30px; height: 22px; overflow: visible; }
+  .legend-item span b{ color: var(--ink); font-weight: 600; display:block; font-size: 0.82rem; }
 
-  footer.hint{ padding: 0.85rem 1.1rem; font-size: 0.82rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
-  footer.hint b{ color: var(--ink); }
-  .page-footer{ margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-faint); }
+  footer{ margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-faint); }
+
+  @media (max-width: 560px){
+    .wrap{ padding: 1.75rem 1rem 3.5rem; }
+    .panel-head{ flex-direction: column; align-items: flex-start; }
+    .mode-toggle{ width: 100%; }
+    .mode-toggle button{ flex: 1; }
+    .legend{ grid-template-columns: 1fr; }
+  }
 </style>
 
 <div class="wrap">
   <header>
     <div class="header-top">
-      <span class="eyebrow">Bicol cacao field tools &middot; irrigation</span>
-      <a class="crosslink" href="./drip-pressure-planner.html">View the pressure planner &rarr;</a>
+      <span class="eyebrow">Bicol cacao field tools · irrigation</span>
+      <div class="header-links">
+        <a class="crosslink" href="./schematic-editor.html">Edit this diagram &rarr;</a>
+        <a class="crosslink" href="./drip-pressure-planner.html">View the pressure planner &rarr;</a>
+      </div>
     </div>
     <h1>Drip System Schematic</h1>
-    <p class="dek">An editable P&amp;ID canvas &mdash; drag any node into place, wire up new connections, and drop in whatever components your farm actually has. Two starting templates (gravity-fed and pump-assisted) are loaded below; build on top of either, or clear the canvas and start from scratch.</p>
+    <p class="dek">Drawn in P&amp;ID convention &mdash; the notation water engineers actually use for pipe, valve and instrument diagrams. Everything downstream of the source (filter, regulator, zoning, trees) is identical either way; <b>only one component changes</b> depending on whether the water source sits above or below the field.</p>
   </header>
 
   <div class="panel">
-    <div class="toolbar">
-      <div class="tool-row">
-        <span class="row-label">Add node</span>
-        <div id="palette"></div>
-      </div>
-      <div class="tool-row">
-        <span class="row-label">Tool</span>
-        <div class="mode-group" role="group" aria-label="Canvas tool">
-          <button type="button" data-mode="select" aria-pressed="true">Select / Drag</button>
-          <button type="button" data-mode="connect" aria-pressed="false">Connect</button>
-          <button type="button" data-mode="delete" aria-pressed="false">Delete</button>
-        </div>
-      </div>
-      <div class="tool-row">
-        <span class="row-label">Templates</span>
-        <button type="button" class="action-btn" id="btn-load-gravity">Gravity-fed</button>
-        <button type="button" class="action-btn" id="btn-load-pump">Pump-assisted</button>
-        <button type="button" class="action-btn danger" id="btn-clear">Clear canvas</button>
-      </div>
-      <div class="tool-row">
-        <span class="row-label">Save</span>
-        <button type="button" class="action-btn" id="btn-export">Export layout (.json)</button>
-        <button type="button" class="action-btn" id="btn-import">Import layout&hellip;</button>
-        <input type="file" id="file-import" accept="application/json" style="display:none">
-        <button type="button" class="action-btn" id="btn-svg">Download as SVG</button>
+    <div class="panel-head">
+      <h2>Source configuration</h2>
+      <div class="mode-toggle" role="group" aria-label="Toggle source configuration">
+        <button type="button" id="btn-gravity" aria-pressed="true">Gravity-fed source</button>
+        <button type="button" id="btn-pump" aria-pressed="false">Source below field</button>
       </div>
     </div>
 
-    <div class="canvas-wrap">
-      <svg id="canvas" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Editable drip irrigation system diagram">
+    <figure>
+      <svg id="sch" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Water path from source through a pump or gravity feed, a check valve, filter and pressure regulator, into a mainline that splits into three irrigation zones and out to the trees; a rainwater tank merges into the mainline as a dry-season backup."
+           data-mode="gravity">
+
         <defs>
-          <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="1" fill="var(--grid-dot)"></circle>
-          </pattern>
-        </defs>
-        <rect x="0" y="0" width="1000" height="520" fill="url(#grid)"></rect>
-        <g id="layer-edges"></g>
-        <g id="layer-nodes"></g>
-      </svg>
-    </div>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-faint)"></path>
+          </marker>
+          <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"></path>
+          </marker>
 
-    <footer class="hint">
-      Click a node type above, then click the canvas to drop it. <b>Drag</b> a node to reposition. Toggle <b>Connect</b> and click two nodes to wire (or unwire) them. Toggle <b>Delete</b> and click a node or a connection to remove it. <b>Double-click</b> a node to rename it.
-    </footer>
+          <symbol id="ico-well" viewBox="0 0 40 40">
+            <circle class="sch-node sch-fill" cx="20" cy="20" r="16"></circle>
+            <path d="M10,22 q5,-6 10,0 t10,0" fill="none" stroke="var(--ink-soft)" stroke-width="1.6"></path>
+            <path d="M10,16 q5,-6 10,0 t10,0" fill="none" stroke="var(--ink-soft)" stroke-width="1.6"></path>
+          </symbol>
+
+          <symbol id="ico-pump" viewBox="0 0 40 40">
+            <circle class="sch-node sch-fill" cx="20" cy="20" r="15"></circle>
+            <path d="M13,12 L13,28 L27,20 Z" fill="var(--warn)"></path>
+          </symbol>
+
+          <symbol id="ico-checkvalve" viewBox="0 0 40 40">
+            <polygon class="sch-node sch-fill" points="6,10 20,20 6,30"></polygon>
+            <polygon class="sch-node sch-fill" points="34,10 20,20 34,30"></polygon>
+            <line x1="20" y1="8" x2="20" y2="32" stroke="var(--ink-faint)" stroke-width="1.6"></line>
+          </symbol>
+
+          <symbol id="ico-gatevalve" viewBox="0 0 40 40">
+            <polygon class="sch-node sch-fill" points="6,10 20,20 6,30"></polygon>
+            <polygon class="sch-node sch-fill" points="34,10 20,20 34,30"></polygon>
+            <line x1="20" y1="4" x2="20" y2="12" stroke="var(--ink-soft)" stroke-width="2"></line>
+            <line x1="12" y1="4" x2="28" y2="4" stroke="var(--ink-soft)" stroke-width="2"></line>
+          </symbol>
+
+          <symbol id="ico-filter" viewBox="0 0 40 40">
+            <polygon class="sch-node sch-fill" points="8,10 32,10 22,30 18,30"></polygon>
+            <line x1="12" y1="16" x2="26" y2="16" stroke="var(--ink-soft)" stroke-width="1.3"></line>
+            <line x1="14" y1="21" x2="24" y2="21" stroke="var(--ink-soft)" stroke-width="1.3"></line>
+          </symbol>
+
+          <symbol id="ico-regulator" viewBox="0 0 40 40">
+            <polygon class="sch-node sch-fill" points="6,14 20,24 6,34"></polygon>
+            <polygon class="sch-node sch-fill" points="34,14 20,24 34,34"></polygon>
+            <line x1="20" y1="24" x2="20" y2="10" stroke="var(--ink-soft)" stroke-width="1.6"></line>
+            <path d="M14,10 q6,-6 12,0" fill="none" stroke="var(--ink-soft)" stroke-width="1.6"></path>
+          </symbol>
+
+          <symbol id="ico-instrument" viewBox="0 0 30 30">
+            <circle class="sch-instrument" cx="15" cy="15" r="13"></circle>
+          </symbol>
+
+          <symbol id="ico-tree" viewBox="0 0 30 34">
+            <line class="sch-tree-trunk" x1="15" y1="34" x2="15" y2="20"></line>
+            <circle class="sch-tree-canopy" cx="15" cy="12" r="11"></circle>
+          </symbol>
+        </defs>
+
+        <!-- main spine -->
+        <use href="#ico-well" x="20" y="122" width="36" height="36"></use>
+        <text class="sch-text title" x="38" y="172" text-anchor="middle">source</text>
+
+        <!-- pump / gravity segment -->
+        <g class="pump-group">
+          <line class="sch-pipe" x1="56" y1="140" x2="94" y2="140" marker-end="url(#arrow)"></line>
+          <use href="#ico-pump" x="94" y="122" width="36" height="36"></use>
+          <text class="sch-text title" x="112" y="172" text-anchor="middle">pump</text>
+          <line class="sch-pipe" x1="130" y1="140" x2="166" y2="140" marker-end="url(#arrow)"></line>
+        </g>
+        <g class="gravity-note">
+          <line class="sch-pipe" x1="56" y1="140" x2="166" y2="140" marker-end="url(#arrow)"></line>
+          <path d="M96,140 L104,124" stroke="var(--good)" stroke-width="2" fill="none" marker-end="url(#arrow-accent)"></path>
+          <text class="sch-text" x="112" y="118" text-anchor="middle">elevation assist</text>
+        </g>
+
+        <!-- check valve -->
+        <use href="#ico-checkvalve" x="166" y="122" width="34" height="36"></use>
+        <text class="sch-text" x="183" y="172" text-anchor="middle">check valve</text>
+        <line class="sch-pipe" x1="200" y1="140" x2="236" y2="140" marker-end="url(#arrow)"></line>
+
+        <!-- filter -->
+        <use href="#ico-filter" x="236" y="122" width="34" height="36"></use>
+        <text class="sch-text" x="253" y="172" text-anchor="middle">filter</text>
+        <line class="sch-pipe" x1="270" y1="140" x2="306" y2="140" marker-end="url(#arrow)"></line>
+
+        <!-- regulator -->
+        <use href="#ico-regulator" x="306" y="122" width="34" height="36"></use>
+        <text class="sch-text" x="323" y="172" text-anchor="middle">regulator</text>
+        <line class="sch-pipe" x1="340" y1="140" x2="386" y2="140" marker-end="url(#arrow)"></line>
+
+        <!-- instruments -->
+        <use href="#ico-instrument" x="356" y="86" width="26" height="26"></use>
+        <text class="sch-text title" x="369" y="103" text-anchor="middle">F</text>
+        <line class="sch-pipe" x1="369" y1="112" x2="369" y2="132" stroke-dasharray="2 2"></line>
+
+        <use href="#ico-instrument" x="386" y="150" width="26" height="26"></use>
+        <text class="sch-text title" x="399" y="167" text-anchor="middle">P</text>
+        <line class="sch-pipe" x1="399" y1="140" x2="399" y2="150" stroke-dasharray="2 2"></line>
+
+        <!-- mainline junction -->
+        <circle class="sch-junction" cx="430" cy="140" r="4"></circle>
+        <text class="sch-text" x="430" y="172" text-anchor="middle">mainline</text>
+
+        <!-- zone branches -->
+        <line class="sch-pipe" x1="430" y1="140" x2="430" y2="55" marker-end="url(#arrow)"></line>
+        <line class="sch-pipe" x1="430" y1="140" x2="430" y2="225" marker-end="url(#arrow)"></line>
+        <line class="sch-pipe" x1="430" y1="55" x2="470" y2="55" marker-end="url(#arrow)"></line>
+        <line class="sch-pipe" x1="430" y1="140" x2="470" y2="140" marker-end="url(#arrow)"></line>
+        <line class="sch-pipe" x1="430" y1="225" x2="470" y2="225" marker-end="url(#arrow)"></line>
+
+        <!-- zone valves + trees, 3 rows -->
+        <g>
+          <use href="#ico-gatevalve" x="470" y="37" width="30" height="34"></use>
+          <line class="sch-pipe" x1="500" y1="55" x2="540" y2="55" marker-end="url(#arrow)"></line>
+          <use href="#ico-tree" x="545" y="34" width="26" height="30"></use>
+          <use href="#ico-tree" x="580" y="34" width="26" height="30"></use>
+          <use href="#ico-tree" x="615" y="34" width="26" height="30"></use>
+          <text class="sch-text" x="485" y="18" text-anchor="middle">zone 1</text>
+        </g>
+        <g>
+          <use href="#ico-gatevalve" x="470" y="122" width="30" height="34"></use>
+          <line class="sch-pipe" x1="500" y1="140" x2="540" y2="140" marker-end="url(#arrow)"></line>
+          <use href="#ico-tree" x="545" y="119" width="26" height="30"></use>
+          <use href="#ico-tree" x="580" y="119" width="26" height="30"></use>
+          <use href="#ico-tree" x="615" y="119" width="26" height="30"></use>
+          <text class="sch-text" x="485" y="115" text-anchor="middle">zone 2</text>
+        </g>
+        <g>
+          <use href="#ico-gatevalve" x="470" y="207" width="30" height="34"></use>
+          <line class="sch-pipe" x1="500" y1="225" x2="540" y2="225" marker-end="url(#arrow)"></line>
+          <use href="#ico-tree" x="545" y="204" width="26" height="30"></use>
+          <use href="#ico-tree" x="580" y="204" width="26" height="30"></use>
+          <use href="#ico-tree" x="615" y="204" width="26" height="30"></use>
+          <text class="sch-text" x="485" y="200" text-anchor="middle">zone 3</text>
+        </g>
+
+        <!-- rainwater tank merging into spine before check valve -->
+        <rect class="sch-tank" x="140" y="200" width="40" height="34"></rect>
+        <line x1="140" y1="212" x2="180" y2="212" stroke="var(--accent)" stroke-width="1.2"></line>
+        <text class="sch-tank-label sch-text" x="160" y="196" text-anchor="middle">buffer tank</text>
+        <path class="sch-pipe tank-line" d="M160,200 L160,150 L166,150" marker-end="url(#arrow-accent)"></path>
+        <text class="sch-text" x="188" y="196" text-anchor="middle" fill="var(--accent-ink)">dry-season</text>
+        <text class="sch-text" x="188" y="208" text-anchor="middle" fill="var(--accent-ink)">backup</text>
+
+        <!-- destination label -->
+        <text class="sch-text title" x="690" y="18" text-anchor="middle">trees</text>
+      </svg>
+    </figure>
+
+    <figcaption>
+      <b>What changes between the two options:</b> when the source sits below the field (Tatae's case), a pump has to lift the water before it reaches the check valve; when the source is above the field, gravity does that work for free and the pump drops out entirely. Every component after that point &mdash; filtration, pressure regulation, metering, zoning, the trees &mdash; is the same system either way.
+    </figcaption>
+
+    <div class="legend">
+      <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-pump"></use></svg><span><b>Pump</b>lifts water when the source sits below the field</span></div>
+      <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-checkvalve"></use></svg><span><b>Check valve</b>stops water flowing back toward the source</span></div>
+      <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-filter"></use></svg><span><b>Filter</b>screens debris that would clog the drip emitters</span></div>
+      <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-regulator"></use></svg><span><b>Pressure regulator</b>steps mainline pressure down to what drip line needs</span></div>
+      <div class="legend-item"><svg viewBox="0 0 30 30"><use href="#ico-instrument"></use><text x="15" y="19" text-anchor="middle" font-size="11" font-family="IBM Plex Mono, monospace" fill="var(--ink)">P/F</text></svg><span><b>Instrument</b>pressure (P) and flow (F) gauges for monitoring</span></div>
+      <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-gatevalve"></use></svg><span><b>Zone valve</b>opens one section at a time when flow is limited</span></div>
+    </div>
   </div>
 
-  <p class="page-footer">Layout autosaves to this browser as you edit. Export/Import move a layout between browsers or into the deployed copy of this page; Download as SVG gives you a slide-ready image of whatever you've built.</p>
+  <footer>Same P&amp;ID conventions used for larger water networks &mdash; drawn at farm scale. Pairs with the Drip Pressure Planner for sizing the pump, zones, and buffer tank shown here.</footer>
 </div>
 
 <script>
 (function(){
-  "use strict";
-  var SVGNS = "http://www.w3.org/2000/svg";
-  var STORE_KEY = "drip-schematic-editor-v1";
+  var svg = document.getElementById("sch");
+  var btnGravity = document.getElementById("btn-gravity");
+  var btnPump = document.getElementById("btn-pump");
 
-  var NODE_TYPES = [
-    { type: "well",        label: "Source" },
-    { type: "pump",        label: "Pump" },
-    { type: "checkvalve",  label: "Check valve" },
-    { type: "gatevalve",   label: "Zone valve" },
-    { type: "filter",      label: "Filter" },
-    { type: "regulator",   label: "Regulator" },
-    { type: "instrument",  label: "Instrument" },
-    { type: "tank",        label: "Tank" },
-    { type: "tree",        label: "Tree" },
-    { type: "junction",    label: "Junction" },
-    { type: "label",       label: "Custom label" },
-    { type: "text",        label: "Plain text" }
-  ];
-
-  function GRAVITY_TEMPLATE(){
-    return {
-      nodes: [
-        { id:"n1",  type:"well",       x:80,  y:260, label:"Source" },
-        { id:"n2",  type:"checkvalve", x:230, y:260, label:"Check valve" },
-        { id:"n3",  type:"filter",     x:330, y:260, label:"Filter" },
-        { id:"n4",  type:"regulator",  x:430, y:260, label:"Regulator" },
-        { id:"n5",  type:"junction",   x:530, y:260, label:"Mainline" },
-        { id:"n6",  type:"instrument", x:480, y:190, label:"F" },
-        { id:"n7",  type:"instrument", x:480, y:330, label:"P" },
-        { id:"n8",  type:"gatevalve",  x:630, y:150, label:"Zone 1" },
-        { id:"n9",  type:"tree",       x:730, y:150, label:"Tree" },
-        { id:"n10", type:"gatevalve",  x:630, y:260, label:"Zone 2" },
-        { id:"n11", type:"tree",       x:730, y:260, label:"Tree" },
-        { id:"n12", type:"gatevalve",  x:630, y:370, label:"Zone 3" },
-        { id:"n13", type:"tree",       x:730, y:370, label:"Tree" },
-        { id:"n14", type:"tank",       x:230, y:400, label:"Buffer tank" }
-      ],
-      edges: [
-        { id:"e1", from:"n1", to:"n2" },
-        { id:"e2", from:"n2", to:"n3" },
-        { id:"e3", from:"n3", to:"n4" },
-        { id:"e4", from:"n4", to:"n5" },
-        { id:"e5", from:"n6", to:"n5" },
-        { id:"e6", from:"n7", to:"n5" },
-        { id:"e7", from:"n5", to:"n8" },
-        { id:"e8", from:"n8", to:"n9" },
-        { id:"e9", from:"n5", to:"n10" },
-        { id:"e10", from:"n10", to:"n11" },
-        { id:"e11", from:"n5", to:"n12" },
-        { id:"e12", from:"n12", to:"n13" },
-        { id:"e13", from:"n14", to:"n2", dashed:true }
-      ]
-    };
+  function setMode(mode){
+    svg.setAttribute("data-mode", mode);
+    btnGravity.setAttribute("aria-pressed", String(mode === "gravity"));
+    btnPump.setAttribute("aria-pressed", String(mode === "pump"));
   }
 
-  function PUMP_TEMPLATE(){
-    var t = GRAVITY_TEMPLATE();
-    t.nodes[0].x = 70;
-    t.nodes.splice(1, 0, { id:"npump", type:"pump", x:150, y:260, label:"Pump" });
-    t.edges[0] = { id:"e1", from:"n1", to:"npump" };
-    t.edges.splice(1, 0, { id:"epump", from:"npump", to:"n2" });
-    return t;
-  }
-
-  var state = { nodes: [], edges: [] };
-  var mode = "select";
-  var placingType = null;
-  var connectAnchor = null;
-  var dragId = null;
-  var dragOffset = { x:0, y:0 };
-  var idCounter = 1;
-
-  var svg = document.getElementById("canvas");
-  var layerEdges = document.getElementById("layer-edges");
-  var layerNodes = document.getElementById("layer-nodes");
-  var palette = document.getElementById("palette");
-
-  function newId(prefix){ idCounter += 1; return prefix + "-" + Date.now().toString(36) + "-" + idCounter; }
-
-  function el(tag, attrs){
-    var e = document.createElementNS(SVGNS, tag);
-    for (var k in attrs){ e.setAttribute(k, attrs[k]); }
-    return e;
-  }
-
-  function saveState(){
-    try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(err){}
-  }
-  function loadState(){
-    try{
-      var raw = localStorage.getItem(STORE_KEY);
-      if (raw){ var parsed = JSON.parse(raw); if (parsed && Array.isArray(parsed.nodes) && Array.isArray(parsed.edges)) return parsed; }
-    }catch(err){}
-    return GRAVITY_TEMPLATE();
-  }
-
-  function findNode(id){ for (var i=0;i<state.nodes.length;i++){ if (state.nodes[i].id === id) return state.nodes[i]; } return null; }
-
-  function screenToSVG(evt){
-    var pt = svg.createSVGPoint();
-    pt.x = evt.clientX; pt.y = evt.clientY;
-    return pt.matrixTransform(svg.getScreenCTM().inverse());
-  }
-
-  /* ---- icon geometry, centered on (0,0), roughly -20..20 ---- */
-  function buildIcon(g, type){
-    if (type === "well"){
-      g.appendChild(el("circle", { class:"icon-fill", cx:0, cy:0, r:16 }));
-      g.appendChild(el("path", { class:"icon-line", d:"M-10,2 q5,-6 10,0 t10,0" }));
-      g.appendChild(el("path", { class:"icon-line", d:"M-10,-4 q5,-6 10,0 t10,0" }));
-    } else if (type === "pump"){
-      g.appendChild(el("circle", { class:"icon-fill", cx:0, cy:0, r:15 }));
-      g.appendChild(el("path", { class:"icon-line", d:"M-7,-8 L-7,8 L7,0 Z" }));
-    } else if (type === "checkvalve"){
-      g.appendChild(el("polygon", { class:"icon-fill", points:"-14,-10 0,0 -14,10" }));
-      g.appendChild(el("polygon", { class:"icon-fill", points:"14,-10 0,0 14,10" }));
-      g.appendChild(el("line", { class:"icon-line", x1:0, y1:-12, x2:0, y2:12 }));
-    } else if (type === "gatevalve"){
-      g.appendChild(el("polygon", { class:"icon-fill", points:"-14,-10 0,0 -14,10" }));
-      g.appendChild(el("polygon", { class:"icon-fill", points:"14,-10 0,0 14,10" }));
-      g.appendChild(el("line", { class:"icon-line", x1:0, y1:-16, x2:0, y2:-8 }));
-      g.appendChild(el("line", { class:"icon-line", x1:-8, y1:-16, x2:8, y2:-16 }));
-    } else if (type === "filter"){
-      g.appendChild(el("polygon", { class:"icon-fill", points:"-12,-10 12,-10 2,10 -2,10" }));
-      g.appendChild(el("line", { class:"icon-line", x1:-8, y1:-4, x2:6, y2:-4, "stroke-width":1.3 }));
-      g.appendChild(el("line", { class:"icon-line", x1:-6, y1:1, x2:4, y2:1, "stroke-width":1.3 }));
-    } else if (type === "regulator"){
-      g.appendChild(el("polygon", { class:"icon-fill", points:"-14,-6 0,4 -14,14" }));
-      g.appendChild(el("polygon", { class:"icon-fill", points:"14,-6 0,4 14,14" }));
-      g.appendChild(el("line", { class:"icon-line", x1:0, y1:4, x2:0, y2:-10 }));
-      g.appendChild(el("path", { class:"icon-line", d:"M-6,-10 q6,-6 12,0" }));
-    } else if (type === "instrument"){
-      g.appendChild(el("circle", { class:"icon-fill", cx:0, cy:0, r:13 }));
-    } else if (type === "tank"){
-      g.appendChild(el("rect", { class:"icon-fill", x:-20, y:-17, width:40, height:34 }));
-      g.appendChild(el("line", { class:"icon-line", x1:-20, y1:-5, x2:20, y2:-5, "stroke-width":1.2 }));
-    } else if (type === "tree"){
-      g.appendChild(el("line", { class:"trunk", x1:0, y1:17, x2:0, y2:5 }));
-      g.appendChild(el("circle", { class:"canopy", cx:0, cy:-6, r:11 }));
-    } else if (type === "junction"){
-      g.appendChild(el("circle", { class:"icon-fill", cx:0, cy:0, r:4 }));
-    } else if (type === "label"){
-      g.appendChild(el("rect", { class:"icon-fill", x:-46, y:-16, width:92, height:32, rx:4 }));
-    } else if (type === "text"){
-      var tGlyph = el("text", { x:0, y:6, "text-anchor":"middle", "font-family":"Inter, sans-serif", "font-weight":"700", "font-size":16, fill:"var(--ink-soft)" });
-      tGlyph.textContent = "T";
-      g.appendChild(tGlyph);
-    }
-  }
-
-  function labelOffset(type){
-    if (type === "label" || type === "text") return 4;
-    if (type === "junction") return 20;
-    if (type === "tree") return 30;
-    return 30;
-  }
-
-  /* ---- palette ---- */
-  NODE_TYPES.forEach(function(nt){
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "palette-btn";
-    btn.setAttribute("aria-pressed", "false");
-    btn.dataset.type = nt.type;
-    var iconSvg = document.createElementNS(SVGNS, "svg");
-    iconSvg.setAttribute("viewBox", "-22 -22 44 44");
-    var scale = (nt.type === "label" || nt.type === "text") ? 0.42 : 1;
-    var g = el("g", { class:"node", "data-type": nt.type, transform: "scale(" + scale + ")" });
-    buildIcon(g, nt.type);
-    iconSvg.appendChild(g);
-    btn.appendChild(iconSvg);
-    btn.appendChild(document.createTextNode(nt.label));
-    btn.addEventListener("click", function(){
-      var isActive = btn.getAttribute("aria-pressed") === "true";
-      Array.prototype.forEach.call(palette.querySelectorAll(".palette-btn"), function(b){ b.setAttribute("aria-pressed","false"); });
-      if (isActive){ placingType = null; setSvgModeClass(); return; }
-      btn.setAttribute("aria-pressed", "true");
-      placingType = nt.type;
-      setMode("select", true);
-    });
-    palette.appendChild(btn);
-  });
-
-  function clearPaletteSelection(){
-    placingType = null;
-    Array.prototype.forEach.call(palette.querySelectorAll(".palette-btn"), function(b){ b.setAttribute("aria-pressed","false"); });
-  }
-
-  /* ---- mode buttons ---- */
-  var modeButtons = document.querySelectorAll(".mode-group button");
-  Array.prototype.forEach.call(modeButtons, function(b){
-    b.addEventListener("click", function(){ setMode(b.dataset.mode, false); });
-  });
-  function setMode(next, keepPlacement){
-    mode = next;
-    connectAnchor = null;
-    if (!keepPlacement) clearPaletteSelection();
-    Array.prototype.forEach.call(modeButtons, function(b){ b.setAttribute("aria-pressed", String(b.dataset.mode === mode)); });
-    setSvgModeClass();
-    render();
-  }
-  function setSvgModeClass(){
-    svg.classList.remove("mode-connect","mode-delete","mode-place");
-    if (placingType){ svg.classList.add("mode-place"); }
-    else if (mode === "connect"){ svg.classList.add("mode-connect"); }
-    else if (mode === "delete"){ svg.classList.add("mode-delete"); }
-  }
-
-  /* ---- rendering ---- */
-  function edgeAnchorPoints(a, b){
-    var dx = b.x - a.x, dy = b.y - a.y;
-    var len = Math.sqrt(dx*dx + dy*dy) || 1;
-    var ux = dx/len, uy = dy/len;
-    var clear = 24;
-    return {
-      x1: a.x + ux*clear, y1: a.y + uy*clear,
-      x2: b.x - ux*clear, y2: b.y - uy*clear,
-      ux: ux, uy: uy
-    };
-  }
-
-  function render(){
-    layerEdges.innerHTML = "";
-    layerNodes.innerHTML = "";
-
-    state.edges.forEach(function(edge){
-      var a = findNode(edge.from), b = findNode(edge.to);
-      if (!a || !b) return;
-      var p = edgeAnchorPoints(a, b);
-      var hit = el("line", { class:"edge-hit", "data-edge": edge.id, x1:p.x1, y1:p.y1, x2:p.x2, y2:p.y2 });
-      var line = el("line", { class:"edge" + (edge.dashed ? " dashed" : ""), "data-edge": edge.id, x1:p.x1, y1:p.y1, x2:p.x2, y2:p.y2 });
-      var ah = el("polygon", {
-        class: "arrowhead",
-        points: [
-          [p.x2, p.y2],
-          [p.x2 - p.ux*9 - p.uy*5, p.y2 - p.uy*9 + p.ux*5],
-          [p.x2 - p.ux*9 + p.uy*5, p.y2 - p.uy*9 - p.ux*5]
-        ].map(function(pt){ return pt[0]+","+pt[1]; }).join(" ")
-      });
-      layerEdges.appendChild(hit);
-      layerEdges.appendChild(line);
-      layerEdges.appendChild(ah);
-    });
-
-    state.nodes.forEach(function(node){
-      var g = el("g", { class:"node", "data-id": node.id, "data-type": node.type, transform: "translate(" + node.x + "," + node.y + ")" });
-      var hit = el("circle", { class:"hit", cx:0, cy:0, r: (node.type==="label" || node.type==="text") ? 30 : 24 });
-      g.appendChild(hit);
-      if (node.type !== "text") buildIcon(g, node.type);
-      var text = el("text", { class:"node-label" + (node.type==="instrument" ? " tag" : ""), x:0, y: labelOffset(node.type) });
-      text.textContent = node.label;
-      g.appendChild(text);
-      if (connectAnchor === node.id) g.classList.add("anchor");
-      layerNodes.appendChild(g);
-    });
-  }
-
-  /* ---- interaction ---- */
-  svg.addEventListener("click", function(evt){
-    var nodeEl = evt.target.closest(".node[data-id]");
-    var edgeEl = evt.target.closest("[data-edge]");
-
-    if (placingType){
-      if (nodeEl) return;
-      var pt = screenToSVG(evt);
-      var def = NODE_TYPES.filter(function(n){ return n.type === placingType; })[0];
-      var label = def.label;
-      if (placingType === "label"){
-        label = window.prompt("Label text:", "New node") || "New node";
-      } else if (placingType === "text"){
-        label = window.prompt("Text:", "Note") || "Note";
-      }
-      state.nodes.push({ id: newId("n"), type: placingType, x: Math.round(pt.x), y: Math.round(pt.y), label: label });
-      clearPaletteSelection();
-      setSvgModeClass();
-      render();
-      saveState();
-      return;
-    }
-
-    if (mode === "connect"){
-      if (!nodeEl) return;
-      var id = nodeEl.getAttribute("data-id");
-      if (!connectAnchor){ connectAnchor = id; render(); return; }
-      if (connectAnchor === id){ connectAnchor = null; render(); return; }
-      var existingIdx = -1;
-      for (var i=0;i<state.edges.length;i++){
-        var e = state.edges[i];
-        if ((e.from===connectAnchor && e.to===id) || (e.from===id && e.to===connectAnchor)){ existingIdx = i; break; }
-      }
-      if (existingIdx >= 0){ state.edges.splice(existingIdx, 1); }
-      else { state.edges.push({ id: newId("e"), from: connectAnchor, to: id }); }
-      connectAnchor = null;
-      render();
-      saveState();
-      return;
-    }
-
-    if (mode === "delete"){
-      if (nodeEl){
-        var nid = nodeEl.getAttribute("data-id");
-        state.nodes = state.nodes.filter(function(n){ return n.id !== nid; });
-        state.edges = state.edges.filter(function(e){ return e.from !== nid && e.to !== nid; });
-        render();
-        saveState();
-        return;
-      }
-      if (edgeEl){
-        var eid = edgeEl.getAttribute("data-edge");
-        state.edges = state.edges.filter(function(e){ return e.id !== eid; });
-        render();
-        saveState();
-        return;
-      }
-    }
-  });
-
-  svg.addEventListener("dblclick", function(evt){
-    if (mode !== "select") return;
-    var nodeEl = evt.target.closest(".node[data-id]");
-    if (!nodeEl) return;
-    var node = findNode(nodeEl.getAttribute("data-id"));
-    if (!node) return;
-    var next = window.prompt("Rename node:", node.label);
-    if (next !== null && next.trim() !== ""){
-      node.label = next.trim();
-      render();
-      saveState();
-    }
-  });
-
-  svg.addEventListener("pointerdown", function(evt){
-    if (mode !== "select" || placingType) return;
-    var nodeEl = evt.target.closest(".node[data-id]");
-    if (!nodeEl) return;
-    var node = findNode(nodeEl.getAttribute("data-id"));
-    if (!node) return;
-    dragId = node.id;
-    var pt = screenToSVG(evt);
-    dragOffset.x = pt.x - node.x;
-    dragOffset.y = pt.y - node.y;
-    svg.setPointerCapture(evt.pointerId);
-  });
-
-  svg.addEventListener("pointermove", function(evt){
-    if (!dragId) return;
-    var node = findNode(dragId);
-    if (!node) return;
-    var pt = screenToSVG(evt);
-    node.x = Math.round(pt.x - dragOffset.x);
-    node.y = Math.round(pt.y - dragOffset.y);
-    render();
-  });
-
-  function endDrag(){ if (dragId){ dragId = null; saveState(); } }
-  svg.addEventListener("pointerup", endDrag);
-  svg.addEventListener("pointercancel", endDrag);
-
-  document.addEventListener("keydown", function(evt){
-    if (evt.key === "Escape"){ clearPaletteSelection(); connectAnchor = null; setSvgModeClass(); render(); }
-  });
-
-  /* ---- templates / clear ---- */
-  document.getElementById("btn-load-gravity").addEventListener("click", function(){
-    state = GRAVITY_TEMPLATE();
-    render(); saveState();
-  });
-  document.getElementById("btn-load-pump").addEventListener("click", function(){
-    state = PUMP_TEMPLATE();
-    render(); saveState();
-  });
-  document.getElementById("btn-clear").addEventListener("click", function(){
-    if (!window.confirm("Clear the canvas? This removes every node and connection.")) return;
-    state = { nodes: [], edges: [] };
-    render(); saveState();
-  });
-
-  /* ---- export / import ---- */
-  function anchorDownload(filename, content, type){
-    var blob = new Blob([content], { type: type });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url; a.download = filename;
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
-  }
-
-  function offerDownload(filename, content, type){
-    var previewGlobal = window.preview;
-    if (previewGlobal && typeof previewGlobal.use === "function"){
-      previewGlobal.use("downloads").then(function(downloads){
-        if (!downloads){ anchorDownload(filename, content, type); return; }
-        downloads.save({ filename: filename, data: content }).catch(function(err){
-          if (err && err.code === "declined") return;
-          anchorDownload(filename, content, type);
-        });
-      }).catch(function(){ anchorDownload(filename, content, type); });
-      return;
-    }
-    anchorDownload(filename, content, type);
-  }
-
-  document.getElementById("btn-export").addEventListener("click", function(){
-    offerDownload("drip-schematic-layout.json", JSON.stringify(state, null, 2), "application/json");
-  });
-
-  document.getElementById("btn-import").addEventListener("click", function(){
-    document.getElementById("file-import").click();
-  });
-  document.getElementById("file-import").addEventListener("change", function(evt){
-    var file = evt.target.files[0];
-    if (!file) return;
-    var reader = new FileReader();
-    reader.onload = function(){
-      try{
-        var parsed = JSON.parse(String(reader.result));
-        if (!parsed || !Array.isArray(parsed.nodes) || !Array.isArray(parsed.edges)) throw new Error("bad shape");
-        state = parsed;
-        render(); saveState();
-      }catch(err){
-        window.alert("That file doesn't look like a layout exported from this tool.");
-      }
-    };
-    reader.readAsText(file);
-    evt.target.value = "";
-  });
-
-  document.getElementById("btn-svg").addEventListener("click", function(){
-    var clone = svg.cloneNode(true);
-    clone.removeAttribute("class");
-    var xml = new XMLSerializer().serializeToString(clone);
-    offerDownload("drip-schematic.svg", '<?xml version="1.0" encoding="UTF-8"?>\n' + xml, "image/svg+xml");
-  });
-
-  /* ---- boot ---- */
-  state = loadState();
-  render();
+  btnGravity.addEventListener("click", function(){ setMode("gravity"); });
+  btnPump.addEventListener("click", function(){ setMode("pump"); });
 })();
 </script>
