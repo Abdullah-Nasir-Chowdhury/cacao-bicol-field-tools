@@ -643,28 +643,13 @@
   });
 
   /* ---- export / import ---- */
-  function anchorDownload(filename, content, type){
+  function offerDownload(filename, content, type){
     var blob = new Blob([content], { type: type });
     var url = URL.createObjectURL(blob);
     var a = document.createElement("a");
     a.href = url; a.download = filename;
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
-  }
-
-  function offerDownload(filename, content, type){
-    var previewGlobal = window.preview;
-    if (previewGlobal && typeof previewGlobal.use === "function"){
-      previewGlobal.use("downloads").then(function(downloads){
-        if (!downloads){ anchorDownload(filename, content, type); return; }
-        downloads.save({ filename: filename, data: content }).catch(function(err){
-          if (err && err.code === "declined") return;
-          anchorDownload(filename, content, type);
-        });
-      }).catch(function(){ anchorDownload(filename, content, type); });
-      return;
-    }
-    anchorDownload(filename, content, type);
   }
 
   document.getElementById("btn-export").addEventListener("click", function(){
