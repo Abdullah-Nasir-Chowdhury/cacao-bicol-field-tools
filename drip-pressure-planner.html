@@ -94,6 +94,13 @@
     border-bottom: 1px solid var(--line);
     margin-bottom: 2rem;
   }
+  .header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
   .eyebrow{
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 0.72rem;
@@ -106,6 +113,16 @@
     padding: 0.28rem 0.6rem;
     border-radius: 3px;
   }
+  .crosslink{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--accent-ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+  .crosslink:hover{ color: var(--accent); }
+  .crosslink:focus-visible{ outline: 2px solid var(--focus); outline-offset: 2px; }
   h1{
     font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     font-weight: 800;
@@ -346,7 +363,10 @@
 <div class="wrap">
 
   <header>
-    <span class="eyebrow">Bicol cacao field tools · irrigation</span>
+    <div class="header-top">
+      <span class="eyebrow">Bicol cacao field tools · irrigation</span>
+      <a class="crosslink" href="./drip-system-schematic.html">View the system schematic &rarr;</a>
+    </div>
     <h1>Drip Pressure Planner</h1>
     <p class="dek">Tatae works 2.5 hectares with no sprinklers and told us plainly: <b>water pressure</b> is his limit, not water itself &mdash; he just can't say how many lines his source can actually run. This planner turns a farm's size and water source into a straight answer: how many trees you can irrigate at once, whether you need a booster, and how big a dry-season buffer tank to keep on hand.</p>
   </header>
