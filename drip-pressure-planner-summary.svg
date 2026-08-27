@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Summary card of the Drip Pressure Planner results for Tatae's 2.5 hectare farm: 2,778 trees, 370 liters per minute demand, 1.06 bar required pressure, and a 1.33 million liter buffer tank for a full month of storage-only backup.">
+  <rect x="0" y="0" width="900" height="520" fill="#FFFFFF"></rect>
+  <rect x="4" y="4" width="892" height="512" fill="none" stroke="#C7D0C4" stroke-width="1.5"></rect>
+
+  <rect x="24" y="24" width="230" height="24" rx="3" fill="#DCEAE7"></rect>
+  <text x="36" y="40" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="700" letter-spacing="0.5" fill="#0B403C">BICOL CACAO FIELD TOOLS</text>
+
+  <text x="24" y="86" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#1B2320">Drip Pressure Planner</text>
+  <text x="24" y="110" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#56645C">Tatae's farm &#8212; 2.5 ha, 3 m spacing, no sprinklers, source pressure unmeasured</text>
+
+  <line x1="24" y1="130" x2="876" y2="130" stroke="#C7D0C4" stroke-width="1"></line>
+
+  <!-- stat row -->
+  <text x="24" y="162" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="0.5" fill="#86928A">TREES COVERED</text>
+  <text x="24" y="198" font-family="Consolas, 'Courier New', monospace" font-size="34" font-weight="700" fill="#1B2320">2,778</text>
+
+  <line x1="310" y1="145" x2="310" y2="198" stroke="#E4E9E2" stroke-width="1.5"></line>
+
+  <text x="334" y="162" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="0.5" fill="#86928A">EMITTERS</text>
+  <text x="334" y="198" font-family="Consolas, 'Courier New', monospace" font-size="34" font-weight="700" fill="#1B2320">5,556</text>
+
+  <line x1="580" y1="145" x2="580" y2="198" stroke="#E4E9E2" stroke-width="1.5"></line>
+
+  <text x="604" y="162" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="0.5" fill="#86928A">FLOW DEMAND</text>
+  <text x="604" y="198" font-family="Consolas, 'Courier New', monospace" font-size="34" font-weight="700" fill="#1B2320">370 <tspan font-size="18" font-weight="500" fill="#56645C">L/min</tspan></text>
+
+  <line x1="24" y1="220" x2="876" y2="220" stroke="#C7D0C4" stroke-width="1"></line>
+
+  <!-- pressure verdict -->
+  <rect x="24" y="242" width="852" height="70" fill="#F3E7CB"></rect>
+  <rect x="24" y="242" width="4" height="70" fill="#9A6B15"></rect>
+  <circle cx="48" cy="264" r="5" fill="#9A6B15"></circle>
+  <text x="66" y="269" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1B2320">Required source pressure: 1.06 bar</text>
+  <text x="66" y="292" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#56645C">Unmeasured on Tatae's farm &#8212; the number to check against whatever pump or gravity head is available before laying pipe.</text>
+
+  <!-- tank framing -->
+  <rect x="24" y="326" width="852" height="94" fill="#E3EEDD"></rect>
+  <rect x="24" y="326" width="4" height="94" fill="#4B7A3B"></rect>
+  <circle cx="48" cy="348" r="5" fill="#4B7A3B"></circle>
+  <text x="66" y="353" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1B2320">Full-month, whole-field buffer: ~1.33 million L</text>
+  <text x="66" y="376" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#56645C">That's what a tank alone would need to hold to replace 30 days of irrigation with zero source &#8212; roughly 1,300</text>
+  <text x="66" y="395" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#56645C">standard 1,000 L tanks. Storage alone doesn't scale; it argues for the booster-and-zoning fix instead.</text>
+
+  <line x1="24" y1="444" x2="876" y2="444" stroke="#C7D0C4" stroke-width="1"></line>
+  <text x="24" y="468" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#86928A">Field-planning rules of thumb, not a certified hydraulic design.</text>
+  <text x="24" y="490" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#86928A">Live, adjustable version: preview.ai/code/artifact/128c106e-1640-463a-a5af-393ee2f1cb26</text>
+</svg>
