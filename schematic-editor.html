@@ -507,7 +507,12 @@
 
     state.nodes.forEach(function(node){
       var g = el("g", { class:"node", "data-id": node.id, "data-type": node.type, transform: "translate(" + node.x + "," + node.y + ")" });
-      var hit = el("circle", { class:"hit", cx:0, cy:0, r: (node.type==="label" || node.type==="text") ? 30 : 24 });
+      var isBox = (node.type === "label" || node.type === "text");
+      var textW = Math.max(60, String(node.label).length * 7 + 16);
+      var hitW = Math.max(isBox ? 100 : 70, textW);
+      var hitY = isBox ? -20 : -26;
+      var hitH = isBox ? 40 : 66;
+      var hit = el("rect", { class:"hit", x: -hitW/2, y: hitY, width: hitW, height: hitH });
       g.appendChild(hit);
       if (node.type !== "text") buildIcon(g, node.type);
       var text = el("text", { class:"node-label" + (node.type==="instrument" ? " tag" : ""), x:0, y: labelOffset(node.type) });
