@@ -230,4 +230,8 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 - Masa — Data Engineering → precision-agriculture / data-centralization angle Muravah wants
 - Keisuke — Modern Philosophy → tradeoffs (organic-vs-export-vs-income, Muravah's AI-bias concern,
   agrivoltaic land-use ethics)
+- Ria — from Bicol, Philippines; studies at Bicol University (BU) → grounds the team's outsider read of
+  the interviews against lived local/regional knowledge; narrates the field-visit slides in the pitch deck
 - Chow — Computer Science → the tools in this repo
+
+See `SPEAKER-NOTES.md` for who presents which section of `Bicol-Cacao-Pitch.pptx`.

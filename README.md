@@ -7,7 +7,7 @@ Each file is a single self-contained HTML page — no build step, no dependencie
 ## Tools
 
 ### [`index.html`](./index.html)
-Landing page linking to all three tools below.
+Landing page linking to all the tools below.
 
 ### [`drip-pressure-planner.html`](./drip-pressure-planner.html)
 Turns a farm's size and water source into a straight answer: how many trees you can irrigate at once, whether you need a booster pump, how many irrigation zones you need, and how big a dry-season buffer tank to keep on hand. Defaults reflect Tatae's actual farm (2.5 ha, no sprinklers, unmeasured source).
@@ -17,6 +17,15 @@ A P&ID-style diagram (the notation water engineers use for pipe, valve, and inst
 
 ### [`schematic-editor.html`](./schematic-editor.html)
 A drag-and-drop canvas for editing either diagram above — reposition nodes, wire new connections, and add components from a palette. Each diagram autosaves separately in the browser; Export/Import moves a layout between browsers.
+
+### [`presentation.html`](./presentation.html)
+The full pitch deck as a click-through, phone-friendly website — on-screen Prev/Next buttons (also arrow keys or a swipe on mobile), auto light/dark theme, and the same interactive charts as the dashboard below, embedded live in the relevant slides. Deploys straight to Netlify alongside everything else in this repo (see `netlify.toml`). Drop your own photos into [`images/`](./images/) using the filenames listed in [`images/README.md`](./images/README.md) — each slide picks them up automatically, no code changes needed. `SPEAKER-NOTES.md` has the study material for whoever presents each section.
+
+## Pitch materials
+
+- [`Bicol-Cacao-Pitch.pptx`](./Bicol-Cacao-Pitch.pptx) — the same pitch as a PowerPoint file, for anywhere a live website isn't an option.
+- [`SPEAKER-NOTES.md`](./SPEAKER-NOTES.md) — who presents which section, with the facts and figures behind each slide (also embedded directly in the .pptx's Notes field).
+- [`FIELD-NOTES.md`](./FIELD-NOTES.md) — the running research log this whole project is built from.
 
 ## Slide-ready graphics
 

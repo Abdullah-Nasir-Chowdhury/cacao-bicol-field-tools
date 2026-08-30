@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bicol Cacao Pitch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EEF1EC; --surface: #FFFFFF; --surface-sunken: #F4F1EC; --line: #E1D9CC;
+    --ink: #241209; --ink-soft: #6B5745; --ink-faint: #9C8D7C;
+    --accent: #B85C38; --accent-ink: #7A3B21; --accent-soft: #F3E1D6;
+    --gold: #C9902E; --gold-soft: #F7E9C9;
+    --olive: #5B6B34; --olive-soft: #E5E9D6;
+    --rust: #8C3B2E; --rust-soft: #F1DAD4;
+    --cat-1: #2a78d6; --cat-2: #eb6834; --cat-3: #1baf7a;
+    --shadow: 0 1px 0 rgba(36,18,9,0.06);
+    --grid-line: #E1D9CC;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #17100A; --surface: #211812; --surface-sunken: #1B140E; --line: #3A2C1F;
+      --ink: #F3ECE2; --ink-soft: #C2B4A2; --ink-faint: #8A7A68;
+      --accent: #E08A5C; --accent-ink: #F3C3A6; --accent-soft: #3A2418;
+      --gold: #E6B85C; --gold-soft: #3A2E13;
+      --olive: #A9BB78; --olive-soft: #2A3018;
+      --rust: #E0897A; --rust-soft: #3B211D;
+      --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4);
+      --grid-line: #3A2C1F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #17100A; --surface: #211812; --surface-sunken: #1B140E; --line: #3A2C1F;
+    --ink: #F3ECE2; --ink-soft: #C2B4A2; --ink-faint: #8A7A68;
+    --accent: #E08A5C; --accent-ink: #F3C3A6; --accent-soft: #3A2418;
+    --gold: #E6B85C; --gold-soft: #3A2E13;
+    --olive: #A9BB78; --olive-soft: #2A3018;
+    --rust: #E0897A; --rust-soft: #3B211D;
+    --cat-1: #3987e5; --cat-2: #d95926; --cat-3: #199e70;
+    --shadow: 0 1px 0 rgba(0,0,0,0.4);
+    --grid-line: #3A2C1F;
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg); color: var(--ink);
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; } }
+
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+  header{ padding-bottom: 1.75rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft); display: inline-flex; padding: 0.28rem 0.6rem; border-radius: 3px;
+  }
+  h1{ font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.4rem); margin: 0.6rem 0 0.5rem; text-wrap: balance; letter-spacing: -0.02em; }
+  .dek{ max-width: 72ch; color: var(--ink-soft); font-size: 1rem; margin: 0; }
+
+  .grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  @media (max-width: 860px){ .grid{ grid-template-columns: 1fr; } }
+  .card{ background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); grid-column: span 1; }
+  .card.wide{ grid-column: span 2; }
+  @media (max-width: 860px){ .card.wide{ grid-column: span 1; } }
+  .card-head{ padding: 1rem 1.2rem 0.2rem; }
+  .card-title{ font-size: 1.05rem; font-weight: 700; margin: 0.1rem 0 0.15rem; }
+  .card-sub{ font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 0.5rem; max-width: 68ch; }
+  .badge-estimate{
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-soft); background: var(--surface-sunken); border: 1px solid var(--line); border-radius: 3px;
+    padding: 0.15rem 0.45rem; display: inline-flex; margin-bottom: 0.4rem;
+  }
+  .chart-area{ padding: 0.5rem 1.2rem 1.1rem; }
+  svg.viz{ width: 100%; height: auto; display: block; overflow: visible; }
+  .viz text{ font-family: "IBM Plex Mono", ui-monospace, monospace; fill: var(--ink-soft); }
+  .viz .value-label{ font-family: "Inter", sans-serif; font-weight: 700; fill: var(--ink); }
+  .viz .axis-line{ stroke: var(--grid-line); stroke-width: 1; }
+  .viz .grid-line{ stroke: var(--grid-line); stroke-width: 1; stroke-dasharray: 2 3; }
+
+  .legend{ display: flex; flex-wrap: wrap; gap: 0.9rem; padding: 0 1.2rem 0.9rem; }
+  .legend-item{ display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--ink-soft); }
+  .legend-swatch{ width: 0.65rem; height: 0.65rem; border-radius: 2px; flex: none; }
+
+  .foot-note{ padding: 0 1.2rem 1rem; font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--line); margin-top: 0.4rem; padding-top: 0.7rem; }
+  .foot-note b{ color: var(--ink-soft); }
+
+  details.data-table{ border-top: 1px solid var(--line); }
+  details.data-table summary{
+    cursor: pointer; padding: 0.6rem 1.2rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint);
+    list-style: none; display: flex; align-items: center; gap: 0.4rem;
+  }
+  details.data-table summary::-webkit-details-marker{ display: none; }
+  details.data-table summary::before{ content: "+"; font-family: "Inter", sans-serif; font-weight: 700; color: var(--accent-ink); }
+  details.data-table[open] summary::before{ content: "\2212"; }
+  .table-wrap{ overflow-x: auto; padding: 0 1.2rem 1rem; }
+  table{ border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+  table caption{ text-align: left; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faint); padding: 0 0 0.4rem; }
+  th, td{ text-align: left; padding: 0.4rem 0.7rem 0.4rem 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  td{ color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  .tooltip{
+    position: fixed; pointer-events: none; z-index: 50;
+    background: var(--ink); color: var(--bg); border-radius: 4px; padding: 0.4rem 0.6rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.76rem; line-height: 1.35;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25); opacity: 0; transition: opacity 0.1s ease; max-width: 220px;
+  }
+  .tooltip.show{ opacity: 1; }
+  .tooltip .tt-title{ font-family: "Inter", sans-serif; font-weight: 700; margin-bottom: 0.15rem; }
+
+  .bar-hit, .dot-hit, .arc-hit, .range-hit{ cursor: pointer; }
+  .bar-hit:hover + .bar-fill, .bar-fill.hovered{ filter: brightness(1.08); }
+  .arc-hit:hover + .arc-fill, .arc-fill.hovered{ filter: brightness(1.08); }
+
+  .subgrid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; padding: 0 1.2rem 0.4rem; }
+  @media (max-width: 760px){ .subgrid{ grid-template-columns: 1fr; } }
+  .subchart h3{ font-size: 0.86rem; font-weight: 700; margin: 0 0 0.15rem; }
+  .subchart .subchart-cap{ font-size: 0.76rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
+  .subchart .legend{ padding: 0.4rem 0 0.2rem; gap: 0.5rem 0.8rem; }
+  .subchart .legend-item{ font-size: 0.72rem; }
+
+  .callout-quote{
+    font-size: 1.02rem; font-style: italic; color: var(--ink); margin: 0 0 0.6rem;
+    padding-left: 0.9rem; border-left: 3px solid var(--accent);
+  }
+  .callout-tag{
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft); display: inline-flex; padding: 0.2rem 0.5rem; border-radius: 3px; margin-bottom: 0.5rem;
+  }
+  .callout-body{ padding: 0 1.2rem 1.2rem; }
+  .img-placeholder{
+    border: 2px dashed var(--line); border-radius: 6px; padding: 1.6rem 1rem; text-align: center;
+    color: var(--ink-faint); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.76rem;
+    margin: 0.9rem 1.2rem 1.2rem; line-height: 1.5;
+  }
+
+  .page-footer{ margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-faint); }
+  .page-footer a{ color: var(--accent-ink); }
+
+  @media (max-width: 480px){
+    .wrap{ padding: 1.75rem 1rem 3.5rem; }
+    .grid{ gap: 1rem; }
+  }
+
+  /* ================= presentation deck ================= */
+  html, body{ height: 100%; }
+  body{ overflow-x: hidden; }
+
+  .progress-track{ position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--surface-sunken); z-index: 200; }
+  .progress-fill{ height: 100%; background: var(--accent); width: 0%; transition: width 0.25s ease; }
+
+  .home-link{
+    position: fixed; top: 0.9rem; left: 0.9rem; z-index: 150;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.05em;
+    color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+    padding: 0.4rem 0.7rem; text-decoration: none; box-shadow: var(--shadow);
+  }
+  .home-link:hover{ border-color: var(--accent); color: var(--accent-ink); }
+  .home-link.on-hero{ background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #F7F2EA; }
+
+  .slide{ display: none; width: 100%; min-height: 100vh; }
+  .slide.active{ display: flex; flex-direction: column; }
+  .slide-inner{
+    max-width: 1120px; margin: 0 auto; width: 100%; flex: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 4.5rem 1.5rem 6.5rem;
+  }
+  .slide-inner.top-align{ justify-content: flex-start; padding-top: 3.5rem; }
+
+  .slide.hero{ background: #241209; }
+  .slide.hero .slide-inner{ color: #F7F2EA; }
+  .hero-eyebrow{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase; color: #D9A441; margin: 0 0 0.7rem; }
+  .hero-title{ font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; margin: 0 0 0.4rem; letter-spacing: -0.02em; color: #F7F2EA; }
+  .hero-sub{ font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-style: italic; color: #D9A441; margin: 0 0 1.1rem; }
+  .hero-body{ max-width: 62ch; color: #C9BEB0; font-size: 1rem; line-height: 1.6; margin: 0 0 1rem; }
+  .hero-note{ max-width: 60ch; color: #F7E9C9; font-style: italic; font-size: 0.95rem; }
+  .hero-credit{ color: #C9BEB0; font-size: 0.85rem; margin-top: 2rem; }
+
+  .presenter-tag{
+    display: inline-flex; align-items: center; gap: 0.35rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faint);
+    border: 1px solid var(--line); border-radius: 20px; padding: 0.22rem 0.65rem 0.22rem 0.5rem; margin-bottom: 0.9rem;
+  }
+  .presenter-tag .dot{ width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); }
+  .slide.hero .presenter-tag{ border-color: rgba(255,255,255,0.25); color: #C9BEB0; }
+
+  .slide-title{ font-size: clamp(1.5rem, 3.4vw, 2.15rem); font-weight: 800; margin: 0 0 0.6rem; letter-spacing: -0.02em; color: var(--ink); text-wrap: balance; }
+  .slide-sub{ font-size: 1.02rem; font-style: italic; color: var(--ink-soft); margin: 0 0 1.2rem; max-width: 78ch; line-height: 1.4; }
+  .slide-body{ color: var(--ink); font-size: 1rem; line-height: 1.5; max-width: 78ch; }
+
+  .img-row{ display: grid; gap: 1.1rem; margin-top: 1rem; }
+  .img-row.cols-2{ grid-template-columns: repeat(2, 1fr); }
+  .img-row.cols-3{ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 760px){ .img-row.cols-2, .img-row.cols-3{ grid-template-columns: 1fr; } }
+  .img-slot{ position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: var(--surface-sunken); border: 1.5px dashed var(--line); }
+  .img-slot img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+  .img-slot .img-fallback{
+    display: none; position: absolute; inset: 0; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 1rem; color: var(--ink-faint); gap: 0.35rem;
+  }
+  .img-slot.missing .img-fallback{ display: flex; }
+  .img-slot .img-fallback .glyph{ font-size: 1.6rem; }
+  .img-slot .img-fallback code{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.72rem; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.4rem; }
+  .img-slot .img-fallback span{ font-size: 0.76rem; font-style: italic; max-width: 22ch; }
+
+  .tool-links{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; margin-top: 1.3rem; }
+  @media (max-width: 700px){ .tool-links{ grid-template-columns: 1fr; } }
+  a.tool-link{
+    display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow);
+    padding: 1rem 1.15rem; text-decoration: none; color: inherit;
+  }
+  a.tool-link:hover{ border-color: var(--accent); }
+  a.tool-link .k{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-faint); }
+  a.tool-link h3{ margin: 0.25rem 0 0.3rem; font-size: 1rem; font-weight: 700; }
+  a.tool-link p{ margin: 0; color: var(--ink-soft); font-size: 0.86rem; }
+
+  .solutions-head{ display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.4rem; }
+  .solutions-head .mini-chart{ flex: none; width: 200px; }
+  .solution-cols{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.1rem; }
+  @media (max-width: 860px){ .solution-cols{ grid-template-columns: 1fr; } }
+  .solution-col{ background: var(--surface); border-radius: 8px; box-shadow: var(--shadow); padding: 1rem 1.1rem; border-top: 3px solid var(--accent); }
+  .solution-col h3{ margin: 0 0 0.6rem; font-size: 0.98rem; }
+  .solution-col ul{ margin: 0; padding-left: 1.1rem; font-size: 0.86rem; color: var(--ink); line-height: 1.4; }
+  .solution-col li{ margin-bottom: 0.5rem; }
+  .recommend-box{ margin-top: 1.1rem; background: var(--olive-soft); border-radius: 8px; padding: 0.9rem 1.1rem; font-size: 0.92rem; color: var(--ink); }
+  .recommend-box b{ color: var(--olive); }
+
+  .numbered-list{ margin-top: 1.1rem; display: flex; flex-direction: column; gap: 1rem; }
+  .numbered-item{ display: flex; gap: 0.9rem; align-items: flex-start; }
+  .numbered-item .num{ flex: none; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
+  .numbered-item .body h3{ margin: 0 0 0.2rem; font-size: 1rem; }
+  .numbered-item .body p{ margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.4; }
+
+  .bullet-list{ margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .bullet-item{ display: flex; gap: 0.7rem; align-items: flex-start; font-size: 1rem; line-height: 1.45; }
+  .bullet-item .dot{ flex: none; margin-top: 0.55rem; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); }
+
+  .chart-slide .card-sub{ max-width: 78ch; }
+  .slide-chart-area{ margin-top: 0.8rem; }
+
+  .nav-bar{
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+    padding: 0.7rem 1rem; background: var(--surface); border-top: 1px solid var(--line);
+  }
+  .nav-btn{
+    min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem;
+    background: var(--surface-sunken); border: 1px solid var(--line); border-radius: 8px; color: var(--ink);
+    font-family: "Inter", sans-serif; font-size: 0.92rem; font-weight: 600; cursor: pointer; padding: 0 1rem;
+  }
+  .nav-btn:hover:not(:disabled){ border-color: var(--accent); color: var(--accent-ink); }
+  .nav-btn:disabled{ opacity: 0.35; cursor: default; }
+  .nav-counter{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.8rem; color: var(--ink-soft); min-width: 4.5rem; text-align: center; }
+
+  @media (max-width: 600px){
+    .slide-inner{ padding: 3.6rem 1.1rem 6rem; }
+    .nav-bar{ gap: 0.6rem; padding: 0.6rem 0.6rem; }
+    .nav-btn{ padding: 0 0.7rem; font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="./index.html" id="home-link" class="home-link on-hero">← Home</a>
+<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+<!-- 1: TITLE -->
+<section class="slide hero">
+  <div class="slide-inner">
+    <p class="hero-eyebrow">Bicol cacao field research · pitch</p>
+    <h1 class="hero-title">Bicol Cacao Crisis</h1>
+    <p class="hero-sub">From Field to Fix</p>
+    <p class="hero-body">A pitch grounded in direct interviews and site visits across Albay and the wider Bicol region, August 26–28.</p>
+    <p class="hero-note">Thesis: every solution we propose already works somewhere in Bicol — our job is showing how to bring it to cacao.</p>
+  </div>
+</section>
+
+<!-- 2: MAYON GOLD VISIT -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">We visited Mayon Gold / Muravah Foundation</h2>
+    <p class="slide-body">A cacao NGO in Albay that funds typhoon-proof homes and education scholarships from cacao profits, grows heirloom native cacao interplanted with Pili and coconut, and works strictly organic — no synthetic fertilizers or pesticides.</p>
+    <div class="img-row cols-2">
+      <div class="img-slot">
+        <img src="images/mayon-gold-1.jpg" alt="Mayon Gold / Muravah site visit, photo 1" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/mayon-gold-1.jpg</code><span>Mayon Gold / Muravah site visit, photo 1</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/mayon-gold-2.jpg" alt="Mayon Gold / Muravah site visit, photo 2" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/mayon-gold-2.jpg</code><span>Mayon Gold / Muravah site visit, photo 2</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3: PROBES EXPOSED PROBLEMS -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Nancy</span>
+    <h2 class="slide-title">Our probes exposed these problems</h2>
+    <div class="bullet-list">
+      <div class="bullet-item"><span class="dot"></span><span>Pest control is named problem #1 overall — ahead of typhoon, transport, or post-harvest handling.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Post-harvest loss runs 80–100% from pests/disease network-wide, and near 100% from typhoon in a bad year.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>The processing facility is &ldquo;sometimes out of supply for cacao&rdquo; — upstream farm losses destabilize downstream production runs.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Power outages are the processing facility's own #1 problem, on top of the supply instability.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Farmer income sits at ₱2,000–10,000/month, with an average farmer age of ~50 and no government succession-training program.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4: PATH TO FINISHED CACAO (interactive chart) -->
+<section class="slide chart-slide">
+  <div class="slide-inner top-align">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Path to finished cacao: direct vs. stored</h2>
+    <p class="card-sub">Cumulative days from flowering to a sellable product, per Muravah's stated timeline &mdash; flower&rarr;pod 6 months, ferment 6 days, solar-dry 1 day&ndash;1 week, roast 27 min at 140&deg;C. Storing dried beans 3&ndash;6 months before processing roughly doubles the time-to-product. Hover any point for the exact day.</p>
+    <div class="slide-chart-area"><svg class="viz" id="line1" viewBox="0 0 980 320" role="img" aria-label="Cumulative days from flowering to finished cacao, comparing a direct-to-roast path that is sellable by day 191 with a stored path that is sellable by day 326"></svg></div>
+    <div class="legend" id="line1-legend"></div>
+  </div>
+</section>
+
+<!-- 5: MORE CONSTRAINTS -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">More constraints we have to design around</h2>
+    <div class="bullet-list">
+      <div class="bullet-item"><span class="dot"></span><span>No annual drought/flood prediction — Muravah syncs planting to the monsoon and seeks out farmers with existing water access.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Aging farmer population (avg. ~50) with no government training pipeline; Muravah's own coping mechanism is recruiting students from BU Guinubatan.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Hard constraint: no synthetic fertilizers or pesticides — biopesticides/biofertilizers only. Any proposal must fit this.</span></div>
+      <div class="bullet-item"><span class="dot"></span><span>Explicitly skeptical of AI/robotics: &ldquo;not there yet, other problems to solve,&rdquo; and &ldquo;AI is biased according to the natives.&rdquo; Solutions must be low-tech, human-in-the-loop.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6: AUG 26, BATBAT (images) -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">August 26 — Tatae's Farm, Batbat</h2>
+    <p class="slide-sub">We visited Tatae's 2.5-hectare cacao farm in the Batbat area to see the pest and disease crisis firsthand.</p>
+    <div class="img-row cols-2">
+      <div class="img-slot">
+        <img src="images/batbat-1.jpg" alt="Arriving at Tatae's farm, Batbat" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-1.jpg</code><span>Arriving at Tatae's farm, Batbat</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/batbat-2.jpg" alt="Tatae's cacao trees / farm overview" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-2.jpg</code><span>Tatae's cacao trees / farm overview</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7: BATBAT — 3 CHARTS -->
+<section class="slide chart-slide">
+  <div class="slide-inner top-align">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">The numbers from Batbat</h2>
+    <p class="card-sub">Three figures collected directly at the Aug 26 site visit to Tatae's farm.</p>
+    <div class="subgrid" style="padding:0;">
+      <div class="subchart">
+        <h3>Post-harvest loss, by cause</h3>
+        <p class="subchart-cap">Pests/disease was reported as a range, not one number.</p>
+        <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Post-harvest cacao loss by cause: handling mortality 60%, pests and disease reported as a range from 80 to 100%, typhoon about 100% in a bad year"></svg>
+      </div>
+      <div class="subchart">
+        <h3>Tatae's cacao yield</h3>
+        <p class="subchart-cap">This season vs. his estimated potential if pest/disease pressure were resolved.</p>
+        <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatae's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
+      </div>
+      <div class="subchart">
+        <h3>Farmer monthly income benchmarks</h3>
+        <p class="subchart-cap">Three reference points named by Muravah Foundation for cacao farmer earnings.</p>
+        <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos example farmer, 10000 pesos cited as a low ceiling"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8: AUG 27 (images) -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">August 27 — Rice, Dairy, Bamboo &amp; Honey Farms</h2>
+    <p class="slide-sub">We visited Tatae Aldavis's thriving rice/dairy farm and farm school, a bamboo farm, and stingless-bee honey producers to see what's already working in Bicol agriculture.</p>
+    <div class="img-row cols-2">
+      <div class="img-slot">
+        <img src="images/aug27-1.jpg" alt="Rice/dairy farm and farm school" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-1.jpg</code><span>Rice/dairy farm &amp; farm school</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/aug27-2.jpg" alt="Bamboo farm / honey producers" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-2.jpg</code><span>Bamboo farm / honey producers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9: AUG 28 (images) -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">August 28 — Solar, Wind &amp; Agritourism</h2>
+    <p class="slide-sub">From the Zambales solar farm's agrivoltaics research and solar panels to the San Miguel Bay wind project and a youth agritourism program — Bicol is investing in climate-resilient infrastructure.</p>
+    <div class="img-row cols-2">
+      <div class="img-slot">
+        <img src="images/aug28-1.jpg" alt="Zambales solar farm / agrivoltaics" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-1.jpg</code><span>Zambales solar farm / agrivoltaics</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/aug28-2.jpg" alt="Youth agritourism program" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-2.jpg</code><span>Youth agritourism program</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10: CLAIM WORTH CHECKING -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <div class="card" style="max-width:800px;">
+      <div class="callout-body" style="padding-top:1.1rem;">
+        <span class="callout-tag">Claim worth checking</span>
+        <p class="callout-quote">&ldquo;Cacao will become Bicol's biggest agricultural production.&rdquo;</p>
+        <p class="card-sub" style="margin-bottom:0.6rem;">Said by a speaker at the Aug 28 youth/agritourism stop (exact attribution unconfirmed — re-check against the raw notes before citing this).</p>
+        <p class="card-sub" style="margin-bottom:0;"><b>Team's own reaction, not a data point:</b> is that actually achievable given cacao's current production levels? Tatae's own farm sits at ~0&nbsp;kg/yr actual output against an estimated 2,000&nbsp;kg/yr potential, and the region-wide post-harvest loss to pests/disease alone runs 80–100%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11: SOLAR — 3 CHARTS -->
+<section class="slide chart-slide">
+  <div class="slide-inner top-align">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">What the Zambales solar precedent tells us</h2>
+    <p class="card-sub">Three figures tied to the Zambales solar farm precedent cited alongside the agrivoltaics-irrigation idea.</p>
+    <div class="subgrid" style="padding:0;">
+      <div class="subchart">
+        <h3>Panel efficiency over a 30-year lifespan</h3>
+        <p class="subchart-cap">Panels degrade gradually rather than stopping at warranty's end.</p>
+        <svg class="viz" id="line2" viewBox="0 0 300 260" role="img" aria-label="Solar panel efficiency declining from 100 percent at year 0 to about 82.5 percent at year 30"></svg>
+      </div>
+      <div class="subchart">
+        <h3>Panel waste, by weight</h3>
+        <p class="subchart-cap">What a retired panel is actually made of.</p>
+        <svg class="viz" id="donut1" viewBox="0 0 300 260" role="img" aria-label="Solar panel waste composition by weight: 75 percent glass, 15 percent aluminum, 10 percent other electronics"></svg>
+        <div class="legend" id="donut1-legend"></div>
+      </div>
+      <div class="subchart">
+        <span class="badge-estimate" style="margin-bottom:0.3rem;">General estimate</span>
+        <h3>Panel orientation: relative energy yield</h3>
+        <p class="subchart-cap">Vertical mounting collects noticeably less sunlight than an optimally tilted panel.</p>
+        <svg class="viz" id="bar4" viewBox="0 0 300 250" role="img" aria-label="Estimated relative solar energy yield by panel orientation: optimal tilt 100 percent baseline, flat or horizontal about 85 percent, vertical wall mounted about 65 percent"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12: VERTICAL PANEL DESIGN CONSIDERATION -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <div class="card" style="max-width:900px; margin-bottom:1.2rem;">
+      <div class="callout-body" style="padding-top:1.1rem;">
+        <span class="callout-tag">Design consideration</span>
+        <p class="callout-quote">Mounting panels vertically wastes potential output — it isn't the efficient way to collect sunlight.</p>
+        <p class="card-sub" style="margin-bottom:0;">This is the team's own engineering observation (not something a source stated), raised against the Zambales agrivoltaics precedent — the previous slide's orientation chart shows why (~65% vs. 100%).</p>
+      </div>
+    </div>
+    <div class="img-row cols-2" style="max-width:900px;">
+      <div class="img-slot">
+        <img src="images/vertical-panel.jpg" alt="Vertical vs. tilted solar panel comparison" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/vertical-panel.jpg</code><span>Vertical vs. tilted panel comparison (not yet in the field notes)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13: MAIN PROBLEM (images) -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Nancy</span>
+    <h2 class="slide-title">What we found at Tatae's farm</h2>
+    <p class="slide-body">Pest and disease pressure — not typhoon, not transport, not land tenure — is what's driving Tatae's cacao yield to nearly zero. Continuous, year-round flowering means the pressure never lets up. Disease agent named: Phytophthora (likely <em>P. palmivora</em>, the classic cacao black pod disease); also birds and a viral disease affecting pod production.</p>
+    <div class="img-row cols-3">
+      <div class="img-slot">
+        <img src="images/pest-infestation.jpg" alt="Pest infestation at Tatae's farm" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/pest-infestation.jpg</code><span>Pest infestation</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/dry-leaves.jpg" alt="Dry, dying leaves" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/dry-leaves.jpg</code><span>Dry, dying leaves</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/diseased-pod.jpg" alt="Diseased cacao pod" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/diseased-pod.jpg</code><span>Diseased cacao pod</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14: SPECIAL SUGGESTION + TOOLS -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Chow — technical / water system</span>
+    <h2 class="slide-title">Run the pilot through a live, calculated tool</h2>
+    <p class="slide-body">Rather than eyeball a drip-irrigation pilot for Tatae's farm, we built a working set of field tools: a drip-pressure planner sized to his real 2.5&nbsp;ha / 120&nbsp;m layout, a water-system schematic, and an interactive editor — so any water-resilience pilot is calculated, not guessed.</p>
+    <div class="tool-links">
+      <a class="tool-link" href="./drip-pressure-planner.html" target="_blank" rel="noopener">
+        <span class="k">Calculator</span>
+        <h3>Drip Pressure Planner</h3>
+        <p>Farm size and water source → tree count, flow demand, required pressure, zones, buffer tank size.</p>
+      </a>
+      <a class="tool-link" href="./drip-system-schematic.html" target="_blank" rel="noopener">
+        <span class="k">Diagram</span>
+        <h3>Water-System Schematic</h3>
+        <p>A P&amp;ID-style diagram toggling between a gravity-fed source and a source below the field.</p>
+      </a>
+      <a class="tool-link" href="./schematic-editor.html" target="_blank" rel="noopener">
+        <span class="k">Editor</span>
+        <h3>Schematic Editor</h3>
+        <p>Drag nodes, wire connections, and add components to either diagram.</p>
+      </a>
+      <a class="tool-link" href="https://github.com/Abdullah-Nasir-Chowdhury/cacao-bicol-field-tools" target="_blank" rel="noopener">
+        <span class="k">Source</span>
+        <h3>Full Repository</h3>
+        <p>Field notes, this presentation, the chart dashboard, and every tool's source code.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 15: SOLUTIONS FROM OTHER FARMS -->
+<section class="slide">
+  <div class="slide-inner top-align">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">Solutions we probed and gathered from other farms</h2>
+    <div class="solutions-head">
+      <p class="card-sub" style="flex:1; min-width:280px;">6 of 12 candidate solutions survived independent fact-checking against the interview data — here's which approach they came from. Grouped below by approach, adapted from proven Bicol practices:</p>
+      <div class="mini-chart">
+        <svg class="viz" id="donut2" viewBox="0 0 380 280" role="img" aria-label="6 verified pest and disease solutions by approach: 3 monitoring and routine discipline, 2 biological and cultural control, 1 post-harvest handling"></svg>
+        <div class="legend" id="donut2-legend"></div>
+      </div>
+    </div>
+    <div class="solution-cols">
+      <div class="solution-col">
+        <h3>Monitoring &amp; routine discipline (3)</h3>
+        <ul>
+          <li>Cacao-adapted 15-day treatment calendar — from the taro project's proven schedule discipline.</li>
+          <li>Field-officer symptom-logging checklist — feeds Muravah's 500–1,000-farmer data study.</li>
+          <li>Centralized calendar-compliance &amp; bio-input ledger — gives the facility supply visibility.</li>
+        </ul>
+      </div>
+      <div class="solution-col">
+        <h3>Biological &amp; cultural control (2)</h3>
+        <ul>
+          <li>Herbal foliar &amp; pod spray for black pod rot — adapted from the rice/dairy farm's practice.</li>
+          <li>Amino-acid/molasses bio-concoction on a 15-day cycle — from the taro project's recipe.</li>
+        </ul>
+      </div>
+      <div class="solution-col">
+        <h3>Post-harvest handling (1)</h3>
+        <ul>
+          <li>Rolling phytosanitation rounds every 7–14 days — harvest and strip/burn diseased pods in one pass.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="recommend-box"><b>Recommended for Tatae first:</b> the 15-day calendar + herbal spray — cheapest to start, needs no new equipment, and fits his limited labor capacity given his health constraints. The compliance ledger and amino-acid spray follow once the calendar habit is established.</div>
+  </div>
+</section>
+
+<!-- 16: FEASIBILITY -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Why this works inside real constraints</h2>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop — no synthetic inputs, no AI/robotics — because that's Muravah and Tatae's explicit requirement.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>If pest/disease pressure comes down, Tatae's own numbers point to a ~4× recovery: 0 kg to a potential 2,000 kg/year.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Fixes two problems at once</h3><p>Stabilizing farm-level supply also stabilizes the processing facility, currently &ldquo;sometimes out of supply for cacao.&rdquo;</p></div></div>
+      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>Nothing invented from scratch</h3><p>It's the rice/dairy farm's spray practice and the taro project's schedule discipline, adapted to cacao's arboreal, year-round biology.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 17: INVESTORS -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">Tatae's own words: &ldquo;a pilot study and investors would be needed&rdquo;</h2>
+    <p class="card-sub">Three concrete ways to help Tatae find investors:</p>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Point to the regional funding precedent</h3><p>The Zambales solar farm secured ₱10M for a comparable-scale agri-infrastructure pilot — proof that regional agri-tech investment appetite exists.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>Package the pilot inside Muravah's existing study</h3><p>Fold it into the 500–1,000-farmer production-cycle study already underway — investors get an established NGO's track record behind one farmer's ask.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Lead with the organic price-premium ROI story</h3><p>Frame the ask as bridge capital toward organic/export certification: a projected 4× yield recovery plus a price premium is a concrete return case.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 18: THANK YOU -->
+<section class="slide hero">
+  <div class="slide-inner">
+    <p class="hero-eyebrow">Thank You</p>
+    <h1 class="hero-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Maraming salamat sa pakikinig</h1>
+    <p class="hero-sub" style="font-style:normal;">ご清聴ありがとうございました</p>
+    <p class="hero-body">Thank you for listening.</p>
+    <p class="hero-credit">Nancy · Masa · Keisuke · Ria · Chow</p>
+  </div>
+</section>
+
+<div class="nav-bar">
+  <button class="nav-btn" id="nav-prev">← Prev</button>
+  <span class="nav-counter" id="nav-counter">1 / 18</span>
+  <button class="nav-btn" id="nav-next">Next →</button>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+(function(){
+  "use strict";
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var tooltip = document.getElementById("tooltip");
+
+  function el(tag, attrs){
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs){ e.setAttribute(k, attrs[k]); }
+    return e;
+  }
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function showTooltip(evt, title, lines){
+    tooltip.innerHTML = "";
+    var t = document.createElement("div");
+    t.className = "tt-title";
+    t.textContent = title;
+    tooltip.appendChild(t);
+    lines.forEach(function(l){
+      var d = document.createElement("div");
+      d.textContent = l;
+      tooltip.appendChild(d);
+    });
+    tooltip.classList.add("show");
+    moveTooltip(evt);
+  }
+  function moveTooltip(evt){
+    var pad = 14;
+    var x = evt.clientX + pad, y = evt.clientY + pad;
+    var vw = window.innerWidth, vh = window.innerHeight;
+    tooltip.style.left = Math.min(x, vw - 240) + "px";
+    tooltip.style.top = Math.min(y, vh - 90) + "px";
+  }
+  function hideTooltip(){ tooltip.classList.remove("show"); }
+
+  function fmt(n){ return n.toLocaleString(); }
+
+  /* ---------------- BAR CHART ---------------- */
+  function barChart(svgId, opts){
+    var svg = document.getElementById(svgId);
+    var vb = svg.viewBox.baseVal;
+    var W = vb.width, H = vb.height;
+    var marginL = 0, marginR = 20, marginT = 16, marginB = 44;
+    var plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+    var maxVal = opts.maxVal;
+    var n = opts.data.length;
+    var gap = opts.gap != null ? opts.gap : 0.42;
+    var slot = plotW / n;
+    var barW = slot * (1 - gap);
+
+    // baseline
+    svg.appendChild(el("line", { class: "axis-line", x1: marginL, y1: marginT + plotH, x2: marginL + plotW, y2: marginT + plotH }));
+
+    opts.data.forEach(function(d, i){
+      var x = marginL + i * slot + (slot - barW) / 2;
+      var xc = x + barW / 2;
+      var color = d.color || cssVar("--accent");
+
+      // -------- grounded bar (0 → range floor) plus a confidence-interval whisker above it --------
+      if (d.range){
+        var v0 = d.range[0], v1 = d.range[1];
+        var yBase = marginT + plotH;
+        var y0 = marginT + plotH - (v0 / maxVal) * plotH;
+        var y1 = marginT + plotH - (v1 / maxVal) * plotH;
+        var capW = barW * 0.6;
+
+        var hit = el("rect", { class: "range-hit", x: x, y: y1 - 10, width: barW, height: (yBase - y1) + 10, fill: "transparent" });
+        svg.appendChild(hit);
+
+        svg.appendChild(el("rect", { x: x, y: y0, width: barW, height: Math.max(yBase - y0, 2), rx: 4, fill: color }));
+        svg.appendChild(el("line", { x1: xc, y1: y0, x2: xc, y2: y1, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
+        svg.appendChild(el("line", { x1: xc - capW / 2, y1: y1, x2: xc + capW / 2, y2: y1, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
+
+        var rlabel = el("text", { class: "value-label", x: xc, y: y1 - 14, "text-anchor": "middle", "font-size": 15 });
+        rlabel.textContent = d.label != null ? d.label : (v0 + "–" + v1);
+        svg.appendChild(rlabel);
+
+        var rcat = el("text", { x: xc, y: marginT + plotH + 24, "text-anchor": "middle", "font-size": 11.5 });
+        wrapText(rcat, d.name, slot - 6);
+        svg.appendChild(rcat);
+
+        hit.addEventListener("mousemove", function(evt){
+          showTooltip(evt, d.name, [(d.tooltip || (v0 + "–" + v1 + (opts.unit ? " " + opts.unit : "") + " (reported range)"))]);
+        });
+        hit.addEventListener("mouseleave", hideTooltip);
+        return;
+      }
+
+      // -------- ordinary single-value bar --------
+      var barH = (d.value / maxVal) * plotH;
+      var y = marginT + plotH - barH;
+
+      var hit = el("rect", { class: "bar-hit", x: x, y: marginT, width: barW, height: plotH, fill: "transparent" });
+      var bar = el("rect", { class: "bar-fill", x: x, y: y, width: barW, height: Math.max(barH, 2), rx: 4, fill: color });
+
+      svg.appendChild(hit);
+      svg.appendChild(bar);
+
+      var label = el("text", { class: "value-label", x: xc, y: y - 10, "text-anchor": "middle", "font-size": 15 });
+      label.textContent = d.label != null ? d.label : fmt(d.value);
+      svg.appendChild(label);
+
+      var cat = el("text", { x: xc, y: marginT + plotH + 24, "text-anchor": "middle", "font-size": 11.5 });
+      wrapText(cat, d.name, slot - 6);
+      svg.appendChild(cat);
+
+      hit.addEventListener("mousemove", function(evt){
+        bar.classList.add("hovered");
+        showTooltip(evt, d.name, [ (d.tooltip || (fmt(d.value) + (opts.unit ? " " + opts.unit : ""))) ]);
+      });
+      hit.addEventListener("mouseleave", function(){ bar.classList.remove("hovered"); hideTooltip(); });
+    });
+  }
+
+  function wrapText(textEl, str, maxWidth){
+    var words = str.split(" ");
+    var lines = [];
+    var cur = "";
+    var approxCharW = 6.6;
+    words.forEach(function(w){
+      var test = cur ? cur + " " + w : w;
+      if (test.length * approxCharW > maxWidth && cur){
+        lines.push(cur);
+        cur = w;
+      } else {
+        cur = test;
+      }
+    });
+    if (cur) lines.push(cur);
+    var x = textEl.getAttribute("x");
+    lines.forEach(function(line, i){
+      var tspan = el("tspan", { x: x, dy: i === 0 ? 0 : 13 });
+      tspan.textContent = line;
+      textEl.appendChild(tspan);
+    });
+  }
+
+  /* ---------------- LINE CHART ---------------- */
+  function lineChart(svgId, opts){
+    var svg = document.getElementById(svgId);
+    var vb = svg.viewBox.baseVal;
+    var W = vb.width, H = vb.height;
+    var marginL = 44, marginR = 24, marginT = 20, marginB = 60;
+    var plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+    var stages = opts.stages;
+    var n = stages.length;
+    var xStep = plotW / (n - 1);
+    var yMax = opts.yMax, yMin = opts.yMin || 0;
+
+    function xPos(i){ return marginL + i * xStep; }
+    function yPos(v){ return marginT + plotH - ((v - yMin) / (yMax - yMin)) * plotH; }
+
+    // gridlines + y ticks
+    var yTicks = opts.yTicks;
+    yTicks.forEach(function(t){
+      var y = yPos(t);
+      svg.appendChild(el("line", { class: "grid-line", x1: marginL, y1: y, x2: marginL + plotW, y2: y }));
+      var lbl = el("text", { x: marginL - 10, y: y + 4, "text-anchor": "end", "font-size": 11 });
+      lbl.textContent = opts.yTickFormat ? opts.yTickFormat(t) : t;
+      svg.appendChild(lbl);
+    });
+    svg.appendChild(el("line", { class: "axis-line", x1: marginL, y1: marginT + plotH, x2: marginL + plotW, y2: marginT + plotH }));
+
+    // x labels
+    stages.forEach(function(s, i){
+      var lbl = el("text", { x: xPos(i), y: marginT + plotH + 22, "text-anchor": "middle", "font-size": 11 });
+      wrapText(lbl, s, xStep + 10);
+      svg.appendChild(lbl);
+    });
+
+    opts.series.forEach(function(series){
+      var pts = series.values.map(function(v, i){ return v == null ? null : [xPos(i), yPos(v)]; });
+      var segs = [];
+      var cur = [];
+      pts.forEach(function(p){
+        if (p){ cur.push(p); } else if (cur.length){ segs.push(cur); cur = []; }
+      });
+      if (cur.length) segs.push(cur);
+
+      segs.forEach(function(seg){
+        var d = seg.map(function(p, i){ return (i === 0 ? "M" : "L") + p[0] + "," + p[1]; }).join(" ");
+        svg.appendChild(el("path", { d: d, fill: "none", stroke: series.color, "stroke-width": 2.5, "stroke-linecap": "round", "stroke-linejoin": "round" }));
+      });
+
+      pts.forEach(function(p, i){
+        if (!p) return;
+        var v = series.values[i];
+        var dot = el("circle", { cx: p[0], cy: p[1], r: 4.5, fill: cssVar("--surface"), stroke: series.color, "stroke-width": 2.5 });
+        var hit = el("circle", { class: "dot-hit", cx: p[0], cy: p[1], r: 12, fill: "transparent" });
+        svg.appendChild(dot);
+        svg.appendChild(hit);
+        hit.addEventListener("mousemove", function(evt){
+          showTooltip(evt, series.name, [stages[i] + ": " + (opts.tooltipFormat ? opts.tooltipFormat(v) : v)]);
+        });
+        hit.addEventListener("mouseleave", hideTooltip);
+      });
+
+      // end label — names the series so a bare number is never floating unexplained
+      var lastIdx = -1;
+      for (var i = pts.length - 1; i >= 0; i--){ if (pts[i]){ lastIdx = i; break; } }
+      if (lastIdx >= 0){
+        var lp = pts[lastIdx];
+        var valueText = opts.tooltipFormat ? opts.tooltipFormat(series.values[lastIdx]) : series.values[lastIdx];
+        var below = !!series.endLabelBelow;
+        var baseY = opts.showSeriesInEndLabel ? (below ? lp[1] + 18 : lp[1] - 26) : (below ? lp[1] + 16 : lp[1] - 12);
+        var lineDy = below ? 13 : 13;
+        var endLabel = el("text", { class: "value-label", x: lp[0], y: baseY, "text-anchor": "middle", "font-size": 12.5, fill: series.color });
+        if (opts.showSeriesInEndLabel){
+          var l1 = el("tspan", { x: lp[0], dy: 0 });
+          l1.textContent = series.name;
+          var l2 = el("tspan", { x: lp[0], dy: lineDy });
+          l2.textContent = valueText;
+          endLabel.appendChild(l1);
+          endLabel.appendChild(l2);
+        } else {
+          endLabel.textContent = valueText;
+        }
+        svg.appendChild(endLabel);
+      }
+    });
+
+    if (opts.annotation){
+      var ax = marginL + opts.annotation.x * xStep;
+      svg.appendChild(el("line", { x1: ax, y1: marginT, x2: ax, y2: marginT + plotH, stroke: cssVar("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "2 3" }));
+      var atext = el("text", { x: ax + 6, y: marginT + 12, "font-size": 10.5, "font-style": "italic", fill: cssVar("--ink-faint") });
+      atext.textContent = opts.annotation.label;
+      svg.appendChild(atext);
+    }
+
+    if (opts.legendEl){
+      var legendHost = document.getElementById(opts.legendEl);
+      opts.series.forEach(function(s){
+        var item = document.createElement("div");
+        item.className = "legend-item";
+        var sw = document.createElement("span");
+        sw.className = "legend-swatch";
+        sw.style.background = s.color;
+        sw.style.borderRadius = "50%";
+        item.appendChild(sw);
+        item.appendChild(document.createTextNode(s.name));
+        legendHost.appendChild(item);
+      });
+    }
+  }
+
+  /* ---------------- DONUT CHART ---------------- */
+  function donutChart(svgId, legendId, data){
+    var svg = document.getElementById(svgId);
+    var vb = svg.viewBox.baseVal;
+    var W = vb.width, H = vb.height;
+    var cx = W / 2, cy = H / 2 - 16;
+    var rOuter = Math.min(W, H) * 0.34, rInner = rOuter * 0.6;
+    var total = data.reduce(function(a, d){ return a + d.value; }, 0);
+    var gapDeg = 2.2;
+    var startAngle = -90;
+
+    var g = el("g", {});
+    svg.appendChild(g);
+
+    data.forEach(function(d){
+      var sweep = (d.value / total) * 360 - gapDeg;
+      var a0 = startAngle + gapDeg / 2;
+      var a1 = a0 + Math.max(sweep, 0);
+      var path = arcPath(cx, cy, rInner, rOuter, a0, a1);
+      var hit = el("path", { class: "arc-hit", d: path, fill: "transparent" });
+      var fillPath = el("path", { class: "arc-fill", d: path, fill: d.color });
+      g.appendChild(fillPath);
+      g.appendChild(hit);
+
+      var midAngle = (a0 + a1) / 2;
+      var labelR = rOuter + 22;
+      var lx = cx + labelR * Math.cos(midAngle * Math.PI / 180);
+      var ly = cy + labelR * Math.sin(midAngle * Math.PI / 180);
+      var pct = Math.round((d.value / total) * 100);
+      if (pct > 0){
+        var label = el("text", { class: "value-label", x: lx, y: ly, "text-anchor": lx > cx + 2 ? "start" : (lx < cx - 2 ? "end" : "middle"), "font-size": 13 });
+        label.textContent = pct + "%";
+        svg.appendChild(label);
+      }
+
+      hit.addEventListener("mousemove", function(evt){
+        fillPath.classList.add("hovered");
+        showTooltip(evt, d.name, [d.value + " of " + total + " (" + pct + "%)"]);
+      });
+      hit.addEventListener("mouseleave", function(){ fillPath.classList.remove("hovered"); hideTooltip(); });
+
+      startAngle += (d.value / total) * 360;
+    });
+
+    var centerLabel = el("text", { x: cx, y: cy - 4, "text-anchor": "middle", "font-size": 22, class: "value-label" });
+    centerLabel.textContent = total;
+    svg.appendChild(centerLabel);
+    var centerSub = el("text", { x: cx, y: cy + 16, "text-anchor": "middle", "font-size": 10.5 });
+    centerSub.textContent = "total";
+    svg.appendChild(centerSub);
+
+    var legendHost = document.getElementById(legendId);
+    data.forEach(function(d){
+      var item = document.createElement("div");
+      item.className = "legend-item";
+      var sw = document.createElement("span");
+      sw.className = "legend-swatch";
+      sw.style.background = d.color;
+      item.appendChild(sw);
+      item.appendChild(document.createTextNode(d.name + " (" + d.value + ")"));
+      legendHost.appendChild(item);
+    });
+  }
+
+  function arcPath(cx, cy, rInner, rOuter, a0, a1){
+    var toRad = function(a){ return a * Math.PI / 180; };
+    var x0o = cx + rOuter * Math.cos(toRad(a0)), y0o = cy + rOuter * Math.sin(toRad(a0));
+    var x1o = cx + rOuter * Math.cos(toRad(a1)), y1o = cy + rOuter * Math.sin(toRad(a1));
+    var x1i = cx + rInner * Math.cos(toRad(a1)), y1i = cy + rInner * Math.sin(toRad(a1));
+    var x0i = cx + rInner * Math.cos(toRad(a0)), y0i = cy + rInner * Math.sin(toRad(a0));
+    var large = (a1 - a0) > 180 ? 1 : 0;
+    return [
+      "M", x0o, y0o,
+      "A", rOuter, rOuter, 0, large, 1, x1o, y1o,
+      "L", x1i, y1i,
+      "A", rInner, rInner, 0, large, 0, x0i, y0i,
+      "Z"
+    ].join(" ");
+  }
+
+  /* ---------------- build charts ---------------- */
+  function render(){
+    document.querySelectorAll(".viz").forEach(function(svg){ svg.innerHTML = ""; });
+    document.querySelectorAll(".legend").forEach(function(l){ l.innerHTML = ""; });
+
+    barChart("bar1", {
+      maxVal: 100, unit: "%", gap: 0.45,
+      data: [
+        { name: "Handling mortality", value: 60, color: cssVar("--gold") },
+        { name: "Pests & disease", range: [80, 100], label: "80–100%", color: cssVar("--accent") },
+        { name: "Typhoon (bad yr)", value: 100, label: "~100%", color: cssVar("--rust") },
+      ],
+    });
+
+    barChart("bar2", {
+      maxVal: 2000, unit: "kg/yr", gap: 0.5,
+      data: [
+        { name: "This season", value: 0, label: "0 kg", color: cssVar("--rust") },
+        { name: "Potential", value: 2000, label: "2,000 kg", color: cssVar("--olive") },
+      ],
+    });
+
+    barChart("bar3", {
+      maxVal: 10000, unit: "₱/mo", gap: 0.5,
+      data: [
+        { name: "Cited low reference", value: 2000, label: "₱2,000", color: cssVar("--accent") },
+        { name: "Example farmer", value: 5000, label: "₱5,000", color: cssVar("--accent") },
+        { name: "“Low” ceiling cited", value: 10000, label: "₱10,000", color: cssVar("--accent") },
+      ],
+    });
+
+    barChart("bar4", {
+      maxVal: 100, unit: "% of optimal", gap: 0.45,
+      data: [
+        { name: "Optimal tilt", value: 100, label: "100%", color: cssVar("--olive") },
+        { name: "Flat / horizontal", value: 85, label: "~85%", color: cssVar("--gold") },
+        { name: "Vertical (wall)", value: 65, label: "~65%", color: cssVar("--rust") },
+      ],
+    });
+
+    lineChart("line1", {
+      stages: ["Flowering", "Pod ready", "Fermented", "Dried", "Stored (3–6mo)", "Roasted"],
+      yMax: 350, yMin: 0,
+      yTicks: [0, 100, 200, 300],
+      yTickFormat: function(t){ return t + "d"; },
+      tooltipFormat: function(v){ return "day " + v; },
+      legendEl: "line1-legend",
+      showSeriesInEndLabel: true,
+      series: [
+        { name: "Direct to roast", color: cssVar("--accent"), endLabelBelow: true, values: [0, 180, 186, 190, null, 191] },
+        { name: "Stored first", color: cssVar("--gold"), values: [0, 180, 186, 190, 325, 326] },
+      ],
+    });
+
+    lineChart("line2", {
+      stages: ["Yr 0", "Yr 5", "Yr 10", "Yr 15", "Yr 20", "Yr 25", "Yr 30"],
+      yMax: 100, yMin: 75,
+      yTicks: [75, 85, 95, 100],
+      yTickFormat: function(t){ return t + "%"; },
+      tooltipFormat: function(v){ return v + "% efficiency"; },
+      annotation: { x: 2.5, label: "some replaced early, 10–15 yrs" },
+      series: [
+        { name: "Panel efficiency", color: cssVar("--accent"), values: [100, 97.1, 94.2, 91.2, 88.3, 85.4, 82.5] },
+      ],
+    });
+
+    donutChart("donut1", "donut1-legend", [
+      { name: "Glass", value: 75, color: cssVar("--cat-1") },
+      { name: "Aluminum", value: 15, color: cssVar("--cat-2") },
+      { name: "Other electronics", value: 10, color: cssVar("--cat-3") },
+    ]);
+
+    donutChart("donut2", "donut2-legend", [
+      { name: "Monitoring & routine discipline", value: 3, color: cssVar("--cat-1") },
+      { name: "Biological & cultural control", value: 2, color: cssVar("--cat-2") },
+      { name: "Post-harvest handling", value: 1, color: cssVar("--cat-3") },
+    ]);
+  }
+
+  render();
+  window.addEventListener("resize", function(){});
+  if (window.matchMedia){
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+  }
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var total = slides.length;
+  var idx = 0;
+
+  var prevBtn = document.getElementById("nav-prev");
+  var nextBtn = document.getElementById("nav-next");
+  var counter = document.getElementById("nav-counter");
+  var progressFill = document.getElementById("progress-fill");
+
+  function show(i){
+    idx = Math.max(0, Math.min(total - 1, i));
+    slides.forEach(function(s, n){ s.classList.toggle("active", n === idx); });
+    counter.textContent = (idx + 1) + " / " + total;
+    progressFill.style.width = (((idx + 1) / total) * 100) + "%";
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx === total - 1;
+    var homeLink = document.getElementById("home-link");
+    homeLink.classList.toggle("on-hero", slides[idx].classList.contains("hero"));
+    window.scrollTo(0, 0);
+    try { history.replaceState(null, "", "#slide-" + (idx + 1)); } catch (e) {}
+  }
+
+  prevBtn.addEventListener("click", function(){ show(idx - 1); });
+  nextBtn.addEventListener("click", function(){ show(idx + 1); });
+
+  document.addEventListener("keydown", function(evt){
+    if (evt.key === "ArrowRight" || evt.key === "PageDown" || evt.key === " "){ evt.preventDefault(); show(idx + 1); }
+    if (evt.key === "ArrowLeft" || evt.key === "PageUp"){ evt.preventDefault(); show(idx - 1); }
+  });
+
+  var touchStartX = null;
+  document.addEventListener("touchstart", function(evt){ touchStartX = evt.changedTouches[0].clientX; }, { passive: true });
+  document.addEventListener("touchend", function(evt){
+    if (touchStartX == null) return;
+    var dx = evt.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50){ dx < 0 ? show(idx + 1) : show(idx - 1); }
+    touchStartX = null;
+  }, { passive: true });
+
+  var startIdx = 0;
+  var hash = window.location.hash.match(/slide-(\d+)/);
+  if (hash){ startIdx = Math.max(0, Math.min(total - 1, parseInt(hash[1], 10) - 1)); }
+  show(startIdx);
+})();
+</script>
+</body>
+</html>
