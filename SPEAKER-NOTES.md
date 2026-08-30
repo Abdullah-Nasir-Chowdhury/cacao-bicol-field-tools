@@ -453,6 +453,26 @@ tank-level sensor keeping the pump from running dry. One-liner for the stage: *"
 we need it → clean it → calm it down → one zone at a time out to the trees, with a rain tank as
 backup and a Pi deciding when."*
 
+**How the pressure planner calculates, if someone asks for the math.** Five chained steps:
+1. **Trees** = farm area ÷ spacing² — at the DA guide's 3×3 m spacing that's ~1,111 trees/ha, so
+   ~2,778 on Tatay's 2.5 ha [3].
+2. **Flow demand** = trees × emitters per tree × emitter flow rate — with 2 emitters at 4 L/hr
+   each, Tatay's whole farm at once would demand ~22,000 L/hr (~370 L/min). That one number is
+   the problem: almost no small source supplies it, which is why zoning exists.
+3. **Required pressure** = emitter working pressure (~1.0 bar for standard drip) + friction loss
+   (pressure dies with pipe distance, worse in narrow pipe) − elevation assist (**0.0981 bar per
+   metre of height** — source above the field helps for free, below the field adds a pump). If
+   the source falls short, the shortfall ÷ 0.0981 converts directly into the booster-pump head
+   in metres — the exact spec you'd hand a pump seller.
+4. **Zones** = flow demand ÷ source flow, rounded up — water one section at a time in sequence,
+   the same one-valve-at-a-time logic on the schematic, automated by the Pi.
+5. **Buffer tank** = daily watering volume × dry days to bridge, ÷1,000 = how many standard
+   1,000 L tanks — the two tanks in the ₱95K ledger come from here.
+One-liner for the stage: *"spacing tells you trees, trees tell you flow, distance and height
+tell you pressure; too little flow means zones, too little pressure means a pump, and the dry
+days you want to survive size the tank."* Water-needs grounding: the cocoa water-relations
+literature and FAO-56 [7][8].
+
 — so any water-resilience pilot for Tatay is calculated from his actual numbers, not guessed. The
 water math itself is cited on the slide ([3]–[8]: the DA cacao production guide, the cocoa
 water-relations literature, FAO-56). Point the room at the GitHub repo
