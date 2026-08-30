@@ -315,8 +315,14 @@
   .budget-row{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin-top: 1.2rem; }
   @media (max-width: 760px){ .budget-row{ grid-template-columns: 1fr; } }
   .budget-tile{ background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); padding: 0.8rem 1rem; display: flex; flex-direction: column; gap: 0.25rem; }
+  a.budget-tile{ text-decoration: none; color: inherit; cursor: pointer; }
+  a.budget-tile:hover{ border-color: var(--accent); }
+  a.budget-tile:hover .budget-hint{ color: var(--accent-ink); }
   .budget-num{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 1.25rem; font-weight: 600; color: var(--accent-ink); }
   .budget-label{ font-size: 0.78rem; color: var(--ink-soft); line-height: 1.35; }
+  .budget-hint{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.66rem; letter-spacing: 0.04em; color: var(--ink-faint); margin-top: 0.35rem; }
+  .jump-back{ margin: 1.1rem 0 0; }
+  .jump-back a{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.76rem; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
   .funding-note{ margin: 0.9rem 0 0; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); max-width: 88ch; line-height: 1.45; }
 
   .bullet-list{ margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
@@ -586,7 +592,7 @@
   </div>
 </section>
 
-<section class="slide">
+<section class="slide" id="investors-slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
     <h2 class="slide-title">Finding investors: the missing piece</h2>
@@ -597,63 +603,11 @@
       <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Bridge capital toward organic certification: 4&times; recovery + price premium.</p></div></div>
     </div>
     <div class="budget-row">
-      <div class="budget-tile"><span class="budget-num">~₱95K</span><span class="budget-label">one-farm starter pilot</span></div>
-      <div class="budget-tile"><span class="budget-num">₱0.9–1M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></div>
-      <div class="budget-tile"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally<a class="cite" href="#references">[1]</a></span></div>
+      <a class="budget-tile" href="#cost-95k" data-jump="cost-95k"><span class="budget-num">~₱95K</span><span class="budget-label">one-farm starter pilot</span><span class="budget-hint">tap for the breakdown →</span></a>
+      <a class="budget-tile" href="#cost-1m" data-jump="cost-1m"><span class="budget-num">₱0.9–1M</span><span class="budget-label">ten-farm expansion in Muravah's study</span><span class="budget-hint">tap for the breakdown →</span></a>
+      <a class="budget-tile" href="#cost-10m" data-jump="cost-10m"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally</span><span class="budget-hint">tap for the breakdown →</span></a>
     </div>
-    <p class="funding-note">Built from market prices; breakdowns on the next three slides. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">Where the ₱95K starter figure comes from</h2>
-    <p class="slide-sub">One farm, one year, at 2025&ndash;26 Philippine market prices.</p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Drip starter zone, 0.25 ha: lines, emitters, filter, regulator<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱30,000</span></div>
-      <div class="ledger-row"><span class="li-label">Two 1,000&nbsp;L poly tanks (₱3,500&ndash;7,500 each) + stand and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱14,000</span></div>
-      <div class="ledger-row"><span class="li-label">Raspberry Pi controller kit: Pi Zero 2 W, soil-moisture, temperature/humidity, rain and tank-level sensors, relay + solenoid valves, enclosure and power<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱8,000</span></div>
-      <div class="ledger-row"><span class="li-label">Bio-spray inputs for a year: molasses, amino ferment, herbal materials<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱12,000</span></div>
-      <div class="ledger-row"><span class="li-label">Printed treatment calendars, checklists, ledgers</span><span class="li-amount">₱4,000</span></div>
-      <div class="ledger-row"><span class="li-label">Monitoring visits, twice monthly for a year (allowance at the ₱435/day regional wage + transport)<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱15,000</span></div>
-      <div class="ledger-row"><span class="li-label">Training day + ~15% contingency</span><span class="li-amount">₱12,000</span></div>
-      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱95,000</span></div>
-    </div>
-    <p class="ledger-note">Every line has a cheaper local substitute; the drip zone and the controller kit are the only equipment purchases.</p>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">Where ₱0.9&ndash;1M for ten farms comes from</h2>
-    <p class="slide-sub">Scaling the starter pilot inside Muravah's existing study; shared costs don't multiply by ten.</p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Ten drip starter zones<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱300,000</span></div>
-      <div class="ledger-row"><span class="li-label">Twenty tanks + stands and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱140,000</span></div>
-      <div class="ledger-row"><span class="li-label">Ten Pi controller kits with sensors and valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱80,000</span></div>
-      <div class="ledger-row"><span class="li-label">Bio-spray inputs, ten farms &times; one year<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱120,000</span></div>
-      <div class="ledger-row"><span class="li-label">Shared printing + three training sessions</span><span class="li-amount">₱45,000</span></div>
-      <div class="ledger-row"><span class="li-label">Field coordinator + student visit program, one year<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱180,000</span></div>
-      <div class="ledger-row"><span class="li-label">Data collection and monitoring materials</span><span class="li-amount">₱40,000</span></div>
-      <div class="ledger-row"><span class="li-label">~10% contingency</span><span class="li-amount">₱85,000</span></div>
-      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱990,000</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">The ₱10M benchmark isn't ours to estimate</h2>
-    <p class="slide-sub">It's what a comparable regional project has already raised.<a class="cite" href="#references">[1]</a></p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Zambales agrivoltaics project funding, as cited to us on the site visit<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱10,000,000</span></div>
-      <div class="ledger-row"><span class="li-label">Our one-farm ask, as a share of that proven benchmark</span><span class="li-amount">~1%</span></div>
-      <div class="ledger-row"><span class="li-label">Our ten-farm ask, as a share of that benchmark</span><span class="li-amount">~10%</span></div>
-    </div>
-    <p class="ledger-note">Full scale could later add what the agrivoltaics precedent already pairs with farming: solar-powered irrigation and cold storage.<a class="cite" href="#references">[10]</a> We cite the benchmark to show the regional appetite, not as our own costing.</p>
+    <p class="funding-note">Built from market prices; tap any tile for its line-by-line breakdown (kept in the Extras appendix). Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
   </div>
 </section>
 
@@ -812,6 +766,61 @@
       </div>
     </div>
     <div class="recommend-box"><b>Start with:</b> the 15-day calendar + herbal spray. No new equipment. Run by Muravah field officers and BU students, not by Tatay. Ledger and amino spray follow.</div>
+  </div>
+</section>
+
+<section class="slide" id="cost-95k">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Where the ₱95K starter figure comes from</h2>
+    <p class="slide-sub">One farm, one year, at 2025&ndash;26 Philippine market prices.</p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Drip starter zone, 0.25 ha: lines, emitters, filter, regulator<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱30,000</span></div>
+      <div class="ledger-row"><span class="li-label">Two 1,000&nbsp;L poly tanks (₱3,500&ndash;7,500 each) + stand and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱14,000</span></div>
+      <div class="ledger-row"><span class="li-label">Raspberry Pi controller kit: Pi Zero 2 W, soil-moisture, temperature/humidity, rain and tank-level sensors, relay + solenoid valves, enclosure and power<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱8,000</span></div>
+      <div class="ledger-row"><span class="li-label">Bio-spray inputs for a year: molasses, amino ferment, herbal materials<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱12,000</span></div>
+      <div class="ledger-row"><span class="li-label">Printed treatment calendars, checklists, ledgers</span><span class="li-amount">₱4,000</span></div>
+      <div class="ledger-row"><span class="li-label">Monitoring visits, twice monthly for a year (allowance at the ₱435/day regional wage + transport)<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱15,000</span></div>
+      <div class="ledger-row"><span class="li-label">Training day + ~15% contingency</span><span class="li-amount">₱12,000</span></div>
+      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱95,000</span></div>
+    </div>
+    <p class="ledger-note">Every line has a cheaper local substitute; the drip zone and the controller kit are the only equipment purchases.</p>
+    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
+  </div>
+</section>
+
+<section class="slide" id="cost-1m">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Where ₱0.9&ndash;1M for ten farms comes from</h2>
+    <p class="slide-sub">Scaling the starter pilot inside Muravah's existing study; shared costs don't multiply by ten.</p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Ten drip starter zones<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱300,000</span></div>
+      <div class="ledger-row"><span class="li-label">Twenty tanks + stands and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱140,000</span></div>
+      <div class="ledger-row"><span class="li-label">Ten Pi controller kits with sensors and valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱80,000</span></div>
+      <div class="ledger-row"><span class="li-label">Bio-spray inputs, ten farms &times; one year<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱120,000</span></div>
+      <div class="ledger-row"><span class="li-label">Shared printing + three training sessions</span><span class="li-amount">₱45,000</span></div>
+      <div class="ledger-row"><span class="li-label">Field coordinator + student visit program, one year<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱180,000</span></div>
+      <div class="ledger-row"><span class="li-label">Data collection and monitoring materials</span><span class="li-amount">₱40,000</span></div>
+      <div class="ledger-row"><span class="li-label">~10% contingency</span><span class="li-amount">₱85,000</span></div>
+      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱990,000</span></div>
+    </div>
+    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
+  </div>
+</section>
+
+<section class="slide" id="cost-10m">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">The ₱10M benchmark isn't ours to estimate</h2>
+    <p class="slide-sub">It's what a comparable regional project has already raised.<a class="cite" href="#references">[1]</a></p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Zambales agrivoltaics project funding, as cited to us on the site visit<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱10,000,000</span></div>
+      <div class="ledger-row"><span class="li-label">Our one-farm ask, as a share of that proven benchmark</span><span class="li-amount">~1%</span></div>
+      <div class="ledger-row"><span class="li-label">Our ten-farm ask, as a share of that benchmark</span><span class="li-amount">~10%</span></div>
+    </div>
+    <p class="ledger-note">Full scale could later add what the agrivoltaics precedent already pairs with farming: solar-powered irrigation and cold storage.<a class="cite" href="#references">[10]</a> We cite the benchmark to show the regional appetite, not as our own costing.</p>
+    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
 
@@ -1457,6 +1466,15 @@
       evt.preventDefault();
       var refsIdx = slides.findIndex(function(s){ return s.id === "references-slide"; });
       if (refsIdx !== -1) show(refsIdx);
+      return;
+    }
+    // in-deck jumps: budget tiles -> their breakdown slides, and the back-links home again
+    var jump = evt.target.closest ? evt.target.closest("[data-jump]") : null;
+    if (jump){
+      evt.preventDefault();
+      var target = document.getElementById(jump.getAttribute("data-jump"));
+      var tIdx = target ? slides.indexOf(target) : -1;
+      if (tIdx !== -1) show(tIdx);
     }
   });
 

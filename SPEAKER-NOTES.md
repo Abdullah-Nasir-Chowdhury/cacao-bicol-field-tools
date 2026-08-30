@@ -1,7 +1,7 @@
 # Speaker Notes — Bicol Cacao Pitch
 
-Study material for the interactive presentation (`presentation.html` — 19 main slides, plus 5
-backup slides numbered e1–e5 in an Extras appendix, and a References page). This is **not a
+Study material for the interactive presentation (`presentation.html` — 16 main slides, plus 8
+backup slides numbered e1–e8 in an Extras appendix, and a References page). This is **not a
 script** — nobody is expected to read from it word-for-word, and realistically no one will stick
 to a script anyway. Instead, each section below gives you the facts, numbers, and sources for
 your slides in enough depth that you can explain them in your own words, improvise if you get cut
@@ -34,11 +34,8 @@ but you should recognize the shape of the whole deck so a handoff never feels li
 | 12 | The pilot study: pest and disease control | Keisuke |
 | 13 | Why this works inside real constraints (feasibility) | Masa |
 | 14 | Finding investors: the missing piece | Keisuke |
-| 15 | Where the ₱95K starter figure comes from | Masa |
-| 16 | Where ₱0.9–1M for ten farms comes from | Masa |
-| 17 | The ₱10M benchmark isn't ours to estimate | Masa |
-| 18 | What we're leaving you with (conclusion) | Ash |
-| 19 | Thank you | Nancy |
+| 15 | What we're leaving you with (conclusion) | Ash |
+| 16 | Thank you | Nancy |
 
 Extras (backup slides, shown only for questions or spare time):
 
@@ -49,16 +46,21 @@ Extras (backup slides, shown only for questions or spare time):
 | e3 | What the Zambales solar precedent tells us (3 charts) | Masa |
 | e4 | Vertical panels waste potential output | Keisuke |
 | e5 | Solutions we probed and gathered from other farms | Keisuke |
+| e6 | Where the ₱95K starter figure comes from | Masa |
+| e7 | Where ₱0.9–1M for ten farms comes from | Masa |
+| e8 | The ₱10M benchmark isn't ours to estimate | Masa |
 
-Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 6 (+1 extra), Keisuke 4 (+2 extras), Ash 2,
+Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 3 (+4 extras), Keisuke 4 (+2 extras), Ash 2,
 Chow 1 (deliberately — see Chow's note below). At roughly 30–40 seconds a slide the main deck is
-about a 10–12 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
-budget slides (15–17) can be taken quickly if time is short — they exist so the ₱95K number is
-defensible, not to be read line by line.
+about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
+budget breakdowns (e6–e8) live in the Extras appendix: the budget tiles on Keisuke's slide 14 are
+**clickable and jump straight to them** (each has a "back to the investor slide" link), so they
+appear only if someone wants the arithmetic — they exist so the ₱95K number is defensible, not to
+be read line by line.
 
 ---
 
-## Nancy — slides 1, 3, 10, 19
+## Nancy — slides 1, 3, 10, 16
 
 You're the empathy / interview-synthesis voice. Your slides carry the human stakes of the deck —
 open it, state the core problems, land the emotional center, close it. Don't over-index on
@@ -93,7 +95,7 @@ the disease: **Phytophthora**, almost certainly *Phytophthora palmivora* (the cl
 pod disease); also birds, and a viral disease affecting pod production. Keep this about Tatay as a
 person before moving into solutions.
 
-**Slide 19 — Thank you.** Close warmly and briefly. Read both lines as written: "Maraming salamat
+**Slide 16 — Thank you.** Close warmly and briefly. Read both lines as written: "Maraming salamat
 sa pakikinig" (Filipino) and "ご清聴ありがとうございました" (Japanese, roughly "thank you for your
 attention"), then "Thank you for listening" in English if it helps the room follow along. Credit
 the team by name: Nancy, Masa, Keisuke, Ria, Ash, Chow. Don't introduce new content here.
@@ -147,12 +149,13 @@ directly on this visit.
 
 ---
 
-## Masa — slides 6, 8, 13, 15–17 + extra e3
+## Masa — slides 6, 8, 13 + extras e3, e6–e8
 
 You're the data voice. Every one of your slides has a chart or a costed ledger — own the numbers,
 say them clearly and slowly, and don't rush past the punchline number on each slide. The three
-budget slides (15–17) are yours because they're arithmetic, not persuasion: every line is priced
-from a cited market source.
+budget breakdowns (e6–e8) are yours because they're arithmetic, not persuasion: every line is
+priced from a cited market source. They sit in the Extras appendix and are reached by tapping the
+budget tiles on Keisuke's slide 14 — be ready to walk one on demand.
 
 **Slide 6 — Path to finished cacao: direct vs. stored.** Muravah's stated production timeline:
 flowering to pod-ready takes **6 months**, then ferment **6 days**, solar-dry **1 day to a week**,
@@ -198,7 +201,7 @@ don't rush it.
    and priced from market data, not invented from scratch. The clickable citations and the
    References page at the end of the deck are the proof; point at them if challenged.
 
-**Slide 15 — Where the ₱95K starter figure comes from.** One farm, one year, at 2025–26
+**Slide e6 — Where the ₱95K starter figure comes from (Extras, via the slide-14 tiles).** One farm, one year, at 2025–26
 Philippine market prices. Walk the ledger top to bottom, don't read every peso:
 - Drip starter zone, 0.25 ha (lines, emitters, filter, regulator): **₱30,000** [13]
 - Two 1,000 L poly tanks (₱3,500–7,500 each) plus stand and fittings: **₱14,000** [12]
@@ -212,14 +215,14 @@ Philippine market prices. Walk the ledger top to bottom, don't read every peso:
 - **Total ≈ ₱95,000.** Every line has a cheaper local substitute; the drip zone and the
   controller kit are the only equipment purchases.
 
-**Slide 16 — Where ₱0.9–1M for ten farms comes from.** Scaling the starter pilot inside
+**Slide e7 — Where ₱0.9–1M for ten farms comes from (Extras).** Scaling the starter pilot inside
 Muravah's existing study — the key sentence is that **shared costs don't multiply by ten**:
 ten drip zones ₱300,000 [13], twenty tanks ₱140,000 [12], ten Pi controller kits ₱80,000 [14],
 bio-spray for ten farms ₱120,000 [1], shared printing plus three training sessions ₱45,000, a
 field coordinator and student visit program for a year ₱180,000 [11], data-collection materials
 ₱40,000, and ~10% contingency ₱85,000 — **total ≈ ₱990,000**.
 
-**Slide 17 — The ₱10M benchmark isn't ours to estimate.** Be precise about what this number is:
+**Slide e8 — The ₱10M benchmark isn't ours to estimate (Extras).** Be precise about what this number is:
 ₱10,000,000 is what the Zambales agrivoltaics project **actually raised**, as cited to us on the
 site visit [1] — it is not our costing. Our one-farm ask is about **1%** of that proven
 benchmark, and the ten-farm ask about **10%**. That's the point of the slide: the region has
@@ -296,8 +299,9 @@ from him. Three concrete ways to fund it:
 
 The three budget tiles on the slide are **~₱95K** (one-farm starter), **₱0.9–1M** (ten farms
 inside Muravah's study), and **₱10M** (the already-funded Zambales benchmark) — say clearly that
-these are built from market prices and that Masa walks the arithmetic on the next three slides.
-Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
+these are built from market prices, and that **each tile is clickable** — tapping one jumps
+straight to that figure's line-by-line breakdown in the Extras appendix (e6–e8, Masa's), each
+with a link back to this slide. Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
 foundations, agri-crowdfunding, BU grants. This is your tradeoffs lane — feel free to speak to
 the organic-vs-export-vs-income tension if asked.
 
@@ -327,7 +331,7 @@ established.
 
 ---
 
-## Ash — slides 9 & 18
+## Ash — slides 9 & 15
 
 You have two slides, and they bookend the deck's critical-thinking thread: one mid-deck moment of
 healthy skepticism, and the final synthesis before the thank-you. Neither is data-heavy — your
@@ -343,7 +347,7 @@ quote is unconfirmed (we'd re-check the raw notes before citing it anywhere form
 of this slide isn't to mock the optimism — it's that the gap between the claim and the current
 numbers is exactly why the pest/disease problem deserves the room's attention.
 
-**Slide 18 — Conclusion ("What we're leaving you with").** Three beats, in order:
+**Slide 15 — Conclusion ("What we're leaving you with").** Three beats, in order:
 1. **The problem is specific, not vague** — continuous pest/disease pressure (cacao flowers
    year-round) took Tatay's farm from 500 kg/yr to nearly zero; 80–100% post-harvest losses
    region-wide.
