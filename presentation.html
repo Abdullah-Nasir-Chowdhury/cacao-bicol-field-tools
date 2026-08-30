@@ -566,7 +566,7 @@
 </section>
 
 <!-- EXTRAS -->
-<section class="slide hero">
+<section class="slide hero" id="extras-divider">
   <div class="slide-inner">
     <p class="hero-eyebrow">Appendix</p>
     <h1 class="hero-title">Extras</h1>
@@ -1139,7 +1139,14 @@
   function show(i){
     idx = Math.max(0, Math.min(total - 1, i));
     slides.forEach(function(s, n){ s.classList.toggle("active", n === idx); });
-    counter.textContent = (idx + 1) + " / " + total;
+    var dividerIdx = slides.findIndex(function(s){ return s.id === "extras-divider"; });
+    if (dividerIdx === -1 || idx < dividerIdx){
+      counter.textContent = (idx + 1) + " / " + (dividerIdx === -1 ? total : dividerIdx);
+    } else if (idx === dividerIdx){
+      counter.textContent = "Extras";
+    } else {
+      counter.textContent = "e" + (idx - dividerIdx) + " / e" + (total - dividerIdx - 1);
+    }
     progressFill.style.width = (((idx + 1) / total) * 100) + "%";
     prevBtn.disabled = idx === 0;
     nextBtn.disabled = idx === total - 1;
