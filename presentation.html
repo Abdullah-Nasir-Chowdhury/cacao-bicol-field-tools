@@ -118,10 +118,18 @@
   .bar-hit:hover + .bar-fill, .bar-fill.hovered{ filter: brightness(1.08); }
   .arc-hit:hover + .arc-fill, .arc-fill.hovered{ filter: brightness(1.08); }
 
-  .subgrid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; padding: 0 1.2rem 0.4rem; }
-  @media (max-width: 760px){ .subgrid{ grid-template-columns: 1fr; } }
+  .subgrid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 2.75rem; padding: 0 1.2rem 0.4rem; }
+  @media (max-width: 760px){ .subgrid{ grid-template-columns: 1fr; gap: 2.5rem; } }
+  .subchart{ min-width: 0; }
   .subchart h3{ font-size: 0.86rem; font-weight: 700; margin: 0 0 0.15rem; }
-  .subchart .subchart-cap{ font-size: 0.76rem; color: var(--ink-soft); margin: 0 0 0.4rem; }
+  .subchart .subchart-cap{ font-size: 0.76rem; color: var(--ink-soft); margin: 0 0 0.9rem; }
+  .subchart svg.viz{ margin-top: auto; }
+  .chart-slide .subgrid{ margin-top: 0.9rem; }
+  .chart-slide .subchart{ display: flex; flex-direction: column; align-items: flex-start; }
+  .chart-slide .subchart svg.viz, .chart-slide .subchart .legend{ width: 100%; }
+  .chart-slide .subchart h3{ font-size: 0.95rem; }
+  .chart-slide .subchart .subchart-cap{ min-height: 2.6em; }
+  @media (max-width: 760px){ .chart-slide .subchart .subchart-cap{ min-height: 0; } }
   .subchart .legend{ padding: 0.4rem 0 0.2rem; gap: 0.5rem 0.8rem; }
   .subchart .legend-item{ font-size: 0.72rem; }
 
@@ -199,7 +207,7 @@
   .img-row.cols-3{ grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 760px){ .img-row.cols-2, .img-row.cols-3{ grid-template-columns: 1fr; } }
   .img-slot{ position: relative; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background: var(--surface-sunken); border: 1.5px dashed var(--line); }
-  .img-slot img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+  .img-slot img, .img-slot video{ width: 100%; height: 100%; object-fit: cover; display: block; }
   .img-slot .img-fallback{
     display: none; position: absolute; inset: 0; flex-direction: column; align-items: center; justify-content: center;
     text-align: center; padding: 1rem; color: var(--ink-faint); gap: 0.35rem;
@@ -219,6 +227,18 @@
   a.tool-link .k{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-faint); }
   a.tool-link h3{ margin: 0.25rem 0 0.3rem; font-size: 1rem; font-weight: 700; }
   a.tool-link p{ margin: 0; color: var(--ink-soft); font-size: 0.86rem; }
+
+  .scope-cols{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-top: 1.2rem; }
+  @media (max-width: 760px){ .scope-cols{ grid-template-columns: 1fr; } }
+  .scope-col{ border-radius: 10px; padding: 1.2rem 1.3rem; }
+  .scope-col.out{ background: var(--surface-sunken); border: 1px solid var(--line); }
+  .scope-col.in{ background: var(--olive-soft, #E5E9D6); border: 1.25px solid var(--olive, #5B6B34); }
+  .scope-label{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+  .scope-col.in .scope-label{ color: var(--olive, #5B6B34); }
+  .scope-col h3{ margin: 0.4rem 0 0.5rem; font-size: 1.15rem; color: var(--ink); }
+  .scope-col.out h3{ color: var(--ink-soft); }
+  .scope-col p{ margin: 0 0 0.7rem; font-size: 0.94rem; color: var(--ink); line-height: 1.5; }
+  .scope-col .scope-note{ font-size: 0.84rem; font-style: italic; color: var(--ink-soft); margin-bottom: 0; }
 
   .solutions-head{ display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.4rem; }
   .solutions-head .mini-chart{ flex: none; width: 200px; }
@@ -315,6 +335,29 @@
   </div>
 </section>
 
+<!-- SCOPE: what's in, what's out -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">Two fixable problems, not every problem</h2>
+    <p class="slide-sub">We scoped deliberately — probing for real problems the farmers themselves called fixable, not inventing new ones.</p>
+    <div class="scope-cols">
+      <div class="scope-col out">
+        <span class="scope-label">Out of scope</span>
+        <h3>Typhoon &amp; Mayon ashfall</h3>
+        <p>Every source we interviewed — Muravah, Tatay, the rice/dairy farm, the bamboo farm — called typhoon &ldquo;unpredictable&rdquo; and said they'd rather see pests and disease fixed, which is tractable.</p>
+        <p class="scope-note">Also left alone because it already works: waste management, sanitation, land tenure, and Muravah's transport.</p>
+      </div>
+      <div class="scope-col in">
+        <span class="scope-label">In scope</span>
+        <h3>Flood/drought resilience + pest &amp; disease control</h3>
+        <p>The two problems farmers themselves called fixable — and where a 4&times; yield recovery is sitting on the table, waiting on pest/disease control specifically.</p>
+        <p class="scope-note">Guiding principle: adapt, don't invent — every solution ahead is a proven practice from another Bicol farm, retargeted to cacao.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 4: PATH TO FINISHED CACAO (interactive chart) -->
 <section class="slide chart-slide">
   <div class="slide-inner top-align">
@@ -344,16 +387,24 @@
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Ria</span>
-    <h2 class="slide-title">August 26 — Tatae's Farm, Batbat</h2>
-    <p class="slide-sub">We visited Tatae's 2.5-hectare cacao farm in the Batbat area to see the pest and disease crisis firsthand.</p>
-    <div class="img-row cols-2">
+    <h2 class="slide-title">August 26 — Tatay's Farm, Batbat</h2>
+    <p class="slide-sub">We visited Tatay's 2.5-hectare cacao farm in the Batbat area to see the pest and disease crisis firsthand.</p>
+    <div class="img-row cols-3">
       <div class="img-slot">
-        <img src="images/batbat-1.jpg" alt="Arriving at Tatae's farm, Batbat" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-1.jpg</code><span>Arriving at Tatae's farm, Batbat</span></div>
+        <img src="images/batbat-1.jpg" alt="Tatay's farm, Batbat" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-1.jpg</code><span>Photo — Tatay's farm, Batbat</span></div>
       </div>
       <div class="img-slot">
-        <img src="images/batbat-2.jpg" alt="Tatae's cacao trees / farm overview" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-2.jpg</code><span>Tatae's cacao trees / farm overview</span></div>
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Video from Tatay's farm, Batbat" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+          <source src="images/batbat-1.mp4" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
+        </video>
+        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-1.mp4</code><span>Video — rotting leaves due to lack of water (plays automatically, loops)</span></div>
+      </div>
+      <div class="img-slot">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Second video from Tatay's farm, Batbat" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+          <source src="images/batbat-2.mp4" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
+        </video>
+        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-2.mp4</code><span>Video 2 — Tatay's farm, Batbat (plays automatically, loops)</span></div>
       </div>
     </div>
   </div>
@@ -364,7 +415,7 @@
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">The numbers from Batbat</h2>
-    <p class="card-sub">Three figures collected directly at the Aug 26 site visit to Tatae's farm.</p>
+    <p class="card-sub">Three figures collected directly at the Aug 26 site visit to Tatay's farm.</p>
     <div class="subgrid" style="padding:0;">
       <div class="subchart">
         <h3>Post-harvest loss, by cause</h3>
@@ -372,9 +423,9 @@
         <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Post-harvest cacao loss by cause: handling mortality 60%, pests and disease reported as a range from 80 to 100%, typhoon about 100% in a bad year"></svg>
       </div>
       <div class="subchart">
-        <h3>Tatae's cacao yield</h3>
+        <h3>Tatay's cacao yield</h3>
         <p class="subchart-cap">This season vs. his estimated potential if pest/disease pressure were resolved.</p>
-        <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatae's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
+        <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
       </div>
       <div class="subchart">
         <h3>Farmer monthly income benchmarks</h3>
@@ -390,7 +441,7 @@
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Ria</span>
     <h2 class="slide-title">August 27 — Rice, Dairy, Bamboo &amp; Honey Farms</h2>
-    <p class="slide-sub">We visited Tatae Aldavis's thriving rice/dairy farm and farm school, a bamboo farm, and stingless-bee honey producers to see what's already working in Bicol agriculture.</p>
+    <p class="slide-sub">We visited Tatay Aldavis's thriving rice/dairy farm and farm school, a bamboo farm, and stingless-bee honey producers to see what's already working in Bicol agriculture.</p>
     <div class="img-row cols-2">
       <div class="img-slot">
         <img src="images/aug27-1.jpg" alt="Rice/dairy farm and farm school" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
@@ -426,13 +477,13 @@
 <!-- 10: CLAIM WORTH CHECKING -->
 <section class="slide">
   <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <span class="presenter-tag"><span class="dot"></span>Ash</span>
     <div class="card" style="max-width:800px;">
       <div class="callout-body" style="padding-top:1.1rem;">
         <span class="callout-tag">Claim worth checking</span>
         <p class="callout-quote">&ldquo;Cacao will become Bicol's biggest agricultural production.&rdquo;</p>
         <p class="card-sub" style="margin-bottom:0.6rem;">Said by a speaker at the Aug 28 youth/agritourism stop (exact attribution unconfirmed — re-check against the raw notes before citing this).</p>
-        <p class="card-sub" style="margin-bottom:0;"><b>Team's own reaction, not a data point:</b> is that actually achievable given cacao's current production levels? Tatae's own farm sits at ~0&nbsp;kg/yr actual output against an estimated 2,000&nbsp;kg/yr potential, and the region-wide post-harvest loss to pests/disease alone runs 80–100%.</p>
+        <p class="card-sub" style="margin-bottom:0;"><b>Team's own reaction, not a data point:</b> is that actually achievable given cacao's current production levels? Tatay's own farm sits at ~0&nbsp;kg/yr actual output against an estimated 2,000&nbsp;kg/yr potential, and the region-wide post-harvest loss to pests/disease alone runs 80–100%.</p>
       </div>
     </div>
   </div>
@@ -490,11 +541,11 @@
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Nancy</span>
-    <h2 class="slide-title">What we found at Tatae's farm</h2>
-    <p class="slide-body">Pest and disease pressure — not typhoon, not transport, not land tenure — is what's driving Tatae's cacao yield to nearly zero. Continuous, year-round flowering means the pressure never lets up. Disease agent named: Phytophthora (likely <em>P. palmivora</em>, the classic cacao black pod disease); also birds and a viral disease affecting pod production.</p>
+    <h2 class="slide-title">What we found at Tatay's farm</h2>
+    <p class="slide-body">Pest and disease pressure — not typhoon, not transport, not land tenure — is what's driving Tatay's cacao yield to nearly zero. Continuous, year-round flowering means the pressure never lets up. Disease agent named: Phytophthora (likely <em>P. palmivora</em>, the classic cacao black pod disease); also birds and a viral disease affecting pod production.</p>
     <div class="img-row cols-3">
       <div class="img-slot">
-        <img src="images/pest-infestation.jpg" alt="Pest infestation at Tatae's farm" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <img src="images/pest-infestation.jpg" alt="Pest infestation at Tatay's farm" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
         <div class="img-fallback"><span class="glyph">🖼</span><code>images/pest-infestation.jpg</code><span>Pest infestation</span></div>
       </div>
       <div class="img-slot">
@@ -514,7 +565,7 @@
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Chow — technical / water system</span>
     <h2 class="slide-title">Run the pilot through a live, calculated tool</h2>
-    <p class="slide-body">Rather than eyeball a drip-irrigation pilot for Tatae's farm, we built a working set of field tools: a drip-pressure planner sized to his real 2.5&nbsp;ha / 120&nbsp;m layout, a water-system schematic, and an interactive editor — so any water-resilience pilot is calculated, not guessed.</p>
+    <p class="slide-body">Rather than eyeball a drip-irrigation pilot for Tatay's farm, we built a working set of field tools: a drip-pressure planner sized to his real 2.5&nbsp;ha / 120&nbsp;m layout, a water-system schematic, and an interactive editor — so any water-resilience pilot is calculated, not guessed.</p>
     <div class="tool-links">
       <a class="tool-link" href="./drip-pressure-planner.html" target="_blank" rel="noopener">
         <span class="k">Calculator</span>
@@ -575,7 +626,7 @@
         </ul>
       </div>
     </div>
-    <div class="recommend-box"><b>Recommended for Tatae first:</b> the 15-day calendar + herbal spray — cheapest to start, needs no new equipment, and fits his limited labor capacity given his health constraints. The compliance ledger and amino-acid spray follow once the calendar habit is established.</div>
+    <div class="recommend-box"><b>Recommended for Tatay first:</b> the 15-day calendar + herbal spray — cheapest to start, needs no new equipment, and fits his limited labor capacity given his health constraints. The compliance ledger and amino-acid spray follow once the calendar habit is established.</div>
   </div>
 </section>
 
@@ -585,8 +636,8 @@
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">Why this works inside real constraints</h2>
     <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop — no synthetic inputs, no AI/robotics — because that's Muravah and Tatae's explicit requirement.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>If pest/disease pressure comes down, Tatae's own numbers point to a ~4× recovery: 0 kg to a potential 2,000 kg/year.</p></div></div>
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop — no synthetic inputs, no AI/robotics — because that's Muravah and Tatay's explicit requirement.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>If pest/disease pressure comes down, Tatay's own numbers point to a ~4× recovery: 0 kg to a potential 2,000 kg/year.</p></div></div>
       <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Fixes two problems at once</h3><p>Stabilizing farm-level supply also stabilizes the processing facility, currently &ldquo;sometimes out of supply for cacao.&rdquo;</p></div></div>
       <div class="numbered-item"><span class="num">4</span><div class="body"><h3>Nothing invented from scratch</h3><p>It's the rice/dairy farm's spray practice and the taro project's schedule discipline, adapted to cacao's arboreal, year-round biology.</p></div></div>
     </div>
@@ -597,30 +648,44 @@
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
-    <h2 class="slide-title">Tatae's own words: &ldquo;a pilot study and investors would be needed&rdquo;</h2>
-    <p class="card-sub">Three concrete ways to help Tatae find investors:</p>
+    <h2 class="slide-title">Finding investors — the gap Tatay named himself</h2>
+    <p class="slide-sub">&ldquo;A pilot study and investors would be needed.&rdquo; — Tatay, on what stands between his farm and recovery. We see three realistic paths for him and Muravah to bring investors on board:</p>
     <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Point to the regional funding precedent</h3><p>The Zambales solar farm secured ₱10M for a comparable-scale agri-infrastructure pilot — proof that regional agri-tech investment appetite exists.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>Package the pilot inside Muravah's existing study</h3><p>Fold it into the 500–1,000-farmer production-cycle study already underway — investors get an established NGO's track record behind one farmer's ask.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Lead with the organic price-premium ROI story</h3><p>Frame the ask as bridge capital toward organic/export certification: a projected 4× yield recovery plus a price premium is a concrete return case.</p></div></div>
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The regional funding precedent</h3><p>The Zambales solar farm raised ₱10M for an agri-infrastructure pilot of comparable scale — regional investment appetite is proven, and a cacao pilot can be pitched against that benchmark.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>A pilot inside Muravah's existing study</h3><p>Joining the 500–1,000-farmer production-cycle study already underway would put an established NGO's track record and scale behind the proposal, rather than a single farmer's request.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Framed as bridge capital toward organic and export certification, the proposal pairs a projected 4× yield recovery with a price premium — an investment case with a concrete return, not a request for aid.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- 18: THANK YOU -->
+<!-- CONCLUSION -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ash</span>
+    <h2 class="slide-title">What we're leaving you with</h2>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The problem is specific, not vague</h3><p>Pest and disease pressure — continuous, because cacao flowers year-round — has taken Tatay's farm from 500&nbsp;kg/yr to nearly zero, and drives 80–100% post-harvest losses across the region's cacao network.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The fix already exists in Bicol</h3><p>Six solutions survived fact-checking against our interviews, all adapted from farms that are already succeeding — starting with a 15-day treatment calendar and an herbal spray that need no new equipment.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>Resolving the pressure is a projected 4× yield recovery for Tatay alone — and stabilizing farm supply stabilizes the processing facility downstream at the same time.</p></div></div>
+      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>The next step is small and fundable</h3><p>A bounded pilot — one row, a handful of farmers, calculated water tools, inside Muravah's existing study — with the investor paths from the previous slide behind it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THANK YOU -->
 <section class="slide hero">
   <div class="slide-inner">
     <p class="hero-eyebrow">Thank You</p>
     <h1 class="hero-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Maraming salamat sa pakikinig</h1>
     <p class="hero-sub" style="font-style:normal;">ご清聴ありがとうございました</p>
     <p class="hero-body">Thank you for listening.</p>
-    <p class="hero-credit">Nancy · Masa · Keisuke · Ria · Chow</p>
+    <p class="hero-credit">Nancy · Masa · Keisuke · Ria · Ash · Chow</p>
   </div>
 </section>
 
 <div class="nav-bar">
   <button class="nav-btn" id="nav-prev">← Prev</button>
-  <span class="nav-counter" id="nav-counter">1 / 18</span>
+  <span class="nav-counter" id="nav-counter">1 / 20</span>
   <button class="nav-btn" id="nav-next">Next →</button>
 </div>
 
@@ -1082,10 +1147,15 @@
     touchStartX = null;
   }, { passive: true });
 
-  var startIdx = 0;
-  var hash = window.location.hash.match(/slide-(\d+)/);
-  if (hash){ startIdx = Math.max(0, Math.min(total - 1, parseInt(hash[1], 10) - 1)); }
-  show(startIdx);
+  function idxFromHash(){
+    var hash = window.location.hash.match(/slide-(\d+)/);
+    return hash ? Math.max(0, Math.min(total - 1, parseInt(hash[1], 10) - 1)) : 0;
+  }
+  window.addEventListener("hashchange", function(){
+    var target = idxFromHash();
+    if (target !== idx) show(target);
+  });
+  show(idxFromHash());
 })();
 </script>
 </body>

@@ -10,18 +10,18 @@ history.
 
 Explicit team decision: focus on **(1) flood/drought resilience of the food supply chain** and **(2) pest
 and disease control**. Typhoon and Mayon ashfall are deliberately deprioritized — every source (Muravah,
-Tatae, the rice/dairy farm, the bamboo farm) called typhoon "unpredictable" and said they'd rather fix
+Tatay, the rice/dairy farm, the bamboo farm) called typhoon "unpredictable" and said they'd rather fix
 pests/disease, which is tractable. Water focus is broader than the Drip Pressure Planner currently covers:
 that tool addresses the drought/pressure side only. Flood/drainage resilience is a real gap in what's been
 built so far.
 
-## ⚠️ Disambiguation: two different "Tatae"s
+## ⚠️ Disambiguation: two different "Tatay"s
 
-"Tatae" is a Bikol honorific (roughly "elder/grandpa"), not a unique name. Do not conflate these two people:
+"Tatay" is a Bikol honorific (roughly "elder/grandpa"), not a unique name. Do not conflate these two people:
 
-- **Cacao-Tatae** (Aug 26): solo 2.5 ha grower in the **Batbat** area, cacao + Pili, ~0 kg current cacao
+- **Cacao-Tatay** (Aug 26): solo 2.5 ha grower in the **Batbat** area, cacao + Pili, ~0 kg current cacao
   yield due to pest/disease, frustrated that even subsidized fertilizer is too expensive for him.
-- **Tatae Aldavis** (Aug 27): runs a thriving, diversified rice/dairy operation with an accredited farm
+- **Tatay Aldavis** (Aug 27): runs a thriving, diversified rice/dairy operation with an accredited farm
   school and "plenty" of government support — a completely different, unrelated farmer.
 
 ## Muravah Foundation / Mayon Gold (Albay) — cacao NGO
@@ -74,7 +74,7 @@ temper → mold → chill → sell. Facility undersized for their batch volumes.
 - Core tension: organic certification + export access vs. simply maximizing income.
 - Pest control named as problem #1 overall.
 
-## Farmer "Tatae" (cacao smallholder, Aug 26, Batbat area)
+## Farmer "Tatay" (cacao smallholder, Aug 26, Batbat area)
 
 - Farm located in the **Batbat** area/barangay.
 - 2.5 ha, sole operator (children work in the cities); 100% organic.
@@ -101,7 +101,7 @@ temper → mold → chill → sell. Facility undersized for their batch volumes.
 
 ## Cross-regional precedent (other Bicol farms/programs — proven working models, not hypotheticals)
 
-**Rice/dairy farm (Tatae Aldavis, Aug 27)** — thriving, government-supported, accredited farm school.
+**Rice/dairy farm (Tatay Aldavis, Aug 27)** — thriving, government-supported, accredited farm school.
 No major pest/disease problem despite organic practice:
 - Herbal pesticide sprays; ducks grazing on snails (low-tech biocontrol); chemical pesticides only as a
   last-resort fallback.
@@ -162,7 +162,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 - Tension: solar buildout competing with agricultural land, raising food-security concerns.
 - **Proposed resolution: agrivoltaics** — co-locate food + energy production on the same land. Named
   applications: solar-powered irrigation, fish hatchery/egg incubation, cold storage.
-  → **Directly relevant**: solar-powered irrigation addresses Tatae's water-pressure problem; cold storage
+  → **Directly relevant**: solar-powered irrigation addresses Tatay's water-pressure problem; cold storage
   addresses the "accumulates humidity, gets spoilt" post-dry storage risk.
 - **Solis** (Ginlong Technologies): a real, existing hardware/software platform for solar PV + hybrid
   storage management — a concrete answer to "what software exists" for an off-grid irrigation/power angle,
@@ -171,7 +171,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
   Pressure Planner approaches sizing (calculate, don't guess).
 - Funding benchmark: proud of ₱10 million in funding for their project — useful reference point for what
   funding scale exists regionally for a comparable agri-tech pilot (context for "investors are a problem,"
-  per Tatae).
+  per Tatay).
 - Lifecycle caveat worth carrying into any solar-irrigation proposal: standard panels weigh 18–22 kg, have
   a 25–30 year design life, degrade to 80–85% efficiency by end of warranty; some are replaced early
   (10–15 yrs); waste is ~70–75% glass, 10–15% aluminum, 5–10% polymers/silicon/copper/silver; IRENA
@@ -194,7 +194,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
   against the raw interview audio/notes before citing) said cacao would become **Bicol's biggest
   agricultural production**. Team's own skeptical reaction (opinion, not data — keep this framing in any
   slide/deck use): *"Is that actually achievable given cacao's current production levels?"* — worth holding
-  up against the dataset's actual numbers (Tatae at ~0 kg/yr actual vs. 2,000 kg/yr potential; 80–100%
+  up against the dataset's actual numbers (Tatay at ~0 kg/yr actual vs. 2,000 kg/yr potential; 80–100%
   pest/disease loss regionally) before repeating the claim uncritically.
 
 ## Solar / agrivoltaics — panel orientation note (Aug 28, own observation)
@@ -212,7 +212,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 | Post-harvest loss — typhoon (bad year) | ~100% |
 | Pod handling mortality (careless) | 60% |
 | Typhoon recovery time | 1–2 years |
-| Tatae's potential vs. actual cacao yield | 2,000 kg vs. ~0 kg |
+| Tatay's potential vs. actual cacao yield | 2,000 kg vs. ~0 kg |
 | Farmer income range | ₱2,000–10,000/month |
 | Average farmer age | ~50 |
 | Farmers in Muravah's data study | 500–1,000 |
@@ -230,6 +230,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 - Masa — Data Engineering → precision-agriculture / data-centralization angle Muravah wants
 - Keisuke — Modern Philosophy → tradeoffs (organic-vs-export-vs-income, Muravah's AI-bias concern,
   agrivoltaic land-use ethics)
+- Ash — presents the "claim worth checking" callout and the conclusion recap in the web presentation
 - Ria — from Bicol, Philippines; studies at Bicol University (BU) → grounds the team's outsider read of
   the interviews against lived local/regional knowledge; narrates the field-visit slides in the pitch deck
 - Chow — Computer Science → the tools in this repo

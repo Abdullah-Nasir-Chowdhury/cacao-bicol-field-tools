@@ -20,13 +20,13 @@ but you should recognize the shape of the whole deck so a handoff never feels li
 | 3 | Our probes exposed these problems | Nancy |
 | 4 | From flowering to a sellable product (chart) | Masa |
 | 5 | More constraints we have to design around | Keisuke |
-| 6 | August 26 — Tatae's Farm, Batbat (images) | Ria |
+| 6 | August 26 — Tatay's Farm, Batbat (images) | Ria |
 | 7 | The numbers from Batbat (3 charts) | Masa |
 | 8 | August 27 — Rice, Dairy, Bamboo & Honey Farms (images) | Ria |
 | 9 | August 28 — Solar, Wind & Agritourism (images) | Ria |
 | 10 | What the Zambales solar precedent tells us (3 charts) | Masa |
 | 11 | Vertical panels waste potential output | Keisuke |
-| 12 | What we found at Tatae's farm (images) | Nancy |
+| 12 | What we found at Tatay's farm (images) | Nancy |
 | 13 | Run the pilot through a live, calculated tool | **Chow only** |
 | 14 | Solutions we probed and gathered from other farms | Keisuke |
 | 15 | Why this works inside real constraints (feasibility) | Masa |
@@ -36,6 +36,11 @@ but you should recognize the shape of the whole deck so a handoff never feels li
 Rough load: Nancy 4 slides, Ria 4, Masa 4, Keisuke 4, Chow 1 (deliberately — see Chow's note
 below). At roughly 30–40 seconds a slide this is about a 10-minute talk; adjust pacing live rather
 than rushing to hit an exact time.
+
+**Web version note:** the interactive presentation (`presentation.html`) follows the same flow but
+adds three slides the PowerPoint doesn't have: a scope slide ("Two fixable problems, not every
+problem" — Keisuke), the "claim worth checking" callout (**Ash**), and a conclusion recap before
+the thank-you (**Ash**). Ash's section below covers both of her slides.
 
 ---
 
@@ -48,7 +53,7 @@ person, not an abstract case study.
 
 **Slide 1 — Title.** Open energetically, you're setting the tone for the whole room. Say who we
 are and why we're credible: this isn't invented, it's built from real interviews with a cacao NGO
-(Muravah Foundation / Mayon Gold), a smallholder farmer (Tatae, in the Batbat area), a processing
+(Muravah Foundation / Mayon Gold), a smallholder farmer (Tatay, in the Batbat area), a processing
 facility, and site visits across Bicol on August 26–28. State the thesis out loud: *"every solution
 we propose already works somewhere in Bicol — our job is showing how to bring it to cacao."* Keep
 this under 30 seconds.
@@ -65,12 +70,12 @@ this under 30 seconds.
 - Farmers earn **₱2,000–10,000/month**, average **~50 years old**, no government succession-
   training program.
 
-**Slide 12 — What we found at Tatae's farm.** This is the emotional low point right before the
+**Slide 12 — What we found at Tatay's farm.** This is the emotional low point right before the
 pivot to solutions — take your time. Pest and disease pressure, not typhoon, not transport, not
-land tenure, is what's driving Tatae's cacao yield to nearly zero. Cacao flowers **year-round**, so
+land tenure, is what's driving Tatay's cacao yield to nearly zero. Cacao flowers **year-round**, so
 the pressure never lets up — there's no off-season where the farm gets a break. If asked to name
 the disease: **Phytophthora**, almost certainly *Phytophthora palmivora* (the classic cacao black
-pod disease); also birds, and a viral disease affecting pod production. Keep this about Tatae as a
+pod disease); also birds, and a viral disease affecting pod production. Keep this about Tatay as a
 person before moving into solutions.
 
 **Slide 17 — Thank you.** Close warmly and briefly. Read both lines as written: "Maraming salamat
@@ -99,14 +104,14 @@ they are explicitly skeptical of AI/robotics ("not there yet, other problems to 
 biased according to the natives") — that skepticism becomes important later when Keisuke and
 others present low-tech solutions.
 
-**Slide 6 — August 26, Tatae's Farm, Batbat (image-only).** We visited Tatae's 2.5-hectare cacao
+**Slide 6 — August 26, Tatay's Farm, Batbat (image-only).** We visited Tatay's 2.5-hectare cacao
 farm in the Batbat area on August 26. He's a solo operator (his children work in the cities),
 100% organic, and dealing with real health problems that limit how much labor-intensive work he
 can physically do himself. Keep it to one or two sentences — the numbers come on the next slide
 (Masa's).
 
-**Slide 8 — August 27, Rice/Dairy, Bamboo & Honey (image-only).** We visited **Tatae Aldavis's**
-rice/dairy farm — a completely different farmer from Tatae in Batbat, same honorific ("Tatae" is a
+**Slide 8 — August 27, Rice/Dairy, Bamboo & Honey (image-only).** We visited **Tatay Aldavis's**
+rice/dairy farm — a completely different farmer from Tatay in Batbat, same honorific ("Tatay" is a
 Bikol term for elder/grandpa, not a unique name), worth clarifying if anyone looks confused. His
 farm is thriving, government-supported, and runs an accredited farm school. They control pests
 with herbal sprays and ducks grazing on snails, with a chemical fallback only as a last resort. We
@@ -143,12 +148,12 @@ highest-leverage fix — the through-line of the whole deck.
 1. *Post-harvest loss by cause*: 60% from careless handling, pests/disease reported as an
    **80–100% range** (the chart shows the midpoint, 90% — say the real range out loud, don't just
    point at the bar), typhoon near 100% in a bad year.
-2. *Tatae's cacao yield*: historically 500 kg/year, but currently near **0 kg** due to
+2. *Tatay's cacao yield*: historically 500 kg/year, but currently near **0 kg** due to
    pest/disease — his estimated potential if pests were resolved is **2,000 kg/year**. Say this
    slowly: that's a **4× recovery**, and it's the single largest lever in the entire dataset.
 3. *Farmer monthly income benchmarks*: a ₱2,000 low reference, a ₱5,000 example farmer, and
    ₱10,000 named as a "low" ceiling — context for how thin margins are region-wide, not just for
-   Tatae.
+   Tatay.
 
 **Slide 10 — What the Zambales solar precedent tells us (3 charts).**
 1. *Panel efficiency* degrades gradually over a 30-year lifespan — 100% new down to about **82.5%
@@ -163,10 +168,10 @@ highest-leverage fix — the through-line of the whole deck.
 **Slide 15 — Why this works (feasibility).** This slide was flagged as especially important —
 don't rush it.
 1. Everything proposed is organic-only, low-cost, human-in-the-loop, no synthetic inputs or
-   AI/robotics — that's not a technology choice, it's literally what Muravah and Tatae told us
+   AI/robotics — that's not a technology choice, it's literally what Muravah and Tatay told us
    they need.
 2. It's the single largest lever in the dataset: resolving pest/disease pressure is a **~4×**
-   yield recovery for Tatae — 0 kg to a potential 2,000 kg/year.
+   yield recovery for Tatay — 0 kg to a potential 2,000 kg/year.
 3. It fixes two problems at once — stabilizing farm-level supply also stabilizes the processing
    facility, which told us it's "sometimes out of supply for cacao" because of these same upstream
    losses.
@@ -212,12 +217,12 @@ loud, it's a credibility point. Three groups:
   farm's practice; an amino-acid/molasses bio-concoction on the taro project's 15-day cycle.
 - *Post-harvest handling (1)*: rolling phytosanitation rounds every 7–14 days.
 
-Land the recommendation clearly: for Tatae specifically, start with the **15-day calendar plus the
+Land the recommendation clearly: for Tatay specifically, start with the **15-day calendar plus the
 herbal spray** — cheapest to start, no new equipment, fits his limited labor capacity given his
 health constraints. The ledger and the amino-acid spray follow once the calendar habit is
 established.
 
-**Slide 16 — The investor gap.** Open with Tatae's own quote: he told us directly that "a pilot
+**Slide 16 — The investor gap.** Open with Tatay's own quote: he told us directly that "a pilot
 study and investors would be needed." Three concrete ways to help him find them:
 1. **Point to the regional funding precedent** — the Zambales solar farm secured ₱10 million for a
    comparable-scale agri-infrastructure pilot, concrete proof that regional agri-tech investment
@@ -234,18 +239,52 @@ asked.
 
 ---
 
+## Ash — web slides: the "claim worth checking" callout & the conclusion
+
+You have two slides in the web presentation, and they bookend the deck's critical-thinking thread:
+one mid-deck moment of healthy skepticism, and the final synthesis before the thank-you. Neither
+is data-heavy — your job is judgment and clarity.
+
+**Slide — the claim worth checking.** A speaker at the August 28 youth/agritourism stop said cacao
+will become **Bicol's biggest agricultural production**. Present the claim fairly, then the team's
+own reaction — clearly framed as our opinion, not a data point: *is that actually achievable given
+cacao's current production levels?* Ground the skepticism in our own numbers: Tatay's farm sits at
+~0 kg/yr actual output against an estimated 2,000 kg/yr potential, and region-wide post-harvest
+loss to pests/disease alone runs 80–100%. Two honesty points to keep: the exact attribution of the
+quote is unconfirmed (we'd re-check the raw notes before citing it anywhere formal), and the point
+of this slide isn't to mock the optimism — it's that the gap between the claim and the current
+numbers is exactly why the pest/disease problem deserves the room's attention.
+
+**Slide — Conclusion ("What we're leaving you with").** Four beats, in order:
+1. **The problem is specific, not vague** — continuous pest/disease pressure (cacao flowers
+   year-round) took Tatay's farm from 500 kg/yr to nearly zero; 80–100% post-harvest losses
+   region-wide.
+2. **The fix already exists in Bicol** — 6 of 12 candidate solutions survived fact-checking against
+   the interviews, all adapted from farms already succeeding; the starting pair is the 15-day
+   treatment calendar plus the herbal spray, which need no new equipment.
+3. **The upside is the region's biggest lever** — a projected 4× yield recovery for Tatay, and
+   stabilizing farm supply also stabilizes the processing facility downstream.
+4. **The next step is small and fundable** — a bounded pilot (one row, a handful of farmers,
+   calculated water tools, inside Muravah's existing 500–1,000-farmer study), with the investor
+   paths from Keisuke's slide behind it.
+
+Close crisply and hand to Nancy for the thank-you. If you're pressed for time, beats 1 and 4 are
+the ones that must survive — the problem and the next step.
+
+---
+
 ## Chow — slide 13 only
 
 This is deliberately the **only** slide you own — you're the technical/water-system voice, and
 the rest of the team doesn't need to go deep on this material. Explain what you built and why:
-rather than eyeballing a drip-irrigation pilot for Tatae's farm, you built a working set of field
+rather than eyeballing a drip-irrigation pilot for Tatay's farm, you built a working set of field
 tools —
 
 - a **drip-pressure planner** sized to his real 2.5-hectare / 120-meter layout,
 - a **water-system schematic** (gravity vs. pump modes), and
 - an **interactive schematic editor**
 
-— so any water-resilience pilot for Tatae is calculated from his actual numbers, not guessed.
+— so any water-resilience pilot for Tatay is calculated from his actual numbers, not guessed.
 Point the room at the GitHub repo
 (`github.com/Abdullah-Nasir-Chowdhury/cacao-bicol-field-tools`), which also holds the full
 field-notes reference and the interactive chart dashboard this deck draws its numbers from. Keep
