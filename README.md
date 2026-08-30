@@ -25,6 +25,7 @@ The full pitch deck as a click-through, phone-friendly website — on-screen Pre
 
 - [`Bicol-Cacao-Pitch.pptx`](./Bicol-Cacao-Pitch.pptx) — the same pitch as a PowerPoint file, for anywhere a live website isn't an option.
 - [`SPEAKER-NOTES.md`](./SPEAKER-NOTES.md) — who presents which section, with the facts and figures behind each slide (also embedded directly in the .pptx's Notes field).
+- [`scripts/`](./scripts/) — the same speaker notes, split into one printable PDF per presenter (`Nancy.pdf`, `Ria.pdf`, `Masa.pdf`, `Keisuke.pdf`, `Chow.pdf`) — study material, not a verbatim script.
 - [`FIELD-NOTES.md`](./FIELD-NOTES.md) — the running research log this whole project is built from.
 
 ## Slide-ready graphics
