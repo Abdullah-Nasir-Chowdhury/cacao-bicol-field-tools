@@ -472,12 +472,13 @@
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">The numbers from Batbat</h2>
-    <p class="card-sub">Three figures straight from the visit, and one comparison from the literature.</p>
-    <div class="subgrid cols-4" style="padding:0;">
+    <p class="card-sub">The visit's numbers, with two other Philippine cash crops alongside for scale.</p>
+    <div class="subgrid" style="padding:0;">
       <div class="subchart">
-        <h3>Post-harvest loss, by cause</h3>
-        <p class="subchart-cap">Pests/disease was reported as a range, not one number.</p>
-        <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Post-harvest cacao loss by cause: handling mortality 60%, pests and disease reported as a range from 80 to 100%, typhoon about 100% in a bad year"></svg>
+        <h3>Loss by cause: cacao vs. rice vs. dragon fruit</h3>
+        <p class="subchart-cap">Same three causes, compared across PH cash crops.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[17]&ndash;[21]</a></p>
+        <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing loss by cause across crops. Handling: cacao 60 percent, Philippine rice 16.5 percent, dragon fruit 35 percent. Pests and disease: cacao 80 to 100 percent, rice 24 to 41 percent, dragon fruit 60 to 80 percent. Typhoon in a bad year: cacao about 100 percent, rice up to 95 percent, dragon fruit has no published figure"></svg>
+        <div class="legend" id="bar1-legend"></div>
       </div>
       <div class="subchart">
         <h3>Tatay's cacao yield</h3>
@@ -485,18 +486,12 @@
         <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
       </div>
       <div class="subchart">
-        <h3>Post-harvest loss vs. other crops</h3>
-        <p class="subchart-cap">Philippine rice and produce lose a fraction of what cacao loses.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[6]</a></p>
-        <svg class="viz" id="bar5" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing low and high post-harvest loss estimates: Philippine rice 16.5 percent, fruits and vegetables 15 to 35 percent, cacao in this study 80 to 100 percent"></svg>
-        <div class="legend" id="bar5-legend"></div>
-      </div>
-      <div class="subchart">
         <h3>Farmer monthly income benchmarks</h3>
         <p class="subchart-cap">Reference points named by Muravah.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[4]</a></p>
         <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos for Blandino Papina, 10000 pesos cited as a low ceiling, all below the Bicol poverty line of 13624 pesos"></svg>
       </div>
     </div>
-    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a></p>
+    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a> For context, Philippine fruits and vegetables broadly lose 15&ndash;35% post-harvest; cacao's losses are far outside even that band.<a class="cite" href="#references">[6]</a></p>
   </div>
 </section>
 
@@ -540,7 +535,7 @@
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Chow · technical / water system</span>
     <h2 class="slide-title">Run the pilot through a live, calculated tool</h2>
-    <p class="slide-body">We built the field tools ourselves, sized to Tatay's real farm. Calculated, not guessed.<a class="cite" href="#references">[3]</a>&ndash;<a class="cite" href="#references">[8]</a></p>
+    <p class="slide-body">We built the field tools ourselves, sized to Tatay's real farm. Calculated, not guessed.<a class="cite" href="#references">[3]&ndash;[8]</a></p>
     <div class="tool-links">
       <a class="tool-link" href="./drip-pressure-planner.html" target="_blank" rel="noopener">
         <span class="k">Calculator</span>
@@ -845,6 +840,11 @@
       <li>Raspberry Pi official product pricing (Raspberry Pi Zero 2 W, US$15); sensors, relays and solenoid valves are commodity parts priced from Philippine electronics retailers. <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" target="_blank" rel="noopener">raspberrypi.com</a></li>
       <li>DOST-PCAARRD, mass rearing of biological control agents (lynx spider <em>Oxyopes javanus</em>, red weaver ant <em>Oecophylla smaragdina</em>) for cacao insect pest management, Philippines. <a href="https://ispweb.pcaarrd.dost.gov.ph/mass-rearing-augmentation-and-conservation-of-the-biological-control-agents-bcas-lynx-spider-oxyopes-javanus-and-red-weaver-ant-oecophylla-smaragdina-for-the-management-of-insect-pests-of-caca/" target="_blank" rel="noopener">pcaarrd.dost.gov.ph</a> &middot; Forbes &amp; Northfield (2017), &ldquo;<em>Oecophylla smaragdina</em> ants provide pest control in Australian cacao,&rdquo; Biotropica. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/btp.12405" target="_blank" rel="noopener">DOI</a></li>
       <li>Schoeneweiss (1975), &ldquo;Predisposition, Stress, and Plant Disease,&rdquo; Annual Review of Phytopathology 13:193&ndash;211 (water stress raises disease susceptibility; the effect reverses when regular watering resumes). <a href="https://www.annualreviews.org/doi/10.1146/annurev.py.13.090175.001205" target="_blank" rel="noopener">Annual Reviews</a></li>
+      <li>&ldquo;Enter the dragon fruit,&rdquo; Philippine Daily Inquirer: post-harvest losses in PH dragon fruit at 35% of output, mainly from piercing and sucking insects. <a href="https://business.inquirer.net/326239/enter-the-dragon-fruit" target="_blank" rel="noopener">inquirer.net</a></li>
+      <li>Savary et al. (2000), &ldquo;Rice Pest Constraints in Tropical Asia: Quantification of Yield Losses Due to Rice Pests in a Range of Production Situations,&rdquo; Plant Disease 84:357&ndash;369 (average ~37% of rice yield lost to pests and disease; range 24&ndash;41%). <a href="https://pubmed.ncbi.nlm.nih.gov/30841254/" target="_blank" rel="noopener">PubMed</a> &middot; <a href="https://ricetoday.irri.org/where-rice-pests-and-diseases-do-the-most-damage/" target="_blank" rel="noopener">IRRI Rice Today</a></li>
+      <li>Balendres &amp; Bengoa (2019), &ldquo;Diseases of dragon fruit (Hylocereus species): Etiology and current management options,&rdquo; Crop Protection 126:104920 (canker losses up to 60%, reaching ~80% in severe cases). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0261219419302662" target="_blank" rel="noopener">ScienceDirect</a></li>
+      <li>FAO via ReliefWeb, &ldquo;Typhoon-affected rice farmers need seeds&rdquo; (post-Haiyan: up to 95% of standing rice destroyed in the worst-hit region). <a href="https://reliefweb.int/report/philippines/typhoon-affected-rice-farmers-need-seeds" target="_blank" rel="noopener">reliefweb.int</a></li>
+      <li>&ldquo;Dragon fruit growers adapt to storm impacts,&rdquo; ReliefWeb (Ilocos growers report typhoon-destroyed posts and lost production, e.g. storm Mario: 300 posts, ~4 t of fruit; no regional loss-% published). <a href="https://reliefweb.int/report/philippines/dragon-fruit-growers-adapt-storm-impacts" target="_blank" rel="noopener">reliefweb.int</a></li>
     </ol>
     <p class="source-note">Click any [n] in the deck to jump here; links open the original sources.</p>
   </div>
@@ -1003,31 +1003,49 @@
 
     groups.forEach(function(g, i){
       var gx = marginL + i * slot + (slot - groupW) / 2;
-      var equalPair = m === 2 && g.values[0] === g.values[1];
 
       series.forEach(function(s, j){
         var v = g.values[j];
         var x = gx + j * (barW + innerGap);
         var xc = x + barW / 2;
-        var barH = (v / maxVal) * plotH;
-        var y = marginT + plotH - barH;
+        var yBase = marginT + plotH;
+        var labelText = (g.labels && g.labels[j] != null) ? g.labels[j] : null;
+        var tipLines = [s.name + ": " + ((g.tooltips && g.tooltips[j]) || (v + (opts.unit || "")))];
 
         var hit = el("rect", { class: "bar-hit", x: x, y: marginT, width: barW, height: plotH, fill: "transparent" });
-        var bar = el("rect", { class: "bar-fill", "data-anim": "grow", "data-delay": j * 0.15, x: x, y: y, width: barW, height: Math.max(barH, 2), rx: 3, fill: s.color });
         svg.appendChild(hit);
+
+        // no published figure for this cell: an honest "n/a" tick instead of an invented bar
+        if (v == null){
+          var na = el("text", { "data-anim": "fade", "data-delay": 0.5, x: xc, y: yBase - 6, "text-anchor": "middle", "font-size": 9, "font-style": "italic", fill: cssVar("--ink-faint") });
+          na.textContent = "n/a";
+          svg.appendChild(na);
+          hit.addEventListener("mousemove", function(evt){ showTooltip(evt, g.name, tipLines); });
+          hit.addEventListener("mouseleave", hideTooltip);
+          return;
+        }
+
+        var isRange = Array.isArray(v);
+        var lo = isRange ? v[0] : v, hi = isRange ? v[1] : v;
+        var yLo = yBase - (lo / maxVal) * plotH;
+        var yHi = yBase - (hi / maxVal) * plotH;
+
+        var bar = el("rect", { class: "bar-fill", "data-anim": "grow", "data-delay": j * 0.15, x: x, y: yLo, width: barW, height: Math.max(yBase - yLo, 2), rx: 3, fill: s.color });
         svg.appendChild(bar);
 
-        // identical low/high pair gets one shared label so the two don't overlap
-        if (!equalPair || j === 0){
-          var lx = equalPair ? gx + groupW / 2 : xc;
-          var label = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.5, x: lx, y: y - 8, "text-anchor": "middle", "font-size": 12 });
-          label.textContent = (g.labels && g.labels[j] != null) ? g.labels[j] : v + (opts.unit || "");
-          svg.appendChild(label);
+        if (isRange){
+          var whiskerColor = cssVar("--ink-soft");
+          svg.appendChild(el("line", { "data-anim": "grow", "data-delay": 0.4, x1: xc, y1: yLo, x2: xc, y2: yHi, stroke: whiskerColor, "stroke-width": 2.5, "stroke-linecap": "round" }));
+          svg.appendChild(el("line", { "data-anim": "fade", "data-delay": 0.6, x1: xc - barW * 0.35, y1: yHi, x2: xc + barW * 0.35, y2: yHi, stroke: whiskerColor, "stroke-width": 2.5, "stroke-linecap": "round" }));
         }
+
+        var label = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.5, x: xc, y: yHi - (isRange ? 8 : 8), "text-anchor": "middle", "font-size": m > 2 ? 9.5 : 12 });
+        label.textContent = labelText != null ? labelText : v + (opts.unit || "");
+        svg.appendChild(label);
 
         hit.addEventListener("mousemove", function(evt){
           bar.classList.add("hovered");
-          showTooltip(evt, g.name, [s.name + ": " + v + (opts.unit || "")]);
+          showTooltip(evt, g.name, tipLines);
         });
         hit.addEventListener("mouseleave", function(){ bar.classList.remove("hovered"); hideTooltip(); });
       });
@@ -1264,12 +1282,33 @@
     document.querySelectorAll(".viz").forEach(function(svg){ svg.innerHTML = ""; });
     document.querySelectorAll(".legend").forEach(function(l){ l.innerHTML = ""; });
 
-    barChart("bar1", {
-      maxVal: 100, unit: "%", gap: 0.45,
-      data: [
-        { name: "Handling mortality", value: 60, color: cssVar("--gold") },
-        { name: "Pests & disease", range: [80, 100], label: "80–100%", color: cssVar("--accent") },
-        { name: "Typhoon (bad yr)", value: 100, label: "~100%", color: cssVar("--rust") },
+    groupedBarChart("bar1", {
+      maxVal: 100, unit: "%",
+      legendEl: "bar1-legend",
+      series: [
+        { name: "Cacao (this study)", color: cssVar("--accent") },
+        { name: "Rice (PH)", color: cssVar("--gold") },
+        { name: "Dragon fruit (PH)", color: cssVar("--olive") },
+      ],
+      groups: [
+        { name: "Handling", values: [60, 16.5, 35], labels: ["60%", "16.5%", "35%"],
+          tooltips: [
+            "60% of pods lost to careless handling (field notes)",
+            "16.5% total post-harvest loss (PhilMech/PhilRice)",
+            "35% of output lost post-harvest, mainly piercing/sucking insects",
+          ] },
+        { name: "Pests & disease", values: [[80, 100], [24, 41], [60, 80]], labels: ["80–100%", "24–41%", "60–80%"],
+          tooltips: [
+            "80–100% reported range (field notes)",
+            "24–41% of yield, avg ~37% (IRRI, tropical Asia)",
+            "canker losses up to 60%, severe cases ~80%",
+          ] },
+        { name: "Typhoon (bad yr)", values: [100, 95, null], labels: ["~100%", "95%", ""],
+          tooltips: [
+            "~100% in a bad typhoon year (field notes)",
+            "up to 95% of standing rice destroyed in worst-hit regions (post-Haiyan)",
+            "no published %: growers report destroyed posts and lost production (storm Mario)",
+          ] },
       ],
     });
 
@@ -1288,20 +1327,6 @@
         { name: "Cited low reference", value: 2000, label: "₱2,000", color: cssVar("--accent") },
         { name: "Blandino Papina", value: 5000, label: "₱5,000", color: cssVar("--accent") },
         { name: "“Low” ceiling cited", value: 10000, label: "₱10,000", color: cssVar("--accent") },
-      ],
-    });
-
-    groupedBarChart("bar5", {
-      maxVal: 100, unit: "%",
-      legendEl: "bar5-legend",
-      series: [
-        { name: "Reported low", color: cssVar("--gold") },
-        { name: "Reported high", color: cssVar("--accent") },
-      ],
-      groups: [
-        { name: "Rice (PH)", values: [16.5, 16.5], labels: ["16.5%", "16.5%"] },
-        { name: "Fruits & veg (PH)", values: [15, 35], labels: ["15%", "35%"] },
-        { name: "Cacao (this study)", values: [80, 100], labels: ["80%", "100%"] },
       ],
     });
 

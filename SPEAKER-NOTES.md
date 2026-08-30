@@ -171,21 +171,32 @@ raise profit here**, because pest/disease pressure caps yield regardless of how 
 in. That last point is why treating pests/disease is the highest-leverage fix — the through-line
 of the whole deck.
 
-**Slide 8 — The numbers from Batbat (4 charts).**
-1. *Post-harvest loss by cause*: 60% from careless handling, pests/disease reported as an
-   **80–100% range** (the bar reaches 80% and the whisker above it shows the span to 100% — say
-   the real range out loud), typhoon near 100% in a bad year.
+**Slide 8 — The numbers from Batbat (3 charts).**
+1. *Loss by cause: cacao vs. rice vs. dragon fruit* — a grouped bar chart. Each cause has three
+   bars: our cacao numbers next to two other Philippine cash crops.
+   - **Handling**: cacao loses **60%** of pods to careless handling (field notes); Philippine
+     rice loses **16.5%** total post-harvest [5]; dragon fruit loses **35%** of output
+     post-harvest [17].
+   - **Pests & disease**: cacao **80–100%** (bar to 80, whisker to 100 — say the range out
+     loud); rice **24–41%**, average ~37% of yield (IRRI, tropical Asia) [18]; dragon fruit
+     stem canker **60–80%** in severe cases [19].
+   - **Typhoon (bad year)**: cacao **~100%**; rice **up to 95%** of standing crop in the
+     worst-hit regions post-Haiyan [20]; dragon fruit shows **"n/a"** — there is no published
+     loss percentage, only grower reports of destroyed posts and lost production (storm Mario:
+     300 posts, ~4 t) [21]. If someone asks about the n/a, own it: we don't invent numbers —
+     that's the credibility standard of the whole deck.
+   - The takeaway to land: even against crops with famously bad loss profiles, **cacao's
+     pest/disease bar is the outlier** — worse than rice's worst case and above dragon fruit's
+     most destructive disease.
 2. *Tatay's cacao yield*: historically 500 kg/year, but currently near **0 kg** due to
    pest/disease — his estimated potential if pests were resolved is **2,000 kg/year**. Say this
    slowly: that's a **4× recovery**, and it's the single largest lever in the entire dataset.
-3. *Post-harvest loss vs. other crops* (grouped bars, low/high estimates): Philippine rice loses
-   **16.5%** post-harvest [5], fruits and vegetables **15–35%** [6] — cacao in this study loses
-   **80–100%** [1]. The point: cacao's losses aren't just bad, they're several times worse than
-   any comparable crop.
-4. *Farmer monthly income benchmarks*: a ₱2,000 low reference, **Blandino Papina** at ₱5,000 as
+3. *Farmer monthly income benchmarks*: a ₱2,000 low reference, **Blandino Papina** at ₱5,000 as
    the named example farmer, and ₱10,000 named as a "low" ceiling. The dashed line is Bicol's
    **poverty threshold for a family of five: ₱13,624/month** [4] — even the ₱10,000 "ceiling"
    sits ₱3,600 below it. Context for how thin margins are region-wide, not just for Tatay.
+   The footnote adds broad context: PH fruits and vegetables lose 15–35% post-harvest [6], and
+   cacao sits far outside even that band.
 
 **Slide 13 — Why this works (feasibility).** This slide was flagged as especially important —
 don't rush it.
