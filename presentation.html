@@ -468,7 +468,7 @@
 
 <section class="slide chart-slide">
   <div class="slide-inner top-align">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <span class="presenter-tag"><span class="dot"></span>Chow</span>
     <h2 class="slide-title">The numbers from Batbat</h2>
     <p class="card-sub">The visit's numbers, with two other Philippine cash crops alongside for scale.</p>
     <div class="subgrid" style="padding:0;">
@@ -480,8 +480,8 @@
       </div>
       <div class="subchart">
         <h3>Tatay's cacao yield</h3>
-        <p class="subchart-cap">This season vs. potential, if pests were resolved.</p>
-        <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
+        <p class="subchart-cap">Previous years vs. this season vs. potential, if pests were resolved.</p>
+        <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield: about 500 kilograms per year previously, 0 kilograms this season, versus a potential 2000 kilograms per year"></svg>
       </div>
       <div class="subchart">
         <h3>Farmer monthly income benchmarks</h3>
@@ -531,7 +531,7 @@
 
 <section class="slide">
   <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Chow · technical / water system</span>
+    <span class="presenter-tag"><span class="dot"></span>Chow</span>
     <h2 class="slide-title">Run the pilot through a live, calculated tool</h2>
     <p class="slide-body">We built the field tools ourselves, sized to Tatay's real farm. Calculated, not guessed.<a class="cite" href="#references">[3]&ndash;[8]</a></p>
     <div class="tool-links">
@@ -1311,8 +1311,9 @@
     });
 
     barChart("bar2", {
-      maxVal: 2000, unit: "kg/yr", gap: 0.5,
+      maxVal: 2000, unit: "kg/yr", gap: 0.45,
       data: [
+        { name: "Previous", value: 500, label: "500 kg", color: cssVar("--gold") },
         { name: "This season", value: 0, label: "0 kg", color: cssVar("--rust") },
         { name: "Potential", value: 2000, label: "2,000 kg", color: cssVar("--olive") },
       ],

@@ -27,7 +27,7 @@ but you should recognize the shape of the whole deck so a handoff never feels li
 | 5 | More constraints we have to design around | Keisuke |
 | 6 | Path to finished cacao: direct vs. stored (chart) | Masa |
 | 7 | Tatay's Farm, Batbat (images) | Ria |
-| 8 | The numbers from Batbat (4 charts) | Masa |
+| 8 | The numbers from Batbat (3 charts) | **Chow** |
 | 9 | The claim worth checking (callout) | Ash |
 | 10 | What we found at Tatay's farm (images) | Nancy |
 | 11 | Run the pilot through a live, calculated tool | **Chow only** |
@@ -50,8 +50,8 @@ Extras (backup slides, shown only for questions or spare time):
 | e7 | Where ₱0.9–1M for ten farms comes from | Masa |
 | e8 | The ₱10M benchmark isn't ours to estimate | Masa |
 
-Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 3 (+4 extras), Keisuke 4 (+2 extras), Ash 2,
-Chow 1 (deliberately — see Chow's note below). At roughly 30–40 seconds a slide the main deck is
+Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 (+4 extras), Keisuke 4 (+2 extras), Ash 2,
+Chow 2. At roughly 30–40 seconds a slide the main deck is
 about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
 budget breakdowns (e6–e8) live in the Extras appendix: the budget tiles on Keisuke's slide 14 are
 **clickable and jump straight to them** (each has a "back to the investor slide" link), so they
@@ -149,7 +149,7 @@ directly on this visit.
 
 ---
 
-## Masa — slides 6, 8, 13 + extras e3, e6–e8
+## Masa — slides 6, 13 + extras e3, e6–e8
 
 You're the data voice. Every one of your slides has a chart or a costed ledger — own the numbers,
 say them clearly and slowly, and don't rush past the punchline number on each slide. The three
@@ -170,33 +170,6 @@ handling (worse with Mayon ashfall), and — an important framing point — **mo
 raise profit here**, because pest/disease pressure caps yield regardless of how much work goes
 in. That last point is why treating pests/disease is the highest-leverage fix — the through-line
 of the whole deck.
-
-**Slide 8 — The numbers from Batbat (3 charts).**
-1. *Loss by cause: cacao vs. rice vs. dragon fruit* — a grouped bar chart. Each cause has three
-   bars: our cacao numbers next to two other Philippine cash crops.
-   - **Handling**: cacao loses **60%** of pods to careless handling (field notes); Philippine
-     rice loses **16.5%** total post-harvest [5]; dragon fruit loses **35%** of output
-     post-harvest [17].
-   - **Pests & disease**: cacao **80–100%** (bar to 80, whisker to 100 — say the range out
-     loud); rice **24–41%**, average ~37% of yield (IRRI, tropical Asia) [18]; dragon fruit
-     stem canker **60–80%** in severe cases [19].
-   - **Typhoon (bad year)**: cacao **~100%**; rice **up to 95%** of standing crop in the
-     worst-hit regions post-Haiyan [20]; dragon fruit **100%** — growers report total production
-     loss when a typhoon topples the posts the vines grow on (storm Mario: 300 posts, ~4 t)
-     [21]. If pressed on the dragon fruit figure, be honest that it's grower-reported rather
-     than a published statistic.
-   - The takeaway to land: even against crops with famously bad loss profiles, **cacao's
-     pest/disease bar is the outlier** — worse than rice's worst case and above dragon fruit's
-     most destructive disease.
-2. *Tatay's cacao yield*: historically 500 kg/year, but currently near **0 kg** due to
-   pest/disease — his estimated potential if pests were resolved is **2,000 kg/year**. Say this
-   slowly: that's a **4× recovery**, and it's the single largest lever in the entire dataset.
-3. *Farmer monthly income benchmarks*: a ₱2,000 low reference, **Blandino Papina** at ₱5,000 as
-   the named example farmer, and ₱10,000 named as a "low" ceiling. The dashed line is Bicol's
-   **poverty threshold for a family of five: ₱13,624/month** [4] — even the ₱10,000 "ceiling"
-   sits ₱3,600 below it. Context for how thin margins are region-wide, not just for Tatay.
-   The footnote adds broad context: PH fruits and vegetables lose 15–35% post-harvest [6], and
-   cacao is far beyond that.
 
 **Slide 13 — Why this works (feasibility).** This slide was flagged as especially important —
 don't rush it.
@@ -373,10 +346,42 @@ the ones that must survive — the problem and the next step.
 
 ---
 
-## Chow — slide 11 only
+## Chow — slides 8 & 11
 
-This is deliberately the **only** slide you own — you're the technical/water-system voice, and
-the rest of the team doesn't need to go deep on this material. Explain what you built and why:
+You're the technical voice — the Batbat numbers and the field tools are both yours, so you carry
+the deck's hardest data slide and its most concrete engineering slide back to back with only Ash's
+callout and Nancy's farm photos between them. The rest of the team doesn't need to go deep on
+this material.
+
+**Slide 8 — The numbers from Batbat (3 charts).**
+1. *Loss by cause: cacao vs. rice vs. dragon fruit* — a grouped bar chart. Each cause has three
+   bars: our cacao numbers next to two other Philippine cash crops.
+   - **Handling**: cacao loses **60%** of pods to careless handling (field notes); Philippine
+     rice loses **16.5%** total post-harvest [5]; dragon fruit loses **35%** of output
+     post-harvest [17].
+   - **Pests & disease**: cacao **80–100%** (bar to 80, whisker to 100 — say the range out
+     loud); rice **24–41%**, average ~37% of yield (IRRI, tropical Asia) [18]; dragon fruit
+     stem canker **60–80%** in severe cases [19].
+   - **Typhoon (bad year)**: cacao **~100%**; rice **up to 95%** of standing crop in the
+     worst-hit regions post-Haiyan [20]; dragon fruit **100%** — growers report total production
+     loss when a typhoon topples the posts the vines grow on (storm Mario: 300 posts, ~4 t)
+     [21]. If pressed on the dragon fruit figure, be honest that it's grower-reported rather
+     than a published statistic.
+   - The takeaway to land: even against crops with famously bad loss profiles, **cacao's
+     pest/disease bar is the outlier** — worse than rice's worst case and above dragon fruit's
+     most destructive disease.
+2. *Tatay's cacao yield*: the chart shows all three bars — **500 kg/year** in previous years,
+   near **0 kg** this season due to
+   pest/disease — his estimated potential if pests were resolved is **2,000 kg/year**. Say this
+   slowly: that's a **4× recovery**, and it's the single largest lever in the entire dataset.
+3. *Farmer monthly income benchmarks*: a ₱2,000 low reference, **Blandino Papina** at ₱5,000 as
+   the named example farmer, and ₱10,000 named as a "low" ceiling. The dashed line is Bicol's
+   **poverty threshold for a family of five: ₱13,624/month** [4] — even the ₱10,000 "ceiling"
+   sits ₱3,600 below it. Context for how thin margins are region-wide, not just for Tatay.
+   The footnote adds broad context: PH fruits and vegetables lose 15–35% post-harvest [6], and
+   cacao is far beyond that.
+
+**Slide 11 — Run the pilot through a live, calculated tool.** Explain what you built and why:
 rather than eyeballing a drip-irrigation pilot for Tatay's farm, you built a working set of field
 tools —
 
