@@ -87,7 +87,9 @@ temper → mold → chill → sell. Facility undersized for their batch volumes.
 - Cacao flowering is **year-round**, not seasonal — pest/disease pressure is continuous.
 - Water: 2.5 ha, no sprinklers; his framing is that water *pressure*, not volume, is the constraint — he
   can't estimate how many sprinklers his source could support. Open to drip irrigation and rainwater
-  collection; says a pilot study and investors would be needed.
+  collection. (Attribution correction: the pilot-study-and-investors framing, and all proposed
+  solutions, are the team's own conclusions from its investigations, not Tatay's suggestions. He
+  described the problems and constraints; the ideas are ours.)
 - Health problems compounding — limited personal capacity for labor-intensive interventions.
 - Believes there's real money in agriculture; younger generation should be encouraged.
 - Confirms government programs exist, but input cost (fertilizer) is a barrier even with subsidies.

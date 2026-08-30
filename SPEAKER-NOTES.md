@@ -222,8 +222,10 @@ herbal spray** — cheapest to start, no new equipment, fits his limited labor c
 health constraints. The ledger and the amino-acid spray follow once the calendar habit is
 established.
 
-**Slide 16 — The investor gap.** Open with Tatay's own quote: he told us directly that "a pilot
-study and investors would be needed." Three concrete ways to help him find them:
+**Slide 16 — The investor gap.** Open by owning the conclusion: our investigation found that what
+stands between Tatay's farm and recovery is a funded pilot study. Be careful with attribution here:
+Tatay described the problems and constraints, but the pilot/investor plan and every proposed
+solution came from our group's own investigations, not from him. Three concrete ways to fund it:
 1. **Point to the regional funding precedent** — the Zambales solar farm secured ₱10 million for a
    comparable-scale agri-infrastructure pilot, concrete proof that regional agri-tech investment
    appetite exists, and a benchmark to pitch against.
