@@ -191,6 +191,9 @@
   .hero-body{ max-width: 62ch; color: #C9BEB0; font-size: 1rem; line-height: 1.6; margin: 0 0 1rem; }
   .hero-note{ max-width: 60ch; color: #F7E9C9; font-style: italic; font-size: 0.95rem; }
   .hero-credit{ color: #C9BEB0; font-size: 0.85rem; margin-top: 2rem; }
+  .team-line{ display: flex; align-items: center; gap: 0.8rem; margin-top: 2.4rem; color: #C9BEB0; font-size: 0.95rem; }
+  .team-line b{ color: #F7F2EA; }
+  .team-line img{ height: 46px; width: auto; background: #FFFFFF; border-radius: 6px; padding: 5px 8px; }
 
   .presenter-tag{
     display: inline-flex; align-items: center; gap: 0.35rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -314,10 +317,13 @@
     <p class="hero-sub">From Field to Fix</p>
     <p class="hero-body">A pitch grounded in direct interviews and site visits across Albay and the wider Bicol region, August 26–28.</p>
     <p class="hero-note">Thesis: every solution we propose already works somewhere in Bicol. Our job is showing how to bring it to cacao.</p>
+    <div class="team-line">
+      <img src="images/tsukuba-logo.png" alt="University of Tsukuba logo" onerror="this.style.display='none'">
+      <span><b>Team BEE</b> · University of Tsukuba</span>
+    </div>
   </div>
 </section>
 
-<!-- 2: MAYON GOLD VISIT -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Ria</span>
@@ -336,7 +342,6 @@
   </div>
 </section>
 
-<!-- 3: PROBES EXPOSED PROBLEMS -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Nancy</span>
@@ -351,7 +356,6 @@
   </div>
 </section>
 
-<!-- SCOPE: what's in, what's out -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
@@ -374,7 +378,6 @@
   </div>
 </section>
 
-<!-- 4: PATH TO FINISHED CACAO (interactive chart) -->
 <section class="slide chart-slide">
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
@@ -385,7 +388,6 @@
   </div>
 </section>
 
-<!-- 5: MORE CONSTRAINTS -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
@@ -399,7 +401,6 @@
   </div>
 </section>
 
-<!-- 6: AUG 26, BATBAT (images) -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Ria</span>
@@ -418,7 +419,6 @@
   </div>
 </section>
 
-<!-- 7: BATBAT — 3 CHARTS -->
 <section class="slide chart-slide">
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
@@ -444,49 +444,6 @@
   </div>
 </section>
 
-<!-- 8: AUG 27 (images) -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Ria</span>
-    <h2 class="slide-title">August 27: Rice, Dairy, Bamboo &amp; Honey Farms</h2>
-    <p class="slide-sub">What's already working: a thriving rice/dairy farm school, bamboo, and stingless-bee honey.</p>
-    <div class="img-row cols-3">
-      <div class="img-slot">
-        <img src="images/aug27-1.jpg" alt="Greenhouse beds with drip irrigation at the rice/dairy farm" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-1.jpg</code><span>Greenhouse with drip irrigation</span></div>
-      </div>
-      <div class="img-slot">
-        <img src="images/aug27-2.jpg" alt="Stone path into the farm under an arch with a hand-painted sign" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-2.jpg</code><span>Path into the farm</span></div>
-      </div>
-      <div class="img-slot">
-        <img src="images/aug27-3.jpg" alt="Stingless-bee honeycomb dripping with honey, held in a hand" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-3.jpg</code><span>Stingless-bee honeycomb</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9: AUG 28 (images) -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Ria</span>
-    <h2 class="slide-title">August 28: Solar, Wind &amp; Agritourism</h2>
-    <p class="slide-sub">Agrivoltaics research, the San Miguel Bay wind project, and a youth agritourism program.</p>
-    <div class="img-row cols-2">
-      <div class="img-slot">
-        <img src="images/aug28-1.jpg" alt="Vertically mounted solar panels lining the field at the agrivoltaics site" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-1.jpg</code><span>Solar panels at the agrivoltaics site</span></div>
-      </div>
-      <div class="img-slot">
-        <img src="images/aug28-2.jpg" alt="Mulched crop beds growing alongside the solar installation" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-2.jpg</code><span>Crop beds at the agrivoltaics site</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 10: CLAIM WORTH CHECKING -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Ash</span>
@@ -501,60 +458,6 @@
   </div>
 </section>
 
-<!-- 11: SOLAR — 3 CHARTS -->
-<section class="slide chart-slide">
-  <div class="slide-inner top-align">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">What the Zambales solar precedent tells us</h2>
-    <p class="card-sub">Three figures behind the agrivoltaics-irrigation idea.</p>
-    <div class="subgrid" style="padding:0;">
-      <div class="subchart">
-        <h3>Panel efficiency over a 30-year lifespan</h3>
-        <p class="subchart-cap">Panels degrade gradually rather than stopping at warranty's end.</p>
-        <svg class="viz" id="line2" viewBox="0 0 300 260" role="img" aria-label="Solar panel efficiency declining from 100 percent at year 0 to about 82.5 percent at year 30"></svg>
-      </div>
-      <div class="subchart">
-        <h3>Panel waste, by weight</h3>
-        <p class="subchart-cap">What a retired panel is actually made of.</p>
-        <svg class="viz" id="donut1" viewBox="0 0 300 260" role="img" aria-label="Solar panel waste composition by weight: 75 percent glass, 15 percent aluminum, 10 percent other electronics"></svg>
-        <div class="legend" id="donut1-legend"></div>
-      </div>
-      <div class="subchart">
-        <span class="badge-estimate" style="margin-bottom:0.3rem;">Researched estimate</span>
-        <h3>Panel orientation: relative energy yield</h3>
-        <p class="subchart-cap">A single vertical panel collects noticeably less sunlight than an optimally tilted one.</p>
-        <svg class="viz" id="bar4" viewBox="0 0 300 250" role="img" aria-label="Estimated relative solar energy yield by panel orientation: optimal tilt 100 percent baseline, flat or horizontal about 85 percent, vertical wall mounted about 65 percent"></svg>
-      </div>
-    </div>
-    <p class="source-note">Per-panel, vertical mounting collects less than optimal tilt; two-sided (bifacial) east&ndash;west vertical <em>farms</em> with the right spacing can yield 10&ndash;20% more per unit of land. Sources: <a href="https://doi.org/10.1016/j.apenergy.2017.08.042" target="_blank" rel="noopener">Khan et al., &ldquo;Vertical bifacial solar farms,&rdquo; Applied Energy 206 (2017)</a> (<a href="https://arxiv.org/abs/1704.08630" target="_blank" rel="noopener">free preprint</a>) and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038092X21009087" target="_blank" rel="noopener">Riaz et al., &ldquo;The optimization of vertical bifacial photovoltaic farms for efficient agrivoltaic systems,&rdquo; Solar Energy 230 (2021)</a>.</p>
-  </div>
-</section>
-
-<!-- 12: VERTICAL PANEL DESIGN CONSIDERATION -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
-    <div class="card" style="max-width:900px; margin-bottom:1.2rem;">
-      <div class="callout-body" style="padding-top:1.1rem;">
-        <span class="callout-tag">Design consideration</span>
-        <p class="callout-quote">Mounting panels vertically wastes potential output: it isn't the efficient way to collect sunlight.</p>
-        <p class="card-sub" style="margin-bottom:0;">Our own observation. The orientation chart shows why: ~65% vs. 100%.</p>
-      </div>
-    </div>
-    <div class="img-row cols-2" style="max-width:900px;">
-      <div class="img-slot">
-        <img src="images/vertical-panel.jpg" alt="Vertically mounted solar panels lining the field at the agrivoltaics site" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/vertical-panel.jpg</code><span>Vertically mounted panels at the agrivoltaics site</span></div>
-      </div>
-      <div class="img-slot">
-        <img src="images/vertical-panel-back.jpg" alt="The back side of the vertically mounted panels, showing exposed rear cells on the steel frames" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-        <div class="img-fallback"><span class="glyph">🖼</span><code>images/vertical-panel-back.jpg</code><span>Behind the panels: exposed rear cells on the steel frames</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 13: MAIN PROBLEM (images) -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Nancy</span>
@@ -577,7 +480,6 @@
   </div>
 </section>
 
-<!-- 14: SPECIAL SUGGESTION + TOOLS -->
 <section class="slide">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Chow · technical / water system</span>
@@ -608,7 +510,161 @@
   </div>
 </section>
 
-<!-- 15: SOLUTIONS FROM OTHER FARMS -->
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Why this works inside real constraints</h2>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop: their explicit requirement.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>0 kg &rarr; 2,000 kg/year: a ~4&times; recovery.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Fixes two problems at once</h3><p>Stable farms mean a stable processing facility.</p></div></div>
+      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>Nothing invented from scratch</h3><p>Proven Bicol practices, adapted to cacao.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">Finding investors: the missing piece</h2>
+    <p class="slide-sub">Our conclusion: a funded pilot is what's missing. The plan is our group's own, and the push comes from Muravah, Bicol University, and its students.</p>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The regional funding precedent</h3><p>₱10M was raised regionally for a comparable pilot: the appetite is proven.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>A pilot inside Muravah's existing study</h3><p>Muravah's 500–1,000-farmer study puts an NGO's track record behind it.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Bridge capital toward organic certification: 4&times; recovery + price premium.</p></div></div>
+    </div>
+    <div class="budget-row">
+      <div class="budget-tile"><span class="budget-num">~₱200K</span><span class="budget-label">one-farm starter pilot</span></div>
+      <div class="budget-tile"><span class="budget-num">₱1.5–2M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></div>
+      <div class="budget-tile"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally</span></div>
+    </div>
+    <p class="funding-note">Rough team estimates. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ash</span>
+    <h2 class="slide-title">What we're leaving you with</h2>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The problem is specific, not vague</h3><p>Year-round pest and disease pressure: 500&nbsp;kg/yr &rarr; ~0, and 80&ndash;100% losses region-wide.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The fix already exists in Bicol</h3><p>6 verified solutions from farms already succeeding. Start: 15-day calendar + herbal spray.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>A projected 4&times; recovery for Tatay, and a stable facility downstream.</p></div></div>
+      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱200K, run by Muravah and BU students.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide hero">
+  <div class="slide-inner">
+    <p class="hero-eyebrow">Thank You</p>
+    <h1 class="hero-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Maraming salamat sa pakikinig</h1>
+    <p class="hero-sub" style="font-style:normal;">ご清聴ありがとうございました</p>
+    <p class="hero-body">Thank you for listening.</p>
+    <p class="hero-credit"><b>Team BEE</b> · University of Tsukuba<br>Nancy · Masa · Keisuke · Ria · Ash · Chow</p>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="slide hero">
+  <div class="slide-inner">
+    <p class="hero-eyebrow">Appendix</p>
+    <h1 class="hero-title">Extras</h1>
+    <p class="hero-body">Backup slides trimmed from the main talk, kept here for questions.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">August 27: Rice, Dairy, Bamboo &amp; Honey Farms</h2>
+    <p class="slide-sub">What's already working: a thriving rice/dairy farm school, bamboo, and stingless-bee honey.</p>
+    <div class="img-row cols-3">
+      <div class="img-slot">
+        <img src="images/aug27-1.jpg" alt="Greenhouse beds with drip irrigation at the rice/dairy farm" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-1.jpg</code><span>Greenhouse with drip irrigation</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/aug27-2.jpg" alt="Stone path into the farm under an arch with a hand-painted sign" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-2.jpg</code><span>Path into the farm</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/aug27-3.jpg" alt="Stingless-bee honeycomb dripping with honey, held in a hand" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug27-3.jpg</code><span>Stingless-bee honeycomb</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Ria</span>
+    <h2 class="slide-title">August 28: Solar, Wind &amp; Agritourism</h2>
+    <p class="slide-sub">Agrivoltaics research, the San Miguel Bay wind project, and a youth agritourism program.</p>
+    <div class="img-row cols-2">
+      <div class="img-slot">
+        <img src="images/aug28-1.jpg" alt="Vertically mounted solar panels lining the field at the agrivoltaics site" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-1.jpg</code><span>Solar panels at the agrivoltaics site</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/aug28-2.jpg" alt="Mulched crop beds growing alongside the solar installation" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/aug28-2.jpg</code><span>Crop beds at the agrivoltaics site</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide chart-slide">
+  <div class="slide-inner top-align">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">What the Zambales solar precedent tells us</h2>
+    <p class="card-sub">Three figures behind the agrivoltaics-irrigation idea.</p>
+    <div class="subgrid" style="padding:0;">
+      <div class="subchart">
+        <h3>Panel efficiency over a 30-year lifespan</h3>
+        <p class="subchart-cap">Panels degrade gradually rather than stopping at warranty's end.</p>
+        <svg class="viz" id="line2" viewBox="0 0 300 260" role="img" aria-label="Solar panel efficiency declining from 100 percent at year 0 to about 82.5 percent at year 30"></svg>
+      </div>
+      <div class="subchart">
+        <h3>Panel waste, by weight</h3>
+        <p class="subchart-cap">What a retired panel is actually made of.</p>
+        <svg class="viz" id="donut1" viewBox="0 0 300 260" role="img" aria-label="Solar panel waste composition by weight: 75 percent glass, 15 percent aluminum, 10 percent other electronics"></svg>
+        <div class="legend" id="donut1-legend"></div>
+      </div>
+      <div class="subchart">
+        <span class="badge-estimate" style="margin-bottom:0.3rem;">Researched estimate</span>
+        <h3>Panel orientation: relative energy yield</h3>
+        <p class="subchart-cap">A single vertical panel collects noticeably less sunlight than an optimally tilted one.</p>
+        <svg class="viz" id="bar4" viewBox="0 0 300 250" role="img" aria-label="Estimated relative solar energy yield by panel orientation: optimal tilt 100 percent baseline, flat or horizontal about 85 percent, vertical wall mounted about 65 percent"></svg>
+      </div>
+    </div>
+    <p class="source-note">Per-panel, vertical mounting collects less than optimal tilt; two-sided (bifacial) east&ndash;west vertical <em>farms</em> with the right spacing can yield 10&ndash;20% more per unit of land. Sources: <a href="https://doi.org/10.1016/j.apenergy.2017.08.042" target="_blank" rel="noopener">Khan et al., &ldquo;Vertical bifacial solar farms,&rdquo; Applied Energy 206 (2017)</a> (<a href="https://arxiv.org/abs/1704.08630" target="_blank" rel="noopener">free preprint</a>) and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038092X21009087" target="_blank" rel="noopener">Riaz et al., &ldquo;The optimization of vertical bifacial photovoltaic farms for efficient agrivoltaic systems,&rdquo; Solar Energy 230 (2021)</a>.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <div class="card" style="max-width:900px; margin-bottom:1.2rem;">
+      <div class="callout-body" style="padding-top:1.1rem;">
+        <span class="callout-tag">Design consideration</span>
+        <p class="callout-quote">Mounting panels vertically wastes potential output: it isn't the efficient way to collect sunlight.</p>
+        <p class="card-sub" style="margin-bottom:0;">Our own observation. The orientation chart shows why: ~65% vs. 100%.</p>
+      </div>
+    </div>
+    <div class="img-row cols-2" style="max-width:900px;">
+      <div class="img-slot">
+        <img src="images/vertical-panel.jpg" alt="Vertically mounted solar panels lining the field at the agrivoltaics site" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/vertical-panel.jpg</code><span>Vertically mounted panels at the agrivoltaics site</span></div>
+      </div>
+      <div class="img-slot">
+        <img src="images/vertical-panel-back.jpg" alt="The back side of the vertically mounted panels, showing exposed rear cells on the steel frames" loading="lazy" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
+        <div class="img-fallback"><span class="glyph">🖼</span><code>images/vertical-panel-back.jpg</code><span>Behind the panels: exposed rear cells on the steel frames</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="slide">
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
@@ -645,68 +701,9 @@
   </div>
 </section>
 
-<!-- 16: FEASIBILITY -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">Why this works inside real constraints</h2>
-    <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop: their explicit requirement.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>0 kg &rarr; 2,000 kg/year: a ~4&times; recovery.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Fixes two problems at once</h3><p>Stable farms mean a stable processing facility.</p></div></div>
-      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>Nothing invented from scratch</h3><p>Proven Bicol practices, adapted to cacao.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 17: INVESTORS -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
-    <h2 class="slide-title">Finding investors: the missing piece</h2>
-    <p class="slide-sub">Our conclusion: a funded pilot is what's missing. The plan is our group's own, and the push comes from Muravah, Bicol University, and its students.</p>
-    <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The regional funding precedent</h3><p>₱10M was raised regionally for a comparable pilot: the appetite is proven.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>A pilot inside Muravah's existing study</h3><p>Muravah's 500–1,000-farmer study puts an NGO's track record behind it.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Bridge capital toward organic certification: 4&times; recovery + price premium.</p></div></div>
-    </div>
-    <div class="budget-row">
-      <div class="budget-tile"><span class="budget-num">~₱200K</span><span class="budget-label">one-farm starter pilot</span></div>
-      <div class="budget-tile"><span class="budget-num">₱1.5–2M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></div>
-      <div class="budget-tile"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally</span></div>
-    </div>
-    <p class="funding-note">Rough team estimates. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
-  </div>
-</section>
-
-<!-- CONCLUSION -->
-<section class="slide">
-  <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Ash</span>
-    <h2 class="slide-title">What we're leaving you with</h2>
-    <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The problem is specific, not vague</h3><p>Year-round pest and disease pressure: 500&nbsp;kg/yr &rarr; ~0, and 80&ndash;100% losses region-wide.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The fix already exists in Bicol</h3><p>6 verified solutions from farms already succeeding. Start: 15-day calendar + herbal spray.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>A projected 4&times; recovery for Tatay, and a stable facility downstream.</p></div></div>
-      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱200K, run by Muravah and BU students.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- THANK YOU -->
-<section class="slide hero">
-  <div class="slide-inner">
-    <p class="hero-eyebrow">Thank You</p>
-    <h1 class="hero-title" style="font-size:clamp(1.8rem,4vw,2.8rem);">Maraming salamat sa pakikinig</h1>
-    <p class="hero-sub" style="font-style:normal;">ご清聴ありがとうございました</p>
-    <p class="hero-body">Thank you for listening.</p>
-    <p class="hero-credit">Nancy · Masa · Keisuke · Ria · Ash · Chow</p>
-  </div>
-</section>
-
 <div class="nav-bar">
   <button class="nav-btn" id="nav-prev">← Prev</button>
-  <span class="nav-counter" id="nav-counter">1 / 20</span>
+  <span class="nav-counter" id="nav-counter">1 / 21</span>
   <button class="nav-btn" id="nav-next">Next →</button>
 </div>
 

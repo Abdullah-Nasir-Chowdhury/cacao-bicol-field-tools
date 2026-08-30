@@ -22,11 +22,12 @@ photos now.
 | `aug28-2.jpg` | August 28 — Solar, Wind & Agritourism | Crop beds at the agrivoltaics site | ✅ added |
 | `vertical-panel.jpg` | Vertical panels waste potential output | Vertically mounted panels, front | ✅ added |
 | `vertical-panel-back.jpg` | Vertical panels waste potential output | Behind the panels: exposed rear cells | ✅ added |
+| `tsukuba-logo.png` | Title & thank-you slides | University of Tsukuba logo (shown on a white chip; PNG with transparency works best) | still needed |
 | `pest-infestation.jpg` | What we found at Tatay's farm | Pest infestation | ✅ added |
 | `dry-leaves.jpg` | What we found at Tatay's farm | Dry, dying leaves | ✅ added |
 | `diseased-pod.jpg` | What we found at Tatay's farm | Diseased cacao pod | ✅ added |
 
-14 photos total — all 14 in place. Replace any of them by uploading a new file with the same name.
+15 files total — 14 in place; only the Tsukuba logo is still to add. Replace any of them by uploading a new file with the same name.
 
 If you use different filenames or extensions, either rename your files to match this table, or
 open `presentation.html`, search for the old filename in each `<img src="...">` tag, and update it.
