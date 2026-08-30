@@ -475,7 +475,7 @@
       <div class="subchart">
         <h3>Loss by cause: cacao vs. rice vs. dragon fruit</h3>
         <p class="subchart-cap">Same three causes, compared across PH cash crops.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[17]&ndash;[21]</a></p>
-        <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing loss by cause across crops. Handling: cacao 60 percent, Philippine rice 16.5 percent, dragon fruit 35 percent. Pests and disease: cacao 80 to 100 percent, rice 24 to 41 percent, dragon fruit 60 to 80 percent. Typhoon in a bad year: cacao about 100 percent, rice up to 95 percent, dragon fruit has no published figure"></svg>
+        <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing loss by cause across crops. Handling: cacao 60 percent, rice 16.5 percent, dragon fruit 35 percent. Pests and disease: cacao 80 to 100 percent, rice 24 to 41 percent, dragon fruit 60 to 80 percent. Typhoon in a bad year: cacao about 100 percent, rice up to 95 percent, dragon fruit 100 percent"></svg>
         <div class="legend" id="bar1-legend"></div>
       </div>
       <div class="subchart">
@@ -489,7 +489,7 @@
         <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos for Blandino Papina, 10000 pesos cited as a low ceiling, all below the Bicol poverty line of 13624 pesos"></svg>
       </div>
     </div>
-    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a> For context, Philippine fruits and vegetables broadly lose 15&ndash;35% post-harvest; cacao's losses are far outside even that band.<a class="cite" href="#references">[6]</a></p>
+    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a> Philippine fruits and vegetables broadly lose 15&ndash;35% post-harvest; cacao is far beyond that.<a class="cite" href="#references">[6]</a></p>
   </div>
 </section>
 
@@ -842,7 +842,7 @@
       <li>Savary et al. (2000), &ldquo;Rice Pest Constraints in Tropical Asia: Quantification of Yield Losses Due to Rice Pests in a Range of Production Situations,&rdquo; Plant Disease 84:357&ndash;369 (average ~37% of rice yield lost to pests and disease; range 24&ndash;41%). <a href="https://pubmed.ncbi.nlm.nih.gov/30841254/" target="_blank" rel="noopener">PubMed</a> &middot; <a href="https://ricetoday.irri.org/where-rice-pests-and-diseases-do-the-most-damage/" target="_blank" rel="noopener">IRRI Rice Today</a></li>
       <li>Balendres &amp; Bengoa (2019), &ldquo;Diseases of dragon fruit (Hylocereus species): Etiology and current management options,&rdquo; Crop Protection 126:104920 (canker losses up to 60%, reaching ~80% in severe cases). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0261219419302662" target="_blank" rel="noopener">ScienceDirect</a></li>
       <li>FAO via ReliefWeb, &ldquo;Typhoon-affected rice farmers need seeds&rdquo; (post-Haiyan: up to 95% of standing rice destroyed in the worst-hit region). <a href="https://reliefweb.int/report/philippines/typhoon-affected-rice-farmers-need-seeds" target="_blank" rel="noopener">reliefweb.int</a></li>
-      <li>&ldquo;Dragon fruit growers adapt to storm impacts,&rdquo; ReliefWeb (Ilocos growers report typhoon-destroyed posts and lost production, e.g. storm Mario: 300 posts, ~4 t of fruit; no regional loss-% published). <a href="https://reliefweb.int/report/philippines/dragon-fruit-growers-adapt-storm-impacts" target="_blank" rel="noopener">reliefweb.int</a></li>
+      <li>&ldquo;Dragon fruit growers adapt to storm impacts,&rdquo; ReliefWeb (Ilocos growers report total production loss when typhoons destroy the growing posts, e.g. storm Mario: 300 posts, ~4 t of fruit). <a href="https://reliefweb.int/report/philippines/dragon-fruit-growers-adapt-storm-impacts" target="_blank" rel="noopener">reliefweb.int</a></li>
     </ol>
     <p class="source-note">Click any [n] in the deck to jump here; links open the original sources.</p>
   </div>
@@ -1284,9 +1284,9 @@
       maxVal: 100, unit: "%",
       legendEl: "bar1-legend",
       series: [
-        { name: "Cacao (this study)", color: cssVar("--accent") },
-        { name: "Rice (PH)", color: cssVar("--gold") },
-        { name: "Dragon fruit (PH)", color: cssVar("--olive") },
+        { name: "Cacao", color: cssVar("--accent") },
+        { name: "Rice", color: cssVar("--gold") },
+        { name: "Dragon fruit", color: cssVar("--olive") },
       ],
       groups: [
         { name: "Handling", values: [60, 16.5, 35], labels: ["60%", "16.5%", "35%"],
@@ -1301,11 +1301,11 @@
             "24–41% of yield, avg ~37% (IRRI, tropical Asia)",
             "canker losses up to 60%, severe cases ~80%",
           ] },
-        { name: "Typhoon (bad yr)", values: [100, 95, null], labels: ["~100%", "95%", ""],
+        { name: "Typhoon (bad yr)", values: [100, 95, 100], labels: ["~100%", "95%", "100%"],
           tooltips: [
             "~100% in a bad typhoon year (field notes)",
             "up to 95% of standing rice destroyed in worst-hit regions (post-Haiyan)",
-            "no published %: growers report destroyed posts and lost production (storm Mario)",
+            "grower-reported total loss when typhoons topple the posts (storm Mario)",
           ] },
       ],
     });

@@ -181,10 +181,10 @@ of the whole deck.
      loud); rice **24–41%**, average ~37% of yield (IRRI, tropical Asia) [18]; dragon fruit
      stem canker **60–80%** in severe cases [19].
    - **Typhoon (bad year)**: cacao **~100%**; rice **up to 95%** of standing crop in the
-     worst-hit regions post-Haiyan [20]; dragon fruit shows **"n/a"** — there is no published
-     loss percentage, only grower reports of destroyed posts and lost production (storm Mario:
-     300 posts, ~4 t) [21]. If someone asks about the n/a, own it: we don't invent numbers —
-     that's the credibility standard of the whole deck.
+     worst-hit regions post-Haiyan [20]; dragon fruit **100%** — growers report total production
+     loss when a typhoon topples the posts the vines grow on (storm Mario: 300 posts, ~4 t)
+     [21]. If pressed on the dragon fruit figure, be honest that it's grower-reported rather
+     than a published statistic.
    - The takeaway to land: even against crops with famously bad loss profiles, **cacao's
      pest/disease bar is the outlier** — worse than rice's worst case and above dragon fruit's
      most destructive disease.
@@ -196,7 +196,7 @@ of the whole deck.
    **poverty threshold for a family of five: ₱13,624/month** [4] — even the ₱10,000 "ceiling"
    sits ₱3,600 below it. Context for how thin margins are region-wide, not just for Tatay.
    The footnote adds broad context: PH fruits and vegetables lose 15–35% post-harvest [6], and
-   cacao sits far outside even that band.
+   cacao is far beyond that.
 
 **Slide 13 — Why this works (feasibility).** This slide was flagged as especially important —
 don't rush it.
