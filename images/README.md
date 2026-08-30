@@ -12,7 +12,6 @@ around 1200–1600px wide look best. JPG or PNG both work — just keep the file
 |---|---|---|---|
 | `mayon-gold-1.jpg` | photo | We visited Mayon Gold / Muravah Foundation | Site visit photo 1 |
 | `mayon-gold-2.jpg` | photo | We visited Mayon Gold / Muravah Foundation | Site visit photo 2 |
-| `batbat-1.jpg` | photo | August 26 — Tatay's Farm, Batbat | Photo of the farm |
 | `batbat-1.mp4` | **video** | August 26 — Tatay's Farm, Batbat | "Leaves dry" — leaves drying/rotting due to lack of water (the clip whose original filename ends in `105010.mp4`). Plays automatically, muted, on loop. |
 | `batbat-2.mp4` | **video** | August 26 — Tatay's Farm, Batbat | "Cacao pod rotting". Plays automatically, muted, on loop. |
 | `aug27-1.jpg` | photo | August 27 — Rice, Dairy, Bamboo & Honey Farms | Rice/dairy farm & farm school |
@@ -24,7 +23,7 @@ around 1200–1600px wide look best. JPG or PNG both work — just keep the file
 | `dry-leaves.jpg` | photo | What we found at Tatay's farm | Dry, dying leaves |
 | `diseased-pod.jpg` | photo | What we found at Tatay's farm | Diseased cacao pod |
 
-That's 11 photos and 2 videos.
+That's 10 photos and 2 videos.
 
 **How to add the videos** (chat only accepts images, so they go straight into the repo):
 on github.com, open this `images/` folder → **Add file → Upload files** → drop in the two `.mp4`
