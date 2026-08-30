@@ -15,8 +15,9 @@ photos now.
 | `mayon-gold-2.jpg` | We visited Mayon Gold / Muravah Foundation | Site visit photo 2 | ✅ added |
 | `batbat-1.jpg` | August 26 — Tatay's Farm, Batbat | Arriving at the farm | ✅ added |
 | `batbat-2.jpg` | August 26 — Tatay's Farm, Batbat | Walking the farm with Tatay | ✅ added |
-| `aug27-1.jpg` | August 27 — Rice, Dairy, Bamboo & Honey Farms | Rice/dairy farm & farm school | still needed |
-| `aug27-2.jpg` | August 27 — Rice, Dairy, Bamboo & Honey Farms | Bamboo farm / honey producers | still needed |
+| `aug27-1.jpg` | August 27 — Rice, Dairy, Bamboo & Honey Farms | Greenhouse with drip irrigation | ✅ added |
+| `aug27-2.jpg` | August 27 — Rice, Dairy, Bamboo & Honey Farms | Path into the farm | ✅ added |
+| `aug27-3.jpg` | August 27 — Rice, Dairy, Bamboo & Honey Farms | Stingless-bee honeycomb | ✅ added |
 | `aug28-1.jpg` | August 28 — Solar, Wind & Agritourism | Zambales solar farm / agrivoltaics | still needed |
 | `aug28-2.jpg` | August 28 — Solar, Wind & Agritourism | Youth agritourism program | still needed |
 | `vertical-panel.jpg` | Vertical panels waste potential output | Vertical vs. tilted panel comparison (the team's own photo, not from the field notes) | still needed |
@@ -24,7 +25,7 @@ photos now.
 | `dry-leaves.jpg` | What we found at Tatay's farm | Dry, dying leaves | ✅ added |
 | `diseased-pod.jpg` | What we found at Tatay's farm | Diseased cacao pod | ✅ added |
 
-12 photos total — 7 in place, 5 still to add (the two Aug 27 shots, the two Aug 28 shots, and the vertical-panel comparison).
+13 photos total — 10 in place, 3 still to add (the two Aug 28 shots and the vertical-panel comparison).
 
 If you use different filenames or extensions, either rename your files to match this table, or
 open `presentation.html`, search for the old filename in each `<img src="...">` tag, and update it.
