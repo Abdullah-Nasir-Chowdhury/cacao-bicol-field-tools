@@ -438,6 +438,21 @@ tools —
 homepage and cross-linked from the controller page; it isn't a card on the slide, but mention it
 if someone asks how the pieces connect.)
 
+**How to read the water-system schematic, if someone opens it or asks.** Water flows left to
+right: source → pump (only when the source sits below the field — Tatay's case; a gravity-fed
+source needs no pump, and that's the *only* component that changes) → check valve (one-way gate
+so water can't drain back toward the source) → filter (drip emitters clog without it — the #1
+maintenance failure in real drip systems) → pressure regulator (steps pressure down to what thin
+drip line tolerates) → mainline splitting into **three zones, opened one valve at a time**, so a
+small low-pressure source can still water the whole farm. The teal dashed line is the **buffer
+tank** merging in as dry-season backup; the F and P circles are a flow meter and pressure gauge
+(pressure dropping = leak, flow dropping = clog); the amber dashed lines are **control signals,
+not water** — the Raspberry Pi opening zone valves (and the pump, in pump mode) on a schedule it
+adapts to weather and season, with rain and soil-moisture sensors able to veto a run and the
+tank-level sensor keeping the pump from running dry. One-liner for the stage: *"source → lift if
+we need it → clean it → calm it down → one zone at a time out to the trees, with a rain tank as
+backup and a Pi deciding when."*
+
 — so any water-resilience pilot for Tatay is calculated from his actual numbers, not guessed. The
 water math itself is cited on the slide ([3]–[8]: the DA cacao production guide, the cocoa
 water-relations literature, FAO-56). Point the room at the GitHub repo
