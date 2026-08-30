@@ -69,7 +69,7 @@ temper → mold → chill → sell. Facility undersized for their batch volumes.
   which discourages farmers from investing more work.
 
 **Economics**
-- Farmer income: ~₱2,000–10,000/month range.
+- Farmer income: ~₱2,000–10,000/month range. Named example: Blandino Papina, ~₱5,000/month.
 - Possible lever: "organic" labeling to justify a price premium.
 - Core tension: organic certification + export access vs. simply maximizing income.
 - Pest control named as problem #1 overall.

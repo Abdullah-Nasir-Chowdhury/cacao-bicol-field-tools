@@ -1,0 +1,300 @@
+<title>Raspberry Pi Controller Schematic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EEF1EC;
+    --surface: #FFFFFF;
+    --surface-sunken: #E4E9E2;
+    --line: #C7D0C4;
+    --ink: #1B2320;
+    --ink-soft: #56645C;
+    --ink-faint: #86928A;
+    --accent: #16746C;
+    --accent-ink: #0B403C;
+    --accent-soft: #DCEAE7;
+    --good: #4B7A3B;
+    --good-soft: #E3EEDD;
+    --warn: #9A6B15;
+    --warn-soft: #F3E7CB;
+    --critical: #8C3B2E;
+    --critical-soft: #F3DED9;
+    --focus: #16746C;
+    --shadow: 0 1px 0 rgba(27,35,32,0.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #101613; --surface: #182120; --surface-sunken: #0E1614; --line: #2B3733;
+      --ink: #E7EDE9; --ink-soft: #A8B6AF; --ink-faint: #71807A;
+      --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
+      --good: #8FC77A; --good-soft: #1F3220; --warn: #E0B04B; --warn-soft: #3A2E14;
+      --critical: #E08A78; --critical-soft: #3B211D; --focus: #4FBDB0;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #101613; --surface: #182120; --surface-sunken: #0E1614; --line: #2B3733;
+    --ink: #E7EDE9; --ink-soft: #A8B6AF; --ink-faint: #71807A;
+    --accent: #4FBDB0; --accent-ink: #B7EAE2; --accent-soft: #1D3532;
+    --good: #8FC77A; --good-soft: #1F3220; --warn: #E0B04B; --warn-soft: #3A2E14;
+    --critical: #E08A78; --critical-soft: #3B211D; --focus: #4FBDB0;
+    --shadow: 0 1px 0 rgba(0,0,0,0.4);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{ transition-duration: 0.001ms !important; } }
+
+  .wrap{ max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+  header{
+    display:flex; flex-direction: column; gap: 0.6rem;
+    padding-bottom: 1.75rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem;
+  }
+  .header-top{
+    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; flex-wrap: wrap;
+  }
+  .header-links{ display:flex; gap: 1rem; flex-wrap: wrap; }
+  .eyebrow{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft);
+    display: inline-flex; width: fit-content; padding: 0.28rem 0.6rem; border-radius: 3px;
+  }
+  .crosslink{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem; color: var(--accent-ink); text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 1px;
+  }
+  .crosslink:hover{ color: var(--accent); }
+  .crosslink:focus-visible{ outline: 2px solid var(--focus); outline-offset: 2px; }
+  h1{
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    margin: 0.15rem 0 0; text-wrap: balance; letter-spacing: -0.02em;
+  }
+  .dek{ max-width: 70ch; color: var(--ink-soft); font-size: 1rem; margin: 0; }
+  .dek b{ color: var(--ink); font-weight: 600; }
+
+  .panel{ background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .panel-head{
+    display:flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+    padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--line); flex-wrap: wrap;
+  }
+  .panel-head h2{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0; font-weight: 600;
+  }
+
+  figure{ margin: 0; padding: 1.25rem 1.1rem 0.5rem; overflow-x: auto; }
+  figure svg{ width: 100%; height: auto; display:block; min-width: 640px; }
+  figcaption{
+    padding: 0.9rem 1.1rem 1.1rem; font-size: 0.86rem; color: var(--ink-soft);
+    border-top: 1px solid var(--line); margin-top: 1rem;
+  }
+  figcaption b{ color: var(--ink); }
+
+  .sch-text{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; fill: var(--ink-soft); }
+  .sch-text.title{ fill: var(--ink); font-weight: 600; font-size: 11.5px; }
+  .sch-text.small{ font-size: 9.5px; fill: var(--ink-faint); }
+  .sch-wire{ stroke: var(--ink-faint); stroke-width: 1.8; fill: none; }
+  .sch-signal{ stroke: var(--warn); stroke-width: 1.6; stroke-dasharray: 5 3; fill: none; }
+  .sch-power{ stroke: var(--critical); stroke-width: 1.8; fill: none; }
+  .blk{ fill: var(--surface-sunken); stroke: var(--ink-faint); stroke-width: 1.5; }
+  .blk-sensor{ fill: var(--accent-soft); stroke: var(--accent); }
+  .blk-pi{ fill: var(--warn-soft); stroke: var(--warn); stroke-width: 1.8; }
+  .blk-act{ fill: var(--good-soft); stroke: var(--good); }
+  .blk-power{ fill: var(--critical-soft); stroke: var(--critical); }
+  .lbl-sensor{ fill: var(--accent-ink); }
+  .lbl-pi{ fill: var(--warn); }
+  .lbl-act{ fill: var(--good); }
+  .lbl-power{ fill: var(--critical); }
+
+  .logic{ padding: 1.1rem; border-top: 1px solid var(--line); }
+  .logic h2{
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.75rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--ink-soft); margin: 0 0 0.8rem; font-weight: 600;
+  }
+  .logic ol{ margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.9rem; }
+  .logic li b{ font-weight: 600; }
+  .logic .note{ margin: 0.9rem 0 0; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); }
+
+  footer{ margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-faint); }
+  footer a{ color: var(--accent-ink); }
+
+  @media (max-width: 560px){
+    .wrap{ padding: 1.75rem 1rem 3.5rem; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="header-top">
+      <span class="eyebrow">Bicol cacao field tools · automation</span>
+      <div class="header-links">
+        <a class="crosslink" href="./index.html">&larr; Home</a>
+        <a class="crosslink" href="./drip-system-schematic.html">Water-system schematic &rarr;</a>
+        <a class="crosslink" href="./drip-pressure-planner.html">Pressure planner &rarr;</a>
+      </div>
+    </div>
+    <h1>Raspberry Pi Controller Schematic</h1>
+    <p class="dek">The detailed view of the <b>controller block</b> on the water-system schematic: a Raspberry Pi Zero 2 W reads soil, weather and tank sensors, then opens the zone valves (and the pump, when one is fitted) on a schedule it adapts to <b>weather and season</b>. Low-cost, low-power, and fully offline once configured.</p>
+  </header>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Controller block diagram</h2>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Block diagram of the irrigation controller. Left: soil-moisture probes, a rain sensor and a tank-level sensor feed an MCP3008 analog-to-digital converter, which talks to the Raspberry Pi over SPI; a DHT22 temperature and humidity sensor connects over GPIO and a DS3231 real-time clock over I2C. Center: the Raspberry Pi Zero 2 W runs the seasonal watering schedule. Right: the Pi drives a relay board over GPIO, and the relay switches three 12-volt solenoid zone valves and a pump contactor. Bottom: a 12-volt supply powers the valve circuits directly and powers the Pi through a 5-volt buck converter.">
+
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-faint)"></path>
+          </marker>
+          <marker id="arr-warn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--warn)"></path>
+          </marker>
+          <marker id="arr-power" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--critical)"></path>
+          </marker>
+        </defs>
+
+        <!-- ===== sensors (left column) ===== -->
+        <text class="sch-text small" x="20" y="28">SENSORS</text>
+
+        <rect class="blk blk-sensor" x="20" y="40" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="58" text-anchor="middle">soil-moisture probe A</text>
+        <text class="sch-text small" x="105" y="73" text-anchor="middle">capacitive, analog</text>
+
+        <rect class="blk blk-sensor" x="20" y="98" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="116" text-anchor="middle">soil-moisture probe B</text>
+        <text class="sch-text small" x="105" y="131" text-anchor="middle">second zone, analog</text>
+
+        <rect class="blk blk-sensor" x="20" y="156" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="174" text-anchor="middle">rain sensor</text>
+        <text class="sch-text small" x="105" y="189" text-anchor="middle">detects active rainfall</text>
+
+        <rect class="blk blk-sensor" x="20" y="214" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="232" text-anchor="middle">tank-level sensor</text>
+        <text class="sch-text small" x="105" y="247" text-anchor="middle">float switch / HC-SR04</text>
+
+        <rect class="blk blk-sensor" x="20" y="300" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="318" text-anchor="middle">DHT22 sensor</text>
+        <text class="sch-text small" x="105" y="333" text-anchor="middle">air temp + humidity</text>
+
+        <rect class="blk blk-sensor" x="20" y="358" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="376" text-anchor="middle">DS3231 real-time clock</text>
+        <text class="sch-text small" x="105" y="391" text-anchor="middle">keeps date &amp; season</text>
+
+        <!-- ===== ADC ===== -->
+        <rect class="blk" x="240" y="110" width="90" height="80" rx="5"></rect>
+        <text class="sch-text title" x="285" y="140" text-anchor="middle">MCP3008</text>
+        <text class="sch-text small" x="285" y="155" text-anchor="middle">8-ch ADC</text>
+        <text class="sch-text small" x="285" y="170" text-anchor="middle">analog in</text>
+
+        <!-- analog sensor wires into ADC -->
+        <path class="sch-wire" d="M190,61 L215,61 L215,120 L240,120" marker-end="url(#arr)"></path>
+        <path class="sch-wire" d="M190,119 L222,119 L222,140 L240,140" marker-end="url(#arr)"></path>
+        <path class="sch-wire" d="M190,177 L222,177 L222,160 L240,160" marker-end="url(#arr)"></path>
+        <path class="sch-wire" d="M190,235 L215,235 L215,180 L240,180" marker-end="url(#arr)"></path>
+
+        <!-- ===== Raspberry Pi ===== -->
+        <rect class="blk blk-pi" x="420" y="100" width="160" height="180" rx="8"></rect>
+        <text class="sch-text title lbl-pi" x="500" y="150" text-anchor="middle">Raspberry Pi</text>
+        <text class="sch-text title lbl-pi" x="500" y="166" text-anchor="middle">Zero 2 W</text>
+        <text class="sch-text small" x="500" y="196" text-anchor="middle">runs the seasonal</text>
+        <text class="sch-text small" x="500" y="210" text-anchor="middle">watering schedule</text>
+        <text class="sch-text small" x="500" y="230" text-anchor="middle">logs every run for</text>
+        <text class="sch-text small" x="500" y="244" text-anchor="middle">the pilot's dataset</text>
+
+        <!-- ADC -> Pi (SPI) -->
+        <path class="sch-wire" d="M330,150 L420,150" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="375" y="142" text-anchor="middle">SPI</text>
+
+        <!-- DHT22 -> Pi (GPIO) -->
+        <path class="sch-wire" d="M190,321 L370,321 L370,230 L420,230" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="345" y="313" text-anchor="middle">GPIO</text>
+
+        <!-- RTC -> Pi (I2C) -->
+        <path class="sch-wire" d="M190,379 L395,379 L395,260 L420,260" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="345" y="371" text-anchor="middle">I2C</text>
+
+        <!-- ===== relay + actuators (right) ===== -->
+        <text class="sch-text small" x="650" y="28">ACTUATORS</text>
+
+        <rect class="blk" x="650" y="120" width="140" height="80" rx="5"></rect>
+        <text class="sch-text title" x="720" y="150" text-anchor="middle">relay board</text>
+        <text class="sch-text small" x="720" y="165" text-anchor="middle">4 channels</text>
+        <text class="sch-text small" x="720" y="180" text-anchor="middle">switches 12 V loads</text>
+
+        <path class="sch-signal" d="M580,160 L650,160" marker-end="url(#arr-warn)"></path>
+        <text class="sch-text small" x="615" y="152" text-anchor="middle">GPIO</text>
+
+        <rect class="blk blk-act" x="650" y="240" width="185" height="40" rx="5"></rect>
+        <text class="sch-text title lbl-act" x="742" y="264" text-anchor="middle">solenoid valve · zone 1</text>
+
+        <rect class="blk blk-act" x="650" y="288" width="185" height="40" rx="5"></rect>
+        <text class="sch-text title lbl-act" x="742" y="312" text-anchor="middle">solenoid valve · zone 2</text>
+
+        <rect class="blk blk-act" x="650" y="336" width="185" height="40" rx="5"></rect>
+        <text class="sch-text title lbl-act" x="742" y="360" text-anchor="middle">solenoid valve · zone 3</text>
+
+        <rect class="blk blk-act" x="650" y="384" width="185" height="40" rx="5"></rect>
+        <text class="sch-text title lbl-act" x="742" y="408" text-anchor="middle">pump contactor</text>
+
+        <!-- relay -> actuator bus -->
+        <path class="sch-signal" d="M720,200 L720,216 L628,216 L628,404"></path>
+        <path class="sch-signal" d="M628,260 L650,260" marker-end="url(#arr-warn)"></path>
+        <path class="sch-signal" d="M628,308 L650,308" marker-end="url(#arr-warn)"></path>
+        <path class="sch-signal" d="M628,356 L650,356" marker-end="url(#arr-warn)"></path>
+        <path class="sch-signal" d="M628,404 L650,404" marker-end="url(#arr-warn)"></path>
+
+        <!-- ===== power (bottom) ===== -->
+        <rect class="blk blk-power" x="240" y="430" width="150" height="44" rx="5"></rect>
+        <text class="sch-text title lbl-power" x="315" y="448" text-anchor="middle">12 V supply</text>
+        <text class="sch-text small" x="315" y="463" text-anchor="middle">mains or small solar</text>
+
+        <rect class="blk blk-power" x="420" y="430" width="140" height="44" rx="5"></rect>
+        <text class="sch-text title lbl-power" x="490" y="448" text-anchor="middle">buck converter</text>
+        <text class="sch-text small" x="490" y="463" text-anchor="middle">12 V &rarr; 5 V</text>
+
+        <path class="sch-power" d="M390,444 L420,444" marker-end="url(#arr-power)"></path>
+        <path class="sch-power" d="M490,430 L490,280" marker-end="url(#arr-power)"></path>
+        <text class="sch-text small" x="502" y="360">5 V</text>
+        <path class="sch-power" d="M315,474 L315,496 L735,496 L735,428" marker-end="url(#arr-power)"></path>
+        <text class="sch-text small" x="530" y="490" text-anchor="middle">12 V to valve &amp; pump circuits (switched by the relay contacts)</text>
+      </svg>
+    </figure>
+
+    <figcaption>
+      <b>How to read it:</b> solid gray lines are sensor data into the Pi (through an MCP3008 ADC for the analog sensors), dashed amber lines are the control signals out (Pi &rarr; relay &rarr; valves and pump), and the red lines are power. The Pi itself never touches 12&nbsp;V: it flips relay channels, and the relay contacts switch the valve and pump circuits.
+    </figcaption>
+
+    <div class="logic">
+      <h2>How it decides when to water</h2>
+      <ol>
+        <li><b>Season sets the baseline (DS3231 clock).</b> The real-time clock keeps the date without any network, so the Pi runs a different base schedule for the dry season (frequent short runs) than for the monsoon months (mostly off).</li>
+        <li><b>Weather can veto a run (rain + soil-moisture sensors).</b> A scheduled run is skipped when it is actively raining or the soil probes already read wet, so the system never wastes tank water on a wet field.</li>
+        <li><b>Heat can add a run (DHT22).</b> On unusually hot, dry-air days the controller adds a short extra pulse to the driest zone.</li>
+        <li><b>The tank guards the pump (level sensor).</b> The pump contactor only engages when the buffer tank needs refilling and the source has water, so the pump can never run dry.</li>
+        <li><b>One zone at a time.</b> The relay opens a single zone valve per run, matching the zoning logic in the pressure planner, so a small source can still feed the whole farm.</li>
+      </ol>
+      <p class="note">Everything runs locally on the Pi; no internet is required in the field. The run log doubles as pilot-study data: every watering, skip and tank refill is time-stamped for Muravah's dataset.</p>
+    </div>
+  </div>
+
+  <footer>Bill of materials: Pi Zero 2 W (US$15 list), MCP3008, DHT22, DS3231, capacitive soil probes, rain sensor, float switch, 4-channel relay, 12&nbsp;V solenoid valves, buck converter, enclosure. Budgeted at ~₱8,000 per farm in the pilot ledger. Pairs with the <a href="./drip-system-schematic.html">water-system schematic</a>, where this whole page is the single amber controller block.</footer>
+</div>

@@ -126,6 +126,9 @@
   .sch-tree-canopy{ fill: var(--good); opacity: 0.88; }
   .sch-tree-trunk{ stroke: var(--ink-faint); stroke-width: 2; }
   .sch-instrument{ fill: var(--surface); stroke: var(--ink-soft); stroke-width: 1.4; }
+  .sch-controller{ fill: var(--warn-soft); stroke: var(--warn); stroke-width: 1.6; }
+  .sch-controller-label{ fill: var(--warn); }
+  .sch-signal{ stroke: var(--warn); stroke-width: 1.6; stroke-dasharray: 5 3; fill: none; }
 
   .pump-group .sch-node{ stroke: var(--warn); }
   .pump-group .sch-fill{ fill: var(--warn-soft); }
@@ -165,6 +168,7 @@
         <a class="crosslink" href="./index.html">&larr; Home</a>
         <a class="crosslink" href="./schematic-editor.html">Edit this diagram &rarr;</a>
         <a class="crosslink" href="./drip-pressure-planner.html">View the pressure planner &rarr;</a>
+        <a class="crosslink" href="./raspberry-pi-controller.html">Controller schematic &rarr;</a>
       </div>
     </div>
     <h1>Drip System Schematic</h1>
@@ -181,8 +185,8 @@
     </div>
 
     <figure>
-      <svg id="sch" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img"
-           aria-label="Water path from source through a pump or gravity feed, a check valve, filter and pressure regulator, into a mainline that splits into three irrigation zones and out to the trees; a rainwater tank merges into the mainline as a dry-season backup."
+      <svg id="sch" viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Water path from source through a pump or gravity feed, a check valve, filter and pressure regulator, into a mainline that splits into three irrigation zones and out to the trees; a rainwater tank merges into the mainline as a dry-season backup. A Raspberry Pi controller block sends dashed control signals to the three zone valves and, when fitted, to the pump."
            data-mode="gravity">
 
         <defs>
@@ -191,6 +195,9 @@
           </marker>
           <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"></path>
+          </marker>
+          <marker id="arrow-warn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--warn)"></path>
           </marker>
 
           <symbol id="ico-well" viewBox="0 0 40 40">
@@ -250,6 +257,7 @@
           <use href="#ico-pump" x="94" y="122" width="36" height="36"></use>
           <text class="sch-text title" x="112" y="172" text-anchor="middle">pump</text>
           <line class="sch-pipe" x1="130" y1="140" x2="166" y2="140" marker-end="url(#arrow)"></line>
+          <path class="sch-signal" d="M545,294 L134,294 L134,166" marker-end="url(#arrow-warn)"></path>
         </g>
         <g class="gravity-note">
           <line class="sch-pipe" x1="56" y1="140" x2="166" y2="140" marker-end="url(#arrow)"></line>
@@ -328,11 +336,22 @@
 
         <!-- destination label -->
         <text class="sch-text title" x="690" y="18" text-anchor="middle">trees</text>
+
+        <!-- automation controller: opens zone valves (and the pump, when fitted) on a weather-aware schedule -->
+        <g>
+          <rect class="sch-controller" x="545" y="268" width="200" height="48" rx="6"></rect>
+          <text class="sch-text title sch-controller-label" x="645" y="288" text-anchor="middle">Raspberry Pi controller</text>
+          <text class="sch-text" font-size="9.5" x="645" y="303" text-anchor="middle">auto schedule: weather + season</text>
+          <path class="sch-signal" d="M630,268 L630,255 L530,255 L530,25"></path>
+          <path class="sch-signal" d="M530,25 L492,25 L492,33" marker-end="url(#arrow-warn)"></path>
+          <path class="sch-signal" d="M530,121 L492,121 L492,125" marker-end="url(#arrow-warn)"></path>
+          <path class="sch-signal" d="M530,206 L492,206 L492,210" marker-end="url(#arrow-warn)"></path>
+        </g>
       </svg>
     </figure>
 
     <figcaption>
-      <b>What changes between the two options:</b> when the source sits below the field (Tatay's case), a pump has to lift the water before it reaches the check valve; when the source is above the field, gravity does that work for free and the pump drops out entirely. Every component after that point &mdash; filtration, pressure regulation, metering, zoning, the trees &mdash; is the same system either way.
+      <b>What changes between the two options:</b> when the source sits below the field (Tatay's case), a pump has to lift the water before it reaches the check valve; when the source is above the field, gravity does that work for free and the pump drops out entirely. Every component after that point &mdash; filtration, pressure regulation, metering, zoning, the trees &mdash; is the same system either way. <b>The dashed amber lines are control signals:</b> a Raspberry Pi opens the zone valves (and drives the pump, when one is fitted) on a schedule it adjusts to weather and season; the controller block has <a class="crosslink" href="./raspberry-pi-controller.html">its own detailed schematic</a>.
     </figcaption>
 
     <div class="legend">
@@ -342,6 +361,7 @@
       <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-regulator"></use></svg><span><b>Pressure regulator</b>steps mainline pressure down to what drip line needs</span></div>
       <div class="legend-item"><svg viewBox="0 0 30 30"><use href="#ico-instrument"></use><text x="15" y="19" text-anchor="middle" font-size="11" font-family="IBM Plex Mono, monospace" fill="var(--ink)">P/F</text></svg><span><b>Instrument</b>pressure (P) and flow (F) gauges for monitoring</span></div>
       <div class="legend-item"><svg viewBox="0 0 40 40"><use href="#ico-gatevalve"></use></svg><span><b>Zone valve</b>opens one section at a time when flow is limited</span></div>
+      <div class="legend-item"><svg viewBox="0 0 40 40"><rect x="4" y="10" width="32" height="20" rx="4" fill="var(--warn-soft)" stroke="var(--warn)" stroke-width="1.6"></rect></svg><span><b>Pi controller</b>automates valves &amp; pump by weather and season; <a class="crosslink" href="./raspberry-pi-controller.html">see its schematic</a></span></div>
     </div>
   </div>
 

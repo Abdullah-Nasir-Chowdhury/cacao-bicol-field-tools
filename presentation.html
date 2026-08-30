@@ -180,6 +180,7 @@
     display: flex; flex-direction: column;
     justify-content: center; justify-content: safe center;
     padding: 4rem 1.5rem 6.5rem;
+    position: relative;
   }
   .slide-inner.top-align{ justify-content: center; justify-content: safe center; }
 
@@ -194,6 +195,20 @@
   .team-line{ display: flex; align-items: center; gap: 0.8rem; margin-top: 2.4rem; color: #C9BEB0; font-size: 0.95rem; }
   .team-line b{ color: #F7F2EA; }
   .team-line img{ height: 46px; width: auto; background: #FFFFFF; border-radius: 6px; padding: 5px 8px; }
+  .hero-logo{
+    position: absolute; right: 2rem; top: 50%; transform: translateY(-50%);
+    height: clamp(110px, 15vw, 170px); width: auto;
+    background: #FFFFFF; border-radius: 14px; padding: 16px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+  }
+  @media (max-width: 860px){
+    .hero-logo{ position: static; transform: none; height: 84px; margin: 1.6rem 0 0; align-self: flex-start; padding: 10px; border-radius: 10px; }
+  }
+
+  /* name / credit fade on slide entry (retriggers each time the slide activates) */
+  @keyframes fadeInUp{ from{ opacity: 0; transform: translateY(8px); } to{ opacity: 1; transform: none; } }
+  .slide.active .presenter-tag{ animation: fadeInUp 0.55s ease 0.05s both; }
+  .slide.active .team-line, .slide.active .hero-credit{ animation: fadeInUp 0.75s ease 0.2s both; }
 
   .presenter-tag{
     display: inline-flex; align-items: center; gap: 0.35rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -266,6 +281,26 @@
   .numbered-item .body h3{ margin: 0 0 0.2rem; font-size: 1rem; }
   .numbered-item .body p{ margin: 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.4; }
 
+  a.cite{ font-size: 0.72em; vertical-align: super; text-decoration: none; color: var(--accent-ink); font-weight: 700; margin-left: 0.1em; }
+  a.cite:hover{ text-decoration: underline; }
+
+  .subgrid.cols-4{ grid-template-columns: repeat(4, 1fr); gap: 1.6rem 1.6rem; }
+  @media (max-width: 1050px){ .subgrid.cols-4{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px){ .subgrid.cols-4{ grid-template-columns: 1fr; } }
+
+  .ledger{ margin-top: 1rem; max-width: 760px; }
+  .ledger-row{ display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.98rem; }
+  .ledger-row .li-label{ color: var(--ink); }
+  .ledger-row .li-amount{ font-family: "IBM Plex Mono", ui-monospace, monospace; white-space: nowrap; color: var(--ink); }
+  .ledger-row.total{ border-bottom: none; border-top: 2px solid var(--ink); font-weight: 700; font-size: 1.05rem; margin-top: 0.15rem; }
+  .ledger-note{ margin-top: 0.9rem; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); max-width: 76ch; line-height: 1.45; }
+
+  .refs{ list-style: none; margin: 1rem 0 0; padding: 0; counter-reset: ref; column-count: 2; column-gap: 2.5rem; }
+  @media (max-width: 800px){ .refs{ column-count: 1; } }
+  .refs li{ counter-increment: ref; font-size: 0.82rem; color: var(--ink); line-height: 1.45; margin-bottom: 0.7rem; padding-left: 2.1rem; position: relative; break-inside: avoid; }
+  .refs li::before{ content: "[" counter(ref) "]"; position: absolute; left: 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.78rem; color: var(--accent-ink); font-weight: 600; }
+  .refs a{ color: var(--accent-ink); word-break: break-word; }
+
   .source-note{ margin: 1.1rem 0 0; font-size: 0.78rem; color: var(--ink-soft); max-width: 92ch; line-height: 1.5; }
   .source-note a{ color: var(--accent-ink); }
 
@@ -318,9 +353,9 @@
     <p class="hero-body">A pitch grounded in direct interviews and site visits across Albay and the wider Bicol region.</p>
     <p class="hero-note">Thesis: every solution we propose already works somewhere in Bicol. Our job is showing how to bring it to cacao.</p>
     <div class="team-line">
-      <img src="images/tsukuba-logo.png" alt="University of Tsukuba logo" onerror="this.style.display='none'">
       <span><b>Team BEE</b> · University of Tsukuba</span>
     </div>
+    <img class="hero-logo" src="images/tsukuba-logo.png" alt="University of Tsukuba emblem" onerror="this.style.display='none'">
   </div>
 </section>
 
@@ -395,7 +430,7 @@
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">Path to finished cacao: direct vs. stored</h2>
-    <p class="card-sub">Days from flowering to a sellable product. Storing beans first nearly doubles it.</p>
+    <p class="card-sub">Days from flowering to a sellable product. Storing beans first nearly doubles it. A well-run benchmark farm from the cocoa literature is sellable by ~day 178.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[2]</a></p>
     <div class="slide-chart-area"><svg class="viz" id="line1" viewBox="0 0 980 320" role="img" aria-label="Cumulative days from flowering to finished cacao, comparing a direct-to-roast path that is sellable by day 191 with a stored path that is sellable by day 326"></svg></div>
     <div class="legend" id="line1-legend"></div>
   </div>
@@ -423,8 +458,8 @@
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">The numbers from Batbat</h2>
-    <p class="card-sub">Three figures straight from the visit.</p>
-    <div class="subgrid" style="padding:0;">
+    <p class="card-sub">Three figures straight from the visit, and one comparison from the literature.</p>
+    <div class="subgrid cols-4" style="padding:0;">
       <div class="subchart">
         <h3>Post-harvest loss, by cause</h3>
         <p class="subchart-cap">Pests/disease was reported as a range, not one number.</p>
@@ -436,11 +471,18 @@
         <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield this season is 0 kilograms, versus a potential 2000 kilograms per year"></svg>
       </div>
       <div class="subchart">
+        <h3>Post-harvest loss vs. other crops</h3>
+        <p class="subchart-cap">Philippine rice and produce lose a fraction of what cacao loses.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[6]</a></p>
+        <svg class="viz" id="bar5" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing low and high post-harvest loss estimates: Philippine rice 16.5 percent, fruits and vegetables 15 to 35 percent, cacao in this study 80 to 100 percent"></svg>
+        <div class="legend" id="bar5-legend"></div>
+      </div>
+      <div class="subchart">
         <h3>Farmer monthly income benchmarks</h3>
-        <p class="subchart-cap">Reference points named by Muravah.</p>
-        <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos example farmer, 10000 pesos cited as a low ceiling"></svg>
+        <p class="subchart-cap">Reference points named by Muravah.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[4]</a></p>
+        <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos for Blandino Papina, 10000 pesos cited as a low ceiling, all below the Bicol poverty line of 13624 pesos"></svg>
       </div>
     </div>
+    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a></p>
   </div>
 </section>
 
@@ -484,7 +526,7 @@
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Chow · technical / water system</span>
     <h2 class="slide-title">Run the pilot through a live, calculated tool</h2>
-    <p class="slide-body">We built the field tools ourselves, sized to Tatay's real farm. Calculated, not guessed.</p>
+    <p class="slide-body">We built the field tools ourselves, sized to Tatay's real farm. Calculated, not guessed.<a class="cite" href="#references">[3]</a>&ndash;<a class="cite" href="#references">[8]</a></p>
     <div class="tool-links">
       <a class="tool-link" href="./drip-pressure-planner.html" target="_blank" rel="noopener">
         <span class="k">Calculator</span>
@@ -501,6 +543,11 @@
         <h3>Schematic Editor</h3>
         <p>Drag nodes, wire connections, and add components to either diagram.</p>
       </a>
+      <a class="tool-link" href="./raspberry-pi-controller.html" target="_blank" rel="noopener">
+        <span class="k">Diagram</span>
+        <h3>Pi Controller Schematic</h3>
+        <p>The Raspberry Pi + sensor block that automates the watering schedule by weather and season.</p>
+      </a>
       <a class="tool-link" href="https://github.com/Abdullah-Nasir-Chowdhury/cacao-bicol-field-tools" target="_blank" rel="noopener">
         <span class="k">Source</span>
         <h3>Full Repository</h3>
@@ -512,13 +559,26 @@
 
 <section class="slide">
   <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <h2 class="slide-title">The pilot study: pest and disease control</h2>
+    <p class="slide-sub">Two organic-only lines of defense, run alongside the water system.</p>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Pest control: deploy insects that eat the pests</h3><p>Release beneficial predators against the snails and other pests. DOST-PCAARRD is already mass-rearing red weaver ants and lynx spiders as biological control agents for cacao insect pests in the Philippines, and weaver ants have been shown to cut pest damage in cacao.<a class="cite" href="#references">[15]</a></p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>Disease control: keep the trees watered and healthy</h3><p>Healthy, regularly watered plants are less susceptible to disease: water stress measurably raises susceptibility, and the effect reverses once regular watering resumes. The drip system and the Pi controller keep trees out of that danger zone year-round.<a class="cite" href="#references">[16]</a></p></div></div>
+    </div>
+    <p class="source-note">Both measures are organic-compatible, satisfying Muravah's hard rule: no synthetic pesticides.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">Why this works inside real constraints</h2>
     <div class="numbered-list">
       <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Matches what farmers actually said they need</h3><p>Organic-only, low-cost, human-in-the-loop: their explicit requirement.</p></div></div>
       <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The single largest lever in the dataset</h3><p>0 kg &rarr; 2,000 kg/year: a ~4&times; recovery.</p></div></div>
       <div class="numbered-item"><span class="num">3</span><div class="body"><h3>Fixes two problems at once</h3><p>Stable farms mean a stable processing facility.</p></div></div>
-      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>Nothing invented from scratch</h3><p>Proven Bicol practices, adapted to cacao.</p></div></div>
+      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>The ideas are properly researched</h3><p>Every measure is cross-checked against published research and priced from market data, not invented from scratch (see References).</p></div></div>
     </div>
   </div>
 </section>
@@ -534,11 +594,63 @@
       <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Bridge capital toward organic certification: 4&times; recovery + price premium.</p></div></div>
     </div>
     <div class="budget-row">
-      <div class="budget-tile"><span class="budget-num">~₱200K</span><span class="budget-label">one-farm starter pilot</span></div>
-      <div class="budget-tile"><span class="budget-num">₱1.5–2M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></div>
-      <div class="budget-tile"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally</span></div>
+      <div class="budget-tile"><span class="budget-num">~₱95K</span><span class="budget-label">one-farm starter pilot</span></div>
+      <div class="budget-tile"><span class="budget-num">₱0.9–1M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></div>
+      <div class="budget-tile"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally<a class="cite" href="#references">[1]</a></span></div>
     </div>
-    <p class="funding-note">Rough team estimates. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
+    <p class="funding-note">Built from market prices; breakdowns on the next three slides. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Where the ₱95K starter figure comes from</h2>
+    <p class="slide-sub">One farm, one year, at 2025&ndash;26 Philippine market prices.</p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Drip starter zone, 0.25 ha: lines, emitters, filter, regulator<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱30,000</span></div>
+      <div class="ledger-row"><span class="li-label">Two 1,000&nbsp;L poly tanks (₱3,500&ndash;7,500 each) + stand and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱14,000</span></div>
+      <div class="ledger-row"><span class="li-label">Raspberry Pi controller kit: Pi Zero 2 W, soil-moisture, temperature/humidity, rain and tank-level sensors, relay + solenoid valves, enclosure and power<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱8,000</span></div>
+      <div class="ledger-row"><span class="li-label">Bio-spray inputs for a year: molasses, amino ferment, herbal materials<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱12,000</span></div>
+      <div class="ledger-row"><span class="li-label">Printed treatment calendars, checklists, ledgers</span><span class="li-amount">₱4,000</span></div>
+      <div class="ledger-row"><span class="li-label">Monitoring visits, twice monthly for a year (allowance at the ₱435/day regional wage + transport)<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱15,000</span></div>
+      <div class="ledger-row"><span class="li-label">Training day + ~15% contingency</span><span class="li-amount">₱12,000</span></div>
+      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱95,000</span></div>
+    </div>
+    <p class="ledger-note">Every line has a cheaper local substitute; the drip zone and the controller kit are the only equipment purchases.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">Where ₱0.9&ndash;1M for ten farms comes from</h2>
+    <p class="slide-sub">Scaling the starter pilot inside Muravah's existing study; shared costs don't multiply by ten.</p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Ten drip starter zones<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱300,000</span></div>
+      <div class="ledger-row"><span class="li-label">Twenty tanks + stands and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱140,000</span></div>
+      <div class="ledger-row"><span class="li-label">Ten Pi controller kits with sensors and valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱80,000</span></div>
+      <div class="ledger-row"><span class="li-label">Bio-spray inputs, ten farms &times; one year<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱120,000</span></div>
+      <div class="ledger-row"><span class="li-label">Shared printing + three training sessions</span><span class="li-amount">₱45,000</span></div>
+      <div class="ledger-row"><span class="li-label">Field coordinator + student visit program, one year<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱180,000</span></div>
+      <div class="ledger-row"><span class="li-label">Data collection and monitoring materials</span><span class="li-amount">₱40,000</span></div>
+      <div class="ledger-row"><span class="li-label">~10% contingency</span><span class="li-amount">₱85,000</span></div>
+      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱990,000</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-inner">
+    <span class="presenter-tag"><span class="dot"></span>Masa</span>
+    <h2 class="slide-title">The ₱10M benchmark isn't ours to estimate</h2>
+    <p class="slide-sub">It's what a comparable regional project has already raised.<a class="cite" href="#references">[1]</a></p>
+    <div class="ledger">
+      <div class="ledger-row"><span class="li-label">Zambales agrivoltaics project funding, as cited to us on the site visit<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱10,000,000</span></div>
+      <div class="ledger-row"><span class="li-label">Our one-farm ask, as a share of that proven benchmark</span><span class="li-amount">~1%</span></div>
+      <div class="ledger-row"><span class="li-label">Our ten-farm ask, as a share of that benchmark</span><span class="li-amount">~10%</span></div>
+    </div>
+    <p class="ledger-note">Full scale could later add what the agrivoltaics precedent already pairs with farming: solar-powered irrigation and cold storage.<a class="cite" href="#references">[10]</a> We cite the benchmark to show the regional appetite, not as our own costing.</p>
   </div>
 </section>
 
@@ -548,9 +660,8 @@
     <h2 class="slide-title">What we're leaving you with</h2>
     <div class="numbered-list">
       <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The problem is specific, not vague</h3><p>Year-round pest and disease pressure: 500&nbsp;kg/yr &rarr; ~0, and 80&ndash;100% losses region-wide.</p></div></div>
-      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The fix already exists in Bicol</h3><p>6 verified solutions from farms already succeeding. Start: 15-day calendar + herbal spray.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>A projected 4&times; recovery for Tatay, and a stable facility downstream.</p></div></div>
-      <div class="numbered-item"><span class="num">4</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱200K, run by Muravah and BU students.</p></div></div>
+      <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>A projected 4&times; recovery for Tatay, and a stable facility downstream.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱95K, run by Muravah and BU students.</p></div></div>
     </div>
   </div>
 </section>
@@ -638,7 +749,7 @@
         <svg class="viz" id="bar4" viewBox="0 0 300 250" role="img" aria-label="Estimated relative solar energy yield by panel orientation: optimal tilt 100 percent baseline, flat or horizontal about 85 percent, vertical wall mounted about 65 percent"></svg>
       </div>
     </div>
-    <p class="source-note">Per-panel, vertical mounting collects less than optimal tilt; two-sided (bifacial) east&ndash;west vertical <em>farms</em> with the right spacing can yield 10&ndash;20% more per unit of land. Sources: <a href="https://doi.org/10.1016/j.apenergy.2017.08.042" target="_blank" rel="noopener">Khan et al., &ldquo;Vertical bifacial solar farms,&rdquo; Applied Energy 206 (2017)</a> (<a href="https://arxiv.org/abs/1704.08630" target="_blank" rel="noopener">free preprint</a>) and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038092X21009087" target="_blank" rel="noopener">Riaz et al., &ldquo;The optimization of vertical bifacial photovoltaic farms for efficient agrivoltaic systems,&rdquo; Solar Energy 230 (2021)</a>.</p>
+    <p class="source-note">Per-panel, vertical mounting collects less than optimal tilt; two-sided (bifacial) east&ndash;west vertical <em>farms</em> with the right spacing can yield 10&ndash;20% more per unit of land.<a class="cite" href="#references">[9]</a><a class="cite" href="#references">[10]</a></p>
   </div>
 </section>
 
@@ -698,6 +809,32 @@
       </div>
     </div>
     <div class="recommend-box"><b>Start with:</b> the 15-day calendar + herbal spray. No new equipment. Run by Muravah field officers and BU students, not by Tatay. Ledger and amino spray follow.</div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="slide" id="references-slide">
+  <div class="slide-inner top-align">
+    <h2 class="slide-title">References</h2>
+    <ol class="refs">
+      <li>Team BEE field interviews &amp; site visits: Muravah Foundation / Mayon Gold, Tatay's farm (Batbat), cacao processing facility, and regional programs, Bicol, 2026. <a href="https://github.com/Abdullah-Nasir-Chowdhury/cacao-bicol-field-tools/blob/main/FIELD-NOTES.md" target="_blank" rel="noopener">Field notes (GitHub)</a></li>
+      <li>International Cocoa Organization, &ldquo;Harvesting &amp; Post-harvest Processing&rdquo; (fermentation 2&ndash;8 days; drying ~5&ndash;6 days). <a href="https://www.icco.org/harvesting-post-harvest-new/" target="_blank" rel="noopener">icco.org</a></li>
+      <li>DA High Value Crops Development Program, &ldquo;Cacao Production Guide&rdquo; (3&times;3&nbsp;m spacing, 1,111 trees/ha). <a href="https://hvcdp.da.gov.ph/wp-content/uploads/2022/05/CACAO-Production-Guide.pdf" target="_blank" rel="noopener">hvcdp.da.gov.ph</a></li>
+      <li>Philippine Statistics Authority Region V, official poverty statistics: poverty threshold ₱13,624/month for a family of five, Bicol, 1st sem 2023. <a href="https://rsso05.psa.gov.ph/statistics/poverty" target="_blank" rel="noopener">rsso05.psa.gov.ph</a></li>
+      <li>Gummert et al., &ldquo;Food Loss in the Food Value Chain: The Philippine Agriculture Scenario&rdquo; (rice post-harvest loss 16.47%, PhilMech/PhilRice). <a href="https://www.jstage.jst.go.jp/article/jdsa/11/1/11_8/_pdf" target="_blank" rel="noopener">J. Dev. Sus. Agr.</a></li>
+      <li>Nuevo &amp; Apaga (2010), &ldquo;Technology on Reducing Postharvest Losses and Maintaining Quality of Fruits and Vegetables, Philippines&rdquo; (losses 15&ndash;35%). <a href="https://cci-hub.org/wp-content/uploads/2022/01/Technology-Reducing-Post-harvest-Losses-and-Maintaining-Quality-of-Fruits-and-Vegetables-Philippines-Nuevo-and-Apaga-2010-compressed.pdf" target="_blank" rel="noopener">PDF</a></li>
+      <li>Carr &amp; Lockwood (2011), &ldquo;The water relations and irrigation requirements of cocoa (Theobroma cacao L.): a review,&rdquo; Experimental Agriculture 47:653&ndash;676. <a href="https://www.cambridge.org/core/journals/experimental-agriculture/article/abs/water-relations-and-irrigation-requirements-of-cocoa-theobroma-cacao-l-a-review/BE75C1AA42F7838FF333793647950D0F" target="_blank" rel="noopener">Cambridge Core</a></li>
+      <li>Allen et al. (1998), FAO Irrigation &amp; Drainage Paper 56, &ldquo;Crop Evapotranspiration.&rdquo; <a href="https://www.fao.org/4/x0490e/x0490e00.htm" target="_blank" rel="noopener">fao.org</a></li>
+      <li>Khan et al. (2017), &ldquo;Vertical bifacial solar farms: physics, design, and global optimization,&rdquo; Applied Energy 206:240&ndash;248. <a href="https://doi.org/10.1016/j.apenergy.2017.08.042" target="_blank" rel="noopener">DOI</a> &middot; <a href="https://arxiv.org/abs/1704.08630" target="_blank" rel="noopener">free preprint</a></li>
+      <li>Riaz et al. (2021), &ldquo;The optimization of vertical bifacial photovoltaic farms for efficient agrivoltaic systems,&rdquo; Solar Energy 230:1004&ndash;1012. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038092X21009087" target="_blank" rel="noopener">ScienceDirect</a></li>
+      <li>Wage Order No. RBV-22 (2025): Bicol daily minimum wage ₱435, all sectors. <a href="https://www.pna.gov.ph/articles/1264321" target="_blank" rel="noopener">Philippine News Agency</a></li>
+      <li>Philippine water tank market prices: 1,000&nbsp;L polyethylene tanks ₱3,500&ndash;7,500. <a href="https://watertankguides.com/water-tank-price-philippines/" target="_blank" rel="noopener">watertankguides.com</a></li>
+      <li>Philippine drip irrigation costs: basic systems from ~₱120K/ha; small-farm DIY example at ~₱30K. <a href="https://agriculture.com.ph/2018/04/29/a-home-grown-drip-irrigation-system/" target="_blank" rel="noopener">Agriculture Monthly</a></li>
+      <li>Raspberry Pi official product pricing (Raspberry Pi Zero 2 W, US$15); sensors, relays and solenoid valves are commodity parts priced from Philippine electronics retailers. <a href="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" target="_blank" rel="noopener">raspberrypi.com</a></li>
+      <li>DOST-PCAARRD, mass rearing of biological control agents (lynx spider <em>Oxyopes javanus</em>, red weaver ant <em>Oecophylla smaragdina</em>) for cacao insect pest management, Philippines. <a href="https://ispweb.pcaarrd.dost.gov.ph/mass-rearing-augmentation-and-conservation-of-the-biological-control-agents-bcas-lynx-spider-oxyopes-javanus-and-red-weaver-ant-oecophylla-smaragdina-for-the-management-of-insect-pests-of-caca/" target="_blank" rel="noopener">pcaarrd.dost.gov.ph</a> &middot; Forbes &amp; Northfield (2017), &ldquo;<em>Oecophylla smaragdina</em> ants provide pest control in Australian cacao,&rdquo; Biotropica. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/btp.12405" target="_blank" rel="noopener">DOI</a></li>
+      <li>Schoeneweiss (1975), &ldquo;Predisposition, Stress, and Plant Disease,&rdquo; Annual Review of Phytopathology 13:193&ndash;211 (water stress raises disease susceptibility; the effect reverses when regular watering resumes). <a href="https://www.annualreviews.org/doi/10.1146/annurev.py.13.090175.001205" target="_blank" rel="noopener">Annual Reviews</a></li>
+    </ol>
+    <p class="source-note">Click any [n] in the deck to jump here; links open the original sources.</p>
   </div>
 </section>
 
@@ -764,6 +901,14 @@
     // baseline
     svg.appendChild(el("line", { class: "axis-line", x1: marginL, y1: marginT + plotH, x2: marginL + plotW, y2: marginT + plotH }));
 
+    if (opts.threshold){
+      var ty = marginT + plotH - (opts.threshold.value / maxVal) * plotH;
+      svg.appendChild(el("line", { "data-anim": "fade", "data-delay": 0.6, x1: marginL, y1: ty, x2: marginL + plotW, y2: ty, stroke: cssVar("--ink"), "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
+      var tl = el("text", { "data-anim": "fade", "data-delay": 0.6, x: marginL + plotW, y: ty - 6, "text-anchor": "end", "font-size": 10.5, "font-style": "italic", fill: cssVar("--ink-soft") });
+      tl.textContent = opts.threshold.label;
+      svg.appendChild(tl);
+    }
+
     opts.data.forEach(function(d, i){
       var x = marginL + i * slot + (slot - barW) / 2;
       var xc = x + barW / 2;
@@ -780,11 +925,13 @@
         var hit = el("rect", { class: "range-hit", x: x, y: y1 - 10, width: barW, height: (yBase - y1) + 10, fill: "transparent" });
         svg.appendChild(hit);
 
-        svg.appendChild(el("rect", { x: x, y: y0, width: barW, height: Math.max(yBase - y0, 2), rx: 4, fill: color }));
-        svg.appendChild(el("line", { x1: xc, y1: y0, x2: xc, y2: y1, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
-        svg.appendChild(el("line", { x1: xc - capW / 2, y1: y1, x2: xc + capW / 2, y2: y1, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
+        // whisker drawn in a neutral ink so the confidence interval reads as distinct from the bar itself
+        var whiskerColor = cssVar("--ink-soft");
+        svg.appendChild(el("rect", { "data-anim": "grow", x: x, y: y0, width: barW, height: Math.max(yBase - y0, 2), rx: 4, fill: color }));
+        svg.appendChild(el("line", { "data-anim": "grow", "data-delay": 0.35, x1: xc, y1: y0, x2: xc, y2: y1, stroke: whiskerColor, "stroke-width": 3, "stroke-linecap": "round" }));
+        svg.appendChild(el("line", { "data-anim": "fade", "data-delay": 0.6, x1: xc - capW / 2, y1: y1, x2: xc + capW / 2, y2: y1, stroke: whiskerColor, "stroke-width": 3, "stroke-linecap": "round" }));
 
-        var rlabel = el("text", { class: "value-label", x: xc, y: y1 - 14, "text-anchor": "middle", "font-size": 15 });
+        var rlabel = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.6, x: xc, y: y1 - 14, "text-anchor": "middle", "font-size": 15 });
         rlabel.textContent = d.label != null ? d.label : (v0 + "–" + v1);
         svg.appendChild(rlabel);
 
@@ -804,12 +951,12 @@
       var y = marginT + plotH - barH;
 
       var hit = el("rect", { class: "bar-hit", x: x, y: marginT, width: barW, height: plotH, fill: "transparent" });
-      var bar = el("rect", { class: "bar-fill", x: x, y: y, width: barW, height: Math.max(barH, 2), rx: 4, fill: color });
+      var bar = el("rect", { class: "bar-fill", "data-anim": "grow", x: x, y: y, width: barW, height: Math.max(barH, 2), rx: 4, fill: color });
 
       svg.appendChild(hit);
       svg.appendChild(bar);
 
-      var label = el("text", { class: "value-label", x: xc, y: y - 10, "text-anchor": "middle", "font-size": 15 });
+      var label = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.45, x: xc, y: y - 10, "text-anchor": "middle", "font-size": 15 });
       label.textContent = d.label != null ? d.label : fmt(d.value);
       svg.appendChild(label);
 
@@ -823,6 +970,74 @@
       });
       hit.addEventListener("mouseleave", function(){ bar.classList.remove("hovered"); hideTooltip(); });
     });
+  }
+
+  /* ---------------- GROUPED BAR CHART ---------------- */
+  function groupedBarChart(svgId, opts){
+    var svg = document.getElementById(svgId);
+    var vb = svg.viewBox.baseVal;
+    var W = vb.width, H = vb.height;
+    var marginL = 0, marginR = 20, marginT = 16, marginB = 44;
+    var plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+    var maxVal = opts.maxVal;
+    var groups = opts.groups, series = opts.series;
+    var n = groups.length, m = series.length;
+    var slot = plotW / n;
+    var innerGap = 4;
+    var groupW = slot * 0.68;
+    var barW = (groupW - innerGap * (m - 1)) / m;
+
+    svg.appendChild(el("line", { class: "axis-line", x1: marginL, y1: marginT + plotH, x2: marginL + plotW, y2: marginT + plotH }));
+
+    groups.forEach(function(g, i){
+      var gx = marginL + i * slot + (slot - groupW) / 2;
+      var equalPair = m === 2 && g.values[0] === g.values[1];
+
+      series.forEach(function(s, j){
+        var v = g.values[j];
+        var x = gx + j * (barW + innerGap);
+        var xc = x + barW / 2;
+        var barH = (v / maxVal) * plotH;
+        var y = marginT + plotH - barH;
+
+        var hit = el("rect", { class: "bar-hit", x: x, y: marginT, width: barW, height: plotH, fill: "transparent" });
+        var bar = el("rect", { class: "bar-fill", "data-anim": "grow", "data-delay": j * 0.15, x: x, y: y, width: barW, height: Math.max(barH, 2), rx: 3, fill: s.color });
+        svg.appendChild(hit);
+        svg.appendChild(bar);
+
+        // identical low/high pair gets one shared label so the two don't overlap
+        if (!equalPair || j === 0){
+          var lx = equalPair ? gx + groupW / 2 : xc;
+          var label = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.5, x: lx, y: y - 8, "text-anchor": "middle", "font-size": 12 });
+          label.textContent = (g.labels && g.labels[j] != null) ? g.labels[j] : v + (opts.unit || "");
+          svg.appendChild(label);
+        }
+
+        hit.addEventListener("mousemove", function(evt){
+          bar.classList.add("hovered");
+          showTooltip(evt, g.name, [s.name + ": " + v + (opts.unit || "")]);
+        });
+        hit.addEventListener("mouseleave", function(){ bar.classList.remove("hovered"); hideTooltip(); });
+      });
+
+      var cat = el("text", { x: gx + groupW / 2, y: marginT + plotH + 24, "text-anchor": "middle", "font-size": 11.5 });
+      wrapText(cat, g.name, slot - 6);
+      svg.appendChild(cat);
+    });
+
+    if (opts.legendEl){
+      var legendHost = document.getElementById(opts.legendEl);
+      series.forEach(function(s){
+        var item = document.createElement("div");
+        item.className = "legend-item";
+        var sw = document.createElement("span");
+        sw.className = "legend-swatch";
+        sw.style.background = s.color;
+        item.appendChild(sw);
+        item.appendChild(document.createTextNode(s.name));
+        legendHost.appendChild(item);
+      });
+    }
   }
 
   function wrapText(textEl, str, maxWidth){
@@ -883,22 +1098,17 @@
 
     opts.series.forEach(function(series){
       var pts = series.values.map(function(v, i){ return v == null ? null : [xPos(i), yPos(v)]; });
-      var segs = [];
-      var cur = [];
-      pts.forEach(function(p){
-        if (p){ cur.push(p); } else if (cur.length){ segs.push(cur); cur = []; }
-      });
-      if (cur.length) segs.push(cur);
-
-      segs.forEach(function(seg){
+      // one continuous path through every real point, bridging null stages
+      var seg = pts.filter(Boolean);
+      if (seg.length > 1){
         var d = seg.map(function(p, i){ return (i === 0 ? "M" : "L") + p[0] + "," + p[1]; }).join(" ");
-        svg.appendChild(el("path", { d: d, fill: "none", stroke: series.color, "stroke-width": 2.5, "stroke-linecap": "round", "stroke-linejoin": "round" }));
-      });
+        svg.appendChild(el("path", { "data-anim": "draw", d: d, fill: "none", stroke: series.color, "stroke-width": 2.5, "stroke-linecap": "round", "stroke-linejoin": "round" }));
+      }
 
       pts.forEach(function(p, i){
         if (!p) return;
         var v = series.values[i];
-        var dot = el("circle", { cx: p[0], cy: p[1], r: 4.5, fill: cssVar("--surface"), stroke: series.color, "stroke-width": 2.5 });
+        var dot = el("circle", { "data-anim": "fade", "data-delay": 0.55, cx: p[0], cy: p[1], r: 4.5, fill: cssVar("--surface"), stroke: series.color, "stroke-width": 2.5 });
         var hit = el("circle", { class: "dot-hit", cx: p[0], cy: p[1], r: 12, fill: "transparent" });
         svg.appendChild(dot);
         svg.appendChild(hit);
@@ -917,7 +1127,7 @@
         var below = !!series.endLabelBelow;
         var baseY = opts.showSeriesInEndLabel ? (below ? lp[1] + 18 : lp[1] - 26) : (below ? lp[1] + 16 : lp[1] - 12);
         var lineDy = below ? 13 : 13;
-        var endLabel = el("text", { class: "value-label", x: lp[0], y: baseY, "text-anchor": "middle", "font-size": 12.5, fill: series.color });
+        var endLabel = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.85, x: lp[0], y: baseY, "text-anchor": "middle", "font-size": 12.5, fill: series.color });
         if (opts.showSeriesInEndLabel){
           var l1 = el("tspan", { x: lp[0], dy: 0 });
           l1.textContent = series.name;
@@ -934,9 +1144,9 @@
 
     if (opts.annotation){
       var ax = marginL + opts.annotation.x * xStep;
-      svg.appendChild(el("line", { x1: ax, y1: marginT, x2: ax, y2: marginT + plotH, stroke: cssVar("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "2 3" }));
+      svg.appendChild(el("line", { "data-anim": "fade", "data-delay": 0.7, x1: ax, y1: marginT, x2: ax, y2: marginT + plotH, stroke: cssVar("--ink-faint"), "stroke-width": 1, "stroke-dasharray": "2 3" }));
       // label sits in the empty bottom band, clear of the plotted line
-      var atext = el("text", { x: ax + 6, y: marginT + plotH - 8, "font-size": 10.5, "font-style": "italic", fill: cssVar("--ink-faint") });
+      var atext = el("text", { "data-anim": "fade", "data-delay": 0.7, x: ax + 6, y: marginT + plotH - 8, "font-size": 10.5, "font-style": "italic", fill: cssVar("--ink-faint") });
       atext.textContent = opts.annotation.label;
       svg.appendChild(atext);
     }
@@ -968,7 +1178,7 @@
     var gapDeg = 2.2;
     var startAngle = -90;
 
-    var g = el("g", {});
+    var g = el("g", { "data-anim": "pop" });
     svg.appendChild(g);
 
     data.forEach(function(d){
@@ -987,7 +1197,7 @@
       var ly = cy + labelR * Math.sin(midAngle * Math.PI / 180);
       var pct = Math.round((d.value / total) * 100);
       if (pct > 0){
-        var label = el("text", { class: "value-label", x: lx, y: ly, "text-anchor": lx > cx + 2 ? "start" : (lx < cx - 2 ? "end" : "middle"), "font-size": 13 });
+        var label = el("text", { class: "value-label", "data-anim": "fade", "data-delay": 0.45, x: lx, y: ly, "text-anchor": lx > cx + 2 ? "start" : (lx < cx - 2 ? "end" : "middle"), "font-size": 13 });
         label.textContent = pct + "%";
         svg.appendChild(label);
       }
@@ -1060,11 +1270,26 @@
     });
 
     barChart("bar3", {
-      maxVal: 10000, unit: "₱/mo", gap: 0.5,
+      maxVal: 14500, unit: "₱/mo", gap: 0.5,
+      threshold: { value: 13624, label: "₱13,624 poverty line" },
       data: [
         { name: "Cited low reference", value: 2000, label: "₱2,000", color: cssVar("--accent") },
-        { name: "Example farmer", value: 5000, label: "₱5,000", color: cssVar("--accent") },
+        { name: "Blandino Papina", value: 5000, label: "₱5,000", color: cssVar("--accent") },
         { name: "“Low” ceiling cited", value: 10000, label: "₱10,000", color: cssVar("--accent") },
+      ],
+    });
+
+    groupedBarChart("bar5", {
+      maxVal: 100, unit: "%",
+      legendEl: "bar5-legend",
+      series: [
+        { name: "Reported low", color: cssVar("--gold") },
+        { name: "Reported high", color: cssVar("--accent") },
+      ],
+      groups: [
+        { name: "Rice (PH)", values: [16.5, 16.5], labels: ["16.5%", "16.5%"] },
+        { name: "Fruits & veg (PH)", values: [15, 35], labels: ["15%", "35%"] },
+        { name: "Cacao (this study)", values: [80, 100], labels: ["80%", "100%"] },
       ],
     });
 
@@ -1086,8 +1311,9 @@
       legendEl: "line1-legend",
       showSeriesInEndLabel: true,
       series: [
-        { name: "Direct to roast", color: cssVar("--accent"), endLabelBelow: true, values: [0, 180, 186, 190, null, 191] },
+        { name: "Direct to roast", color: cssVar("--accent"), values: [0, 180, 186, 190, null, 191] },
         { name: "Stored first", color: cssVar("--gold"), values: [0, 180, 186, 190, 325, 326] },
+        { name: "Benchmark (lit.)", color: cssVar("--olive"), endLabelBelow: true, values: [0, 165, 171, 177, null, 178] },
       ],
     });
 
@@ -1121,6 +1347,67 @@
   if (window.matchMedia){
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
   }
+
+  /* ---------------- chart entry animations ----------------
+     Elements are tagged with data-anim at build time; each time a slide
+     activates, its tagged elements are reset to a zero state and
+     transitioned in, so bars/lines grow from 0 on every visit. */
+  window.__animateSlide = function(slideEl){
+    if (!slideEl) return;
+    var els = slideEl.querySelectorAll("[data-anim]");
+    if (!els.length) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce){
+      els.forEach(function(n){
+        n.style.transition = "none";
+        n.style.opacity = ""; n.style.transform = "";
+        n.style.strokeDasharray = ""; n.style.strokeDashoffset = "";
+      });
+      return;
+    }
+    els.forEach(function(n){
+      var kind = n.getAttribute("data-anim");
+      n.style.transition = "none";
+      if (kind === "grow"){
+        n.style.transformBox = "fill-box";
+        n.style.transformOrigin = "center bottom";
+        n.style.transform = "scaleY(0.001)";
+      } else if (kind === "draw"){
+        var L = 0;
+        try { L = n.getTotalLength(); } catch (e) {}
+        if (L > 0){
+          n.style.strokeDasharray = L + " " + L;
+          n.style.strokeDashoffset = L;
+        }
+      } else if (kind === "fade"){
+        n.style.opacity = "0";
+      } else if (kind === "pop"){
+        n.style.transformBox = "fill-box";
+        n.style.transformOrigin = "center";
+        n.style.transform = "scale(0.6)";
+        n.style.opacity = "0";
+      }
+    });
+    void slideEl.offsetWidth; // flush the zero state before transitioning
+    els.forEach(function(n){
+      var kind = n.getAttribute("data-anim");
+      var delay = (parseFloat(n.getAttribute("data-delay")) || 0) + "s";
+      if (kind === "grow"){
+        n.style.transition = "transform 0.7s cubic-bezier(0.22,1,0.36,1) " + delay;
+        n.style.transform = "scaleY(1)";
+      } else if (kind === "draw"){
+        n.style.transition = "stroke-dashoffset 1s ease " + delay;
+        n.style.strokeDashoffset = "0";
+      } else if (kind === "fade"){
+        n.style.transition = "opacity 0.5s ease " + delay;
+        n.style.opacity = "1";
+      } else if (kind === "pop"){
+        n.style.transition = "transform 0.6s cubic-bezier(0.22,1,0.36,1) " + delay + ", opacity 0.5s ease " + delay;
+        n.style.transform = "scale(1)";
+        n.style.opacity = "1";
+      }
+    });
+  };
 })();
 </script>
 
@@ -1140,12 +1427,16 @@
     idx = Math.max(0, Math.min(total - 1, i));
     slides.forEach(function(s, n){ s.classList.toggle("active", n === idx); });
     var dividerIdx = slides.findIndex(function(s){ return s.id === "extras-divider"; });
-    if (dividerIdx === -1 || idx < dividerIdx){
+    var refsIdx = slides.findIndex(function(s){ return s.id === "references-slide"; });
+    if (idx === refsIdx){
+      counter.textContent = "References";
+    } else if (dividerIdx === -1 || idx < dividerIdx){
       counter.textContent = (idx + 1) + " / " + (dividerIdx === -1 ? total : dividerIdx);
     } else if (idx === dividerIdx){
       counter.textContent = "Extras";
     } else {
-      counter.textContent = "e" + (idx - dividerIdx) + " / e" + (total - dividerIdx - 1);
+      var extrasTotal = (refsIdx === -1 ? total : refsIdx) - dividerIdx - 1;
+      counter.textContent = "e" + (idx - dividerIdx) + " / e" + extrasTotal;
     }
     progressFill.style.width = (((idx + 1) / total) * 100) + "%";
     prevBtn.disabled = idx === 0;
@@ -1154,7 +1445,17 @@
     homeLink.classList.toggle("on-hero", slides[idx].classList.contains("hero"));
     window.scrollTo(0, 0);
     try { history.replaceState(null, "", "#slide-" + (idx + 1)); } catch (e) {}
+    if (window.__animateSlide) window.__animateSlide(slides[idx]);
   }
+
+  document.addEventListener("click", function(evt){
+    var cite = evt.target.closest ? evt.target.closest("a.cite") : null;
+    if (cite){
+      evt.preventDefault();
+      var refsIdx = slides.findIndex(function(s){ return s.id === "references-slide"; });
+      if (refsIdx !== -1) show(refsIdx);
+    }
+  });
 
   prevBtn.addEventListener("click", function(){ show(idx - 1); });
   nextBtn.addEventListener("click", function(){ show(idx + 1); });
