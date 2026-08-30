@@ -174,14 +174,14 @@
 
   .slide{ display: none; width: 100%; min-height: 100vh; }
   .slide.active{ display: flex; flex-direction: column; }
-  /* Every content slide anchors to the same top position so nothing jumps between slides. */
+  /* Every slide centers its content vertically — one consistent rule, so nothing jumps between slides. */
   .slide-inner{
     max-width: 1120px; margin: 0 auto; width: 100%; flex: 1;
-    display: flex; flex-direction: column; justify-content: flex-start;
-    padding: 3.5rem 1.5rem 6.5rem;
+    display: flex; flex-direction: column;
+    justify-content: center; justify-content: safe center;
+    padding: 4rem 1.5rem 6.5rem;
   }
-  .slide-inner.top-align{ justify-content: flex-start; }
-  .slide.hero .slide-inner{ justify-content: center; padding-top: 4.5rem; }
+  .slide-inner.top-align{ justify-content: center; justify-content: safe center; }
 
   .slide.hero{ background: #241209; }
   .slide.hero .slide-inner{ color: #F7F2EA; }
