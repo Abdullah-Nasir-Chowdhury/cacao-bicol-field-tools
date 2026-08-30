@@ -16,6 +16,49 @@ citation live.
 Read your own section closely. Skim everyone else's — you don't need to memorize their slides,
 but you should recognize the shape of the whole deck so a handoff never feels like a surprise.
 
+## Field-visit recap (read this first if you missed a visit)
+
+Everything in the deck traces back to these visits — this is the shared ground truth every
+presenter should know, whether or not you were there.
+
+**Tatay's cacao farm, Batbat (Tuesday, Aug 26).** A 2.5-hectare farm run by Tatay alone — his
+children work in the cities — 100% organic, and he has health problems that limit how much heavy
+labor he can do himself. His farm used to produce about 500 kg of cacao a year (sold at
+₱75–100/kg); this season it's close to **zero**, because of pests and disease. His own estimate
+of the farm's potential if pests were solved: **2,000 kg/year** — a 4× recovery, the biggest
+single lever we found anywhere. Cacao flowers year-round here, so the pest pressure never gets an
+off-season. On water, his framing was specific: the constraint is water *pressure*, not volume —
+he can't even estimate how many sprinklers his source could feed — and he's open to drip
+irrigation and rainwater collection. Important attribution point: Tatay described the problems
+and constraints; the pilot plan, the tools, and every proposed solution came from our own
+investigations, not from him.
+
+**What the farmers and Muravah told us directly.** Pest control is their #1 problem — ahead of
+typhoon, which everyone called "unpredictable" and would rather we not chase. Post-harvest losses
+run 80–100% from pests/disease across the network, and 60% of pods die from careless handling
+alone (worse under Mayon ashfall). Farmer income is ₱2,000–10,000/month — below Bicol's
+₱13,624/month poverty line for a family of five — the average farmer is about 50, and there's no
+succession pipeline; Muravah copes by recruiting BU Guinubatan students. Two hard rules for any
+solution: **organic only** (no synthetic fertilizers or pesticides, ever) and **no AI/robotics**
+("not there yet," "AI is biased according to the natives") — low-tech and human-in-the-loop is a
+values position for them, not a budget issue. More labor doesn't raise profit, because pest
+pressure caps yield no matter how much work goes in.
+
+**Muravah Foundation / Mayon Gold.** The cacao NGO anchoring all of this: cacao profits fund
+typhoon-proof homes and scholarships, heirloom native cacao interplanted with Pili and coconut,
+and a production-cycle data study already running across 500–1,000 farmers — which is where our
+pilot would live.
+
+**The processing facility.** Their own #1 problem is power outages, but the line that matters for
+us: they're "sometimes out of supply for cacao." Farm-level pest losses upstream directly
+destabilize the factory downstream — fixing the farms fixes two problems at once.
+
+**The other farms (Aug 27–28, now Extras slides).** Tatay Aldavis's rice/dairy farm school
+(a different "Tatay" — it's a Bikol honorific for an elder, not a name) controls pests with
+herbal sprays and ducks that eat snails — proof organic pest control works in Bicol; plus a
+bamboo farm, stingless-bee honey producers, the Zambales agrivoltaics site (the ₱10M funding
+benchmark), and a youth agritourism program.
+
 ## Who presents what
 
 | # | Slide | Presenter |
