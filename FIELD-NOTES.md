@@ -19,8 +19,8 @@ built so far.
 
 "Tatae" is a Bikol honorific (roughly "elder/grandpa"), not a unique name. Do not conflate these two people:
 
-- **Cacao-Tatae** (Aug 26): solo 2.5 ha grower, cacao + Pili, ~0 kg current cacao yield due to
-  pest/disease, frustrated that even subsidized fertilizer is too expensive for him.
+- **Cacao-Tatae** (Aug 26): solo 2.5 ha grower in the **Batbat** area, cacao + Pili, ~0 kg current cacao
+  yield due to pest/disease, frustrated that even subsidized fertilizer is too expensive for him.
 - **Tatae Aldavis** (Aug 27): runs a thriving, diversified rice/dairy operation with an accredited farm
   school and "plenty" of government support — a completely different, unrelated farmer.
 
@@ -74,8 +74,9 @@ temper → mold → chill → sell. Facility undersized for their batch volumes.
 - Core tension: organic certification + export access vs. simply maximizing income.
 - Pest control named as problem #1 overall.
 
-## Farmer "Tatae" (cacao smallholder, Aug 26)
+## Farmer "Tatae" (cacao smallholder, Aug 26, Batbat area)
 
+- Farm located in the **Batbat** area/barangay.
 - 2.5 ha, sole operator (children work in the cities); 100% organic.
 - Cacao yield: 500 kg/year historically, ₱75–100/kg. Pili: ₱60–70/kg, split 50/50 owner/picker.
 - **Currently ~0 kg cacao yield** due to pest/disease; potential ~2,000 kg/year if resolved — a 4x recovery,
@@ -188,6 +189,20 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 - **Notable finding:** the speaker didn't know how badly Mayon-area cacao farmers were doing — a real
   visibility gap between cacao's crisis and the region's broader, well-resourced agri-innovation ecosystem.
 - Open question, still unresolved: is this cacao crisis Bicol-specific, or nationwide?
+- **Claim to flag:** a speaker at this stop (attribution unconfirmed — best guess is this program's own
+  speaker, consistent with their stated belief that "there's a future for cacao farming," but re-check
+  against the raw interview audio/notes before citing) said cacao would become **Bicol's biggest
+  agricultural production**. Team's own skeptical reaction (opinion, not data — keep this framing in any
+  slide/deck use): *"Is that actually achievable given cacao's current production levels?"* — worth holding
+  up against the dataset's actual numbers (Tatae at ~0 kg/yr actual vs. 2,000 kg/yr potential; 80–100%
+  pest/disease loss regionally) before repeating the claim uncritically.
+
+## Solar / agrivoltaics — panel orientation note (Aug 28, own observation)
+
+- **Vertical panel placement is inefficient for sunlight collection** — flagged as a design consideration
+  for any agrivoltaic or solar-irrigation proposal built on the Zambales precedent above. This is the
+  team's own engineering observation, not something a source stated in an interview.
+- Supporting photo to be added later (placeholder reserved in the deck/slide build).
 
 ## Quick-reference numbers
 
