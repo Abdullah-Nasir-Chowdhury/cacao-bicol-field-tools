@@ -23,7 +23,7 @@ but you should recognize the shape of the whole deck so a handoff never feels li
 | 6 | August 26 — Tatay's Farm, Batbat (images) | Ria |
 | 7 | The numbers from Batbat (3 charts) | Masa |
 | 8 | August 27 — Rice, Dairy, Bamboo & Honey Farms (images) | Ria |
-| 9 | August 28 — Solar & Agritourism (images) | Ria |
+| 9 | August 28 — Solar, Wind & Agritourism (images) | Ria |
 | 10 | What the Zambales solar precedent tells us (3 charts) | Masa |
 | 11 | Vertical panels waste potential output | Keisuke |
 | 12 | What we found at Tatay's farm (images) | Nancy |
@@ -119,9 +119,10 @@ also visited a bamboo farm (no problems reported except typhoon) and stingless-b
 (honey, bee, and propolis — propolis is the most valuable, used medicinally). Throughline: proof
 that low-tech, organic pest control already works elsewhere in Bicol.
 
-**Slide 9 — August 28, Solar & Agritourism (image-only).** Covers the Zambales solar farm
+**Slide 9 — August 28, Solar, Wind & Agritourism (image-only).** Covers the Zambales solar farm
 and its agrivoltaics research (solar co-located with farming — irrigation, cold storage, fish
-hatcheries), the Neonormal Agventure taro project, and a youth agritourism program aimed at
+hatcheries), the San Miguel Bay offshore wind project (a ₱170B+ regional renewable-energy
+investment, mentioned as context; we have no photos of it), the Neonormal Agventure taro project, and a youth agritourism program aimed at
 getting young people interested in farming again. Say the words "solar panels" explicitly here —
 Masa's very next slide builds directly on this visit.
 
