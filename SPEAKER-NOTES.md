@@ -354,7 +354,7 @@ callout and Nancy's farm photos between them. The rest of the team doesn't need 
 this material.
 
 **Slide 8 — The numbers from Batbat (3 charts).**
-1. *Loss by cause: cacao vs. rice vs. dragon fruit* — a grouped bar chart. Each cause has three
+1. *Loss by cause, crop by crop* — a grouped bar chart. Each cause has three
    bars: our cacao numbers next to two other Philippine cash crops.
    - **Handling**: cacao loses **60%** of pods to careless handling (field notes); Philippine
      rice loses **16.5%** total post-harvest [5]; dragon fruit loses **35%** of output

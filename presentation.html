@@ -197,12 +197,10 @@
   .team-line img{ height: 46px; width: auto; background: #FFFFFF; border-radius: 6px; padding: 5px 8px; }
   .hero-logo{
     position: absolute; right: 2rem; top: 50%; transform: translateY(-50%);
-    height: clamp(110px, 15vw, 170px); width: auto;
-    background: #FFFFFF; border-radius: 14px; padding: 16px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+    height: clamp(120px, 16vw, 190px); width: auto;
   }
   @media (max-width: 860px){
-    .hero-logo{ position: static; transform: none; height: 84px; margin: 1.6rem 0 0; align-self: flex-start; padding: 10px; border-radius: 10px; }
+    .hero-logo{ position: static; transform: none; height: 92px; margin: 1.6rem 0 0; align-self: flex-start; }
   }
 
   /* name / credit fade on slide entry (retriggers each time the slide activates);
@@ -321,7 +319,7 @@
   .budget-label{ font-size: 0.78rem; color: var(--ink-soft); line-height: 1.35; }
   .jump-back{ margin: 1.1rem 0 0; }
   .jump-back a{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.76rem; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
-  .funding-note{ margin: 0.9rem 0 0; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); max-width: 88ch; line-height: 1.45; }
+  .funding-note{ margin: 0.9rem 0 0; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); line-height: 1.45; }
 
   .bullet-list{ margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
   .bullet-item{ display: flex; gap: 0.7rem; align-items: flex-start; font-size: 1rem; line-height: 1.45; }
@@ -442,7 +440,7 @@
   <div class="slide-inner top-align">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">Path to finished cacao: direct vs. stored</h2>
-    <p class="card-sub">Days from flowering to a sellable product. Storing beans first nearly doubles it. A well-run benchmark farm from the cocoa literature is sellable by ~day 178.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[2]</a></p>
+    <p class="card-sub" style="max-width:none;">Days from flowering to a sellable product. Storing beans first nearly doubles it.<br>A well-run benchmark farm from the cocoa literature is sellable by ~day 178.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[2]</a></p>
     <div class="slide-chart-area"><svg class="viz" id="line1" viewBox="0 0 980 320" role="img" aria-label="Cumulative days from flowering to finished cacao, comparing a direct-to-roast path that is sellable by day 191 with a stored path that is sellable by day 326"></svg></div>
     <div class="legend" id="line1-legend"></div>
   </div>
@@ -473,14 +471,14 @@
     <p class="card-sub">The visit's numbers, with two other Philippine cash crops alongside for scale.</p>
     <div class="subgrid" style="padding:0;">
       <div class="subchart">
-        <h3>Loss by cause: cacao vs. rice vs. dragon fruit</h3>
-        <p class="subchart-cap">Same three causes, compared across PH cash crops.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[17]&ndash;[21]</a></p>
+        <h3>Loss by cause, crop by crop</h3>
+        <p class="subchart-cap">Cacao vs. rice vs. dragon fruit, same three causes.<a class="cite" href="#references">[1]</a><a class="cite" href="#references">[5]</a><a class="cite" href="#references">[17]&ndash;[21]</a></p>
         <svg class="viz" id="bar1" viewBox="0 0 300 250" role="img" aria-label="Grouped bars comparing loss by cause across crops. Handling: cacao 60 percent, rice 16.5 percent, dragon fruit 35 percent. Pests and disease: cacao 80 to 100 percent, rice 24 to 41 percent, dragon fruit 60 to 80 percent. Typhoon in a bad year: cacao about 100 percent, rice up to 95 percent, dragon fruit 100 percent"></svg>
         <div class="legend" id="bar1-legend"></div>
       </div>
       <div class="subchart">
         <h3>Tatay's cacao yield</h3>
-        <p class="subchart-cap">Previous years vs. this season vs. potential, if pests were resolved.</p>
+        <p class="subchart-cap">Previous vs. this season vs. potential, pests resolved.</p>
         <svg class="viz" id="bar2" viewBox="0 0 300 250" role="img" aria-label="Tatay's cacao yield: about 500 kilograms per year previously, 0 kilograms this season, versus a potential 2000 kilograms per year"></svg>
       </div>
       <div class="subchart">
@@ -489,7 +487,7 @@
         <svg class="viz" id="bar3" viewBox="0 0 300 250" role="img" aria-label="Farmer monthly income benchmarks: 2000 pesos cited low reference, 5000 pesos for Blandino Papina, 10000 pesos cited as a low ceiling, all below the Bicol poverty line of 13624 pesos"></svg>
       </div>
     </div>
-    <p class="source-note">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a> Philippine fruits and vegetables broadly lose 15&ndash;35% post-harvest; cacao is far beyond that.<a class="cite" href="#references">[6]</a></p>
+    <p class="source-note" style="max-width:none;">Even the ₱10,000 &ldquo;ceiling&rdquo; sits ₱3,600 below Bicol's poverty threshold for a family of five (₱13,624/month).<a class="cite" href="#references">[4]</a><br>Philippine fruits and vegetables broadly lose 15&ndash;35% post-harvest; cacao is far beyond that.<a class="cite" href="#references">[6]</a></p>
   </div>
 </section>
 
@@ -589,7 +587,7 @@
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
     <h2 class="slide-title">Finding investors: the missing piece</h2>
-    <p class="slide-sub">Our conclusion: a funded pilot is what's missing. The plan is our group's own, and the push comes from Muravah, Bicol University, and its students.</p>
+    <p class="slide-sub" style="max-width:none;">Our conclusion: a funded pilot is what's missing. The plan is our group's own, and the push comes from Muravah, Bicol&nbsp;University, and its students.</p>
     <div class="numbered-list">
       <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The regional funding precedent</h3><p>₱10M was raised regionally for a comparable pilot: the appetite is proven.</p></div></div>
       <div class="numbered-item"><span class="num">2</span><div class="body"><h3>A pilot inside Muravah's existing study</h3><p>Muravah's 500–1,000-farmer study puts an NGO's track record behind it.</p></div></div>
@@ -1301,7 +1299,7 @@
             "24–41% of yield, avg ~37% (IRRI, tropical Asia)",
             "canker losses up to 60%, severe cases ~80%",
           ] },
-        { name: "Typhoon (bad yr)", values: [100, 95, 100], labels: ["~100%", "95%", "100%"],
+        { name: "Typhoon", values: [100, 95, 100], labels: ["~100%", "95%", "100%"],
           tooltips: [
             "~100% in a bad typhoon year (field notes)",
             "up to 95% of standing rice destroyed in worst-hit regions (post-Haiyan)",
