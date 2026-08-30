@@ -205,10 +205,18 @@
     .hero-logo{ position: static; transform: none; height: 84px; margin: 1.6rem 0 0; align-self: flex-start; padding: 10px; border-radius: 10px; }
   }
 
-  /* name / credit fade on slide entry (retriggers each time the slide activates) */
+  /* name / credit fade on slide entry (retriggers each time the slide activates);
+     presenter names then keep fading in and out for as long as the slide is up */
   @keyframes fadeInUp{ from{ opacity: 0; transform: translateY(8px); } to{ opacity: 1; transform: none; } }
-  .slide.active .presenter-tag{ animation: fadeInUp 0.55s ease 0.05s both; }
+  @keyframes namePulse{ from{ opacity: 1; } to{ opacity: 0.3; } }
+  .slide.active .presenter-tag{
+    animation: fadeInUp 0.55s ease 0.05s both,
+               namePulse 2.2s ease-in-out 0.8s infinite alternate;
+  }
   .slide.active .team-line, .slide.active .hero-credit{ animation: fadeInUp 0.75s ease 0.2s both; }
+  @media (prefers-reduced-motion: reduce){
+    .slide.active .presenter-tag, .slide.active .team-line, .slide.active .hero-credit{ animation: none; }
+  }
 
   .presenter-tag{
     display: inline-flex; align-items: center; gap: 0.35rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -532,11 +540,6 @@
         <span class="k">Calculator</span>
         <h3>Drip Pressure Planner</h3>
         <p>Farm size and water source → tree count, flow demand, required pressure, zones, buffer tank size.</p>
-      </a>
-      <a class="tool-link" href="./drip-system-schematic.html" target="_blank" rel="noopener">
-        <span class="k">Diagram</span>
-        <h3>Water-System Schematic</h3>
-        <p>A P&amp;ID-style diagram toggling between a gravity-fed source and a source below the field.</p>
       </a>
       <a class="tool-link" href="./schematic-editor.html" target="_blank" rel="noopener">
         <span class="k">Editor</span>
