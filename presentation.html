@@ -174,12 +174,14 @@
 
   .slide{ display: none; width: 100%; min-height: 100vh; }
   .slide.active{ display: flex; flex-direction: column; }
+  /* Every content slide anchors to the same top position so nothing jumps between slides. */
   .slide-inner{
     max-width: 1120px; margin: 0 auto; width: 100%; flex: 1;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 4.5rem 1.5rem 6.5rem;
+    display: flex; flex-direction: column; justify-content: flex-start;
+    padding: 3.5rem 1.5rem 6.5rem;
   }
-  .slide-inner.top-align{ justify-content: flex-start; padding-top: 3.5rem; }
+  .slide-inner.top-align{ justify-content: flex-start; }
+  .slide.hero .slide-inner{ justify-content: center; padding-top: 4.5rem; }
 
   .slide.hero{ background: #241209; }
   .slide.hero .slide-inner{ color: #F7F2EA; }
@@ -395,16 +397,18 @@
         <div class="img-fallback"><span class="glyph">🖼</span><code>images/batbat-1.jpg</code><span>Photo — Tatay's farm, Batbat</span></div>
       </div>
       <div class="img-slot">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Video from Tatay's farm, Batbat" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-          <source src="images/batbat-1.mp4" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Video of leaves drying and rotting due to lack of water at Tatay's farm, Batbat">
+          <source src="images/batbat-1.mp4" type="video/mp4">
+          <source src="https://drive.google.com/uc?export=download&amp;id=1EXYbXqgSHioXA6P1GT7Ap5bKljMQrzey" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
         </video>
-        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-1.mp4</code><span>Video — rotting leaves due to lack of water (plays automatically, loops)</span></div>
+        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-1.mp4</code><span>Video — leaves drying/rotting due to lack of water (plays automatically, loops)</span></div>
       </div>
       <div class="img-slot">
-        <video autoplay muted loop playsinline preload="metadata" aria-label="Second video from Tatay's farm, Batbat" onerror="this.style.display='none'; this.closest('.img-slot').classList.add('missing')">
-          <source src="images/batbat-2.mp4" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Video of a rotting cacao pod at Tatay's farm, Batbat">
+          <source src="images/batbat-2.mp4" type="video/mp4">
+          <source src="https://drive.google.com/uc?export=download&amp;id=1NgtmGrCOk2Eyfx1yLxjupg-aPbHQJiVD" type="video/mp4" onerror="var s=this.closest('.img-slot'); this.parentElement.style.display='none'; s.classList.add('missing')">
         </video>
-        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-2.mp4</code><span>Video 2 — Tatay's farm, Batbat (plays automatically, loops)</span></div>
+        <div class="img-fallback"><span class="glyph">🎬</span><code>images/batbat-2.mp4</code><span>Video — rotting cacao pod (plays automatically, loops)</span></div>
       </div>
     </div>
   </div>
