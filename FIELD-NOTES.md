@@ -202,7 +202,7 @@ Tuba-tuba, Ube, Uraro. Note: take cacao tree height into account for any harvest
 - **Vertical panel placement is inefficient for sunlight collection** — flagged as a design consideration
   for any agrivoltaic or solar-irrigation proposal built on the Zambales precedent above. This is the
   team's own engineering observation, not something a source stated in an interview.
-- Supporting photo to be added later (placeholder reserved in the deck/slide build).
+- Supporting photo captured at the Aug 28 agrivoltaics site visit: vertically mounted panels lining the field (images/vertical-panel.jpg in the repo; shown on the vertical-panels slide).
 
 ## Quick-reference numbers
 
