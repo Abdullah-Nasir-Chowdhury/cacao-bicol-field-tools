@@ -75,7 +75,7 @@ benchmark), and a youth agritourism program.
 | 9 | The claim worth checking (callout) | Ash |
 | 10 | What we found at Tatay's farm (images) | Nancy |
 | 11 | Run the pilot through a live, calculated tool | **Chow only** |
-| 12 | The pilot study: pest and disease control | Keisuke |
+| 12 | The pilot study: pest and disease control | **Chow** |
 | 13 | Why this works inside real constraints (feasibility) | Masa |
 | 14 | Finding investors: the missing piece | Keisuke |
 | 15 | What we're leaving you with (conclusion) | Ash |
@@ -94,8 +94,8 @@ Extras (backup slides, shown only for questions or spare time):
 | e4 | Vertical panels waste potential output | Keisuke |
 | e5 | Solutions we probed and gathered from other farms | Keisuke |
 
-Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 extra), Keisuke 4
-(+2 extras), Ash 2, Chow 2. At roughly 30–40 seconds a slide the main deck is
+Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 extra), Keisuke 3
+(+2 extras), Ash 2, Chow 3. At roughly 30–40 seconds a slide the main deck is
 about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
 budget breakdowns (i1–i3) sit right after the thank-you: the budget tiles on Keisuke's
 slide 14 are **clickable and jump straight to them** (each has a "back to the investor slide"
@@ -278,10 +278,10 @@ cold storage [10].
 
 ---
 
-## Keisuke — slides 4, 5, 12, 14 + extras e4, e5
+## Keisuke — slides 4, 5, 14 + extras e4, e5
 
-You're the tradeoffs/philosophy voice — scope, constraints, the pilot's scientific grounding,
-and the funding case sit in your slides.
+You're the tradeoffs/philosophy voice — scope, constraints, and the funding case sit in your
+slides.
 
 **Slide 4 — Two fixable problems, not every problem (scope).** This is the honesty slide — we're
 not claiming to fix everything. **Out of scope:** typhoon and Mayon ashfall. Every source called
@@ -302,22 +302,6 @@ every solution ahead already works on another Bicol farm.
    problems to solve," and "AI is biased according to the natives." Frame this as a values
    position, not just a budget constraint — it's why every solution later in the deck is
    deliberately low-tech and human-in-the-loop.
-
-**Slide 12 — The pilot study: pest and disease control.** This is the substance of the pilot
-Chow's tools make calculable — two organic lines of defense, both with published research behind
-them (the citations are clickable on the slide):
-1. **Pest control — deploy insects that eat the pests.** We release beneficial predators against
-   the snails and other pests. This isn't speculative: DOST-PCAARRD is **already mass-rearing red
-   weaver ants and lynx spiders** as biological control agents for cacao insect pests in the
-   Philippines, and field research shows weaver ants cut pest damage in cacao [15]. If someone
-   asks "does this fit organic?" — yes, biological control is the textbook organic answer, and
-   it echoes what the rice/dairy farm already does with ducks eating snails.
-2. **Disease control — keep the trees watered and healthy.** Water stress measurably raises a
-   plant's susceptibility to disease, and the classic plant-pathology finding (Schoeneweiss 1975)
-   is that the effect **reverses once regular watering resumes** [16]. That's the scientific link
-   between the water system and the disease problem: the drip system plus the Pi controller keeps
-   trees out of the stress zone year-round, which is disease prevention, not just irrigation.
-Land the closing line: both measures satisfy Muravah's hard rule — no synthetic pesticides.
 
 **Slide 14 — Finding investors: the missing piece.** Open by owning the conclusion: our
 investigation found that what stands between Tatay's farm and recovery is a funded pilot study.
@@ -399,9 +383,10 @@ the ones that must survive — the problem and the next step.
 
 ---
 
-## Chow — slides 8 & 11
+## Chow — slides 8, 11 & 12
 
-You're the technical voice — the Batbat numbers and the field tools are both yours, so you carry
+You're the technical voice — the Batbat numbers, the field tools, and the pilot-study slide are
+all yours, so you carry
 the deck's hardest data slide and its most concrete engineering slide back to back with only Ash's
 callout and Nancy's farm photos between them. The rest of the team doesn't need to go deep on
 this material.
@@ -490,6 +475,22 @@ water-relations literature, FAO-56). Point the room at the GitHub repo
 field-notes reference and the interactive chart dashboard this deck draws its numbers from. Keep
 the framing tight: this is the concrete, checkable, technical contribution — invite people to open
 it later rather than trying to demo it live if time is short.
+
+**Slide 12 — The pilot study: pest and disease control.** You keep the floor straight after the tools slide — this is the substance of the pilot your
+tools make calculable: two organic lines of defense, both with published research behind them
+(the citations are clickable on the slide):
+1. **Pest control — deploy insects that eat the pests.** We release beneficial predators against
+   the snails and other pests. This isn't speculative: DOST-PCAARRD is **already mass-rearing red
+   weaver ants and lynx spiders** as biological control agents for cacao insect pests in the
+   Philippines, and field research shows weaver ants cut pest damage in cacao [15]. If someone
+   asks "does this fit organic?" — yes, biological control is the textbook organic answer, and
+   it echoes what the rice/dairy farm already does with ducks eating snails.
+2. **Disease control — keep the trees watered and healthy.** Water stress measurably raises a
+   plant's susceptibility to disease, and the classic plant-pathology finding (Schoeneweiss 1975)
+   is that the effect **reverses once regular watering resumes** [16]. That's the scientific link
+   between the water system and the disease problem: the drip system plus the Pi controller keeps
+   trees out of the stress zone year-round, which is disease prevention, not just irrigation.
+Land the closing line: both measures satisfy Muravah's hard rule — no synthetic pesticides.
 
 ---
 
