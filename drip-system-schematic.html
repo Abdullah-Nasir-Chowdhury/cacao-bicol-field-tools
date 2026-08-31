@@ -278,7 +278,7 @@
         <!-- regulator -->
         <use href="#ico-regulator" x="306" y="122" width="34" height="36"></use>
         <text class="sch-text" x="323" y="172" text-anchor="middle">regulator</text>
-        <line class="sch-pipe" x1="340" y1="140" x2="386" y2="140" marker-end="url(#arrow)"></line>
+        <line class="sch-pipe" x1="340" y1="140" x2="424" y2="140" marker-end="url(#arrow)"></line>
 
         <!-- instruments -->
         <use href="#ico-instrument" x="356" y="86" width="26" height="26"></use>
@@ -342,6 +342,8 @@
           <text class="sch-text title sch-controller-label" x="645" y="288" text-anchor="middle">Raspberry Pi controller</text>
           <text class="sch-text" font-size="9.5" x="645" y="303" text-anchor="middle">auto schedule: weather + season</text>
           <path class="sch-signal" d="M630,268 L630,255 L530,255 L530,25"></path>
+          <path class="sch-signal" d="M399,176 L399,255 L530,255"></path>
+          <path class="sch-signal" d="M369,86 L369,60 L530,60"></path>
           <path class="sch-signal" d="M530,25 L492,25 L492,33" marker-end="url(#arrow-warn)"></path>
           <path class="sch-signal" d="M530,121 L492,121 L492,125" marker-end="url(#arrow-warn)"></path>
           <path class="sch-signal" d="M530,206 L492,206 L492,210" marker-end="url(#arrow-warn)"></path>
@@ -350,7 +352,7 @@
     </figure>
 
     <figcaption>
-      <b>What changes between the two options:</b> when the source sits below the field (Tatay's case), a pump has to lift the water before it reaches the check valve; when the source is above the field, gravity does that work for free and the pump drops out entirely. Every component after that point &mdash; filtration, pressure regulation, metering, zoning, the trees &mdash; is the same system either way. <b>The dashed amber lines are control signals:</b> a Raspberry Pi opens the zone valves (and drives the pump, when one is fitted) on a schedule it adjusts to weather and season; the controller block has <a class="crosslink" href="./raspberry-pi-controller.html">its own detailed schematic</a>.
+      <b>What changes between the two options:</b> when the source sits below the field (Tatay's case), a pump has to lift the water before it reaches the check valve; when the source is above the field, gravity does that work for free and the pump drops out entirely. Every component after that point &mdash; filtration, pressure regulation, metering, zoning, the trees &mdash; is the same system either way. <b>The dashed amber lines are control signals:</b> a Raspberry Pi opens the zone valves (and drives the pump, when one is fitted) on a schedule it adjusts to weather and season, and it also reads the flow (F) and pressure (P) instruments so it can alert the farmer the moment pressure drops (a leak) or flow drops (a clog); the controller block has <a class="crosslink" href="./raspberry-pi-controller.html">its own detailed schematic</a>.
     </figcaption>
 
     <div class="legend">

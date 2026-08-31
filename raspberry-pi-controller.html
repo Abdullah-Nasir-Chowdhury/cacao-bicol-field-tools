@@ -157,8 +157,8 @@
     </div>
 
     <figure>
-      <svg viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" role="img"
-           aria-label="Block diagram of the irrigation controller. Left: soil-moisture probes, a rain sensor and a tank-level sensor feed an MCP3008 analog-to-digital converter, which talks to the Raspberry Pi over SPI; a DHT22 temperature and humidity sensor connects over GPIO and a DS3231 real-time clock over I2C. Center: the Raspberry Pi Zero 2 W runs the seasonal watering schedule. Right: the Pi drives a relay board over GPIO, and the relay switches three 12-volt solenoid zone valves and a pump contactor. Bottom: a 12-volt supply powers the valve circuits directly and powers the Pi through a 5-volt buck converter.">
+      <svg viewBox="0 0 880 640" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Block diagram of the irrigation controller. Left: soil-moisture probes, a rain sensor, a tank-level sensor and a line-pressure sensor feed an MCP3008 analog-to-digital converter, which talks to the Raspberry Pi over SPI; a pulse-output flow meter and a DHT22 temperature and humidity sensor connect over GPIO and a DS3231 real-time clock over I2C. Center: the Raspberry Pi Zero 2 W runs the seasonal watering schedule and alerts the farmer when pressure or flow drifts. Right: the Pi drives a relay board over GPIO, and the relay switches three 12-volt solenoid zone valves and a pump contactor. Bottom: a 12-volt supply powers the valve circuits directly and powers the Pi through a 5-volt buck converter.">
 
         <defs>
           <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -191,16 +191,24 @@
         <text class="sch-text title lbl-sensor" x="105" y="232" text-anchor="middle">tank-level sensor</text>
         <text class="sch-text small" x="105" y="247" text-anchor="middle">float switch / HC-SR04</text>
 
-        <rect class="blk blk-sensor" x="20" y="300" width="170" height="42" rx="5"></rect>
-        <text class="sch-text title lbl-sensor" x="105" y="318" text-anchor="middle">DHT22 sensor</text>
-        <text class="sch-text small" x="105" y="333" text-anchor="middle">air temp + humidity</text>
+        <rect class="blk blk-sensor" x="20" y="272" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="290" text-anchor="middle">line-pressure sensor</text>
+        <text class="sch-text small" x="105" y="305" text-anchor="middle">drop = a leak, analog</text>
 
-        <rect class="blk blk-sensor" x="20" y="358" width="170" height="42" rx="5"></rect>
-        <text class="sch-text title lbl-sensor" x="105" y="376" text-anchor="middle">DS3231 real-time clock</text>
-        <text class="sch-text small" x="105" y="391" text-anchor="middle">keeps date &amp; season</text>
+        <rect class="blk blk-sensor" x="20" y="330" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="348" text-anchor="middle">flow meter</text>
+        <text class="sch-text small" x="105" y="363" text-anchor="middle">drop = a clog, pulse out</text>
+
+        <rect class="blk blk-sensor" x="20" y="388" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="406" text-anchor="middle">DHT22 sensor</text>
+        <text class="sch-text small" x="105" y="421" text-anchor="middle">air temp + humidity</text>
+
+        <rect class="blk blk-sensor" x="20" y="446" width="170" height="42" rx="5"></rect>
+        <text class="sch-text title lbl-sensor" x="105" y="464" text-anchor="middle">DS3231 real-time clock</text>
+        <text class="sch-text small" x="105" y="479" text-anchor="middle">keeps date &amp; season</text>
 
         <!-- ===== ADC ===== -->
-        <rect class="blk" x="240" y="110" width="90" height="80" rx="5"></rect>
+        <rect class="blk" x="240" y="105" width="90" height="105" rx="5"></rect>
         <text class="sch-text title" x="285" y="140" text-anchor="middle">MCP3008</text>
         <text class="sch-text small" x="285" y="155" text-anchor="middle">8-ch ADC</text>
         <text class="sch-text small" x="285" y="170" text-anchor="middle">analog in</text>
@@ -209,7 +217,8 @@
         <path class="sch-wire" d="M190,61 L215,61 L215,120 L240,120" marker-end="url(#arr)"></path>
         <path class="sch-wire" d="M190,119 L222,119 L222,140 L240,140" marker-end="url(#arr)"></path>
         <path class="sch-wire" d="M190,177 L222,177 L222,160 L240,160" marker-end="url(#arr)"></path>
-        <path class="sch-wire" d="M190,235 L215,235 L215,180 L240,180" marker-end="url(#arr)"></path>
+        <path class="sch-wire" d="M190,235 L222,235 L222,180 L240,180" marker-end="url(#arr)"></path>
+        <path class="sch-wire" d="M190,293 L215,293 L215,200 L240,200" marker-end="url(#arr)"></path>
 
         <!-- ===== Raspberry Pi ===== -->
         <rect class="blk blk-pi" x="420" y="100" width="160" height="180" rx="8"></rect>
@@ -224,13 +233,17 @@
         <path class="sch-wire" d="M330,150 L420,150" marker-end="url(#arr)"></path>
         <text class="sch-text small" x="375" y="142" text-anchor="middle">SPI</text>
 
+        <!-- flow meter -> Pi (GPIO pulse) -->
+        <path class="sch-wire" d="M190,351 L395,351 L395,220 L420,220" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="345" y="343" text-anchor="middle">GPIO pulse</text>
+
         <!-- DHT22 -> Pi (GPIO) -->
-        <path class="sch-wire" d="M190,321 L370,321 L370,230 L420,230" marker-end="url(#arr)"></path>
-        <text class="sch-text small" x="345" y="313" text-anchor="middle">GPIO</text>
+        <path class="sch-wire" d="M190,409 L375,409 L375,245 L420,245" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="345" y="401" text-anchor="middle">GPIO</text>
 
         <!-- RTC -> Pi (I2C) -->
-        <path class="sch-wire" d="M190,379 L395,379 L395,260 L420,260" marker-end="url(#arr)"></path>
-        <text class="sch-text small" x="345" y="371" text-anchor="middle">I2C</text>
+        <path class="sch-wire" d="M190,467 L405,467 L405,268 L420,268" marker-end="url(#arr)"></path>
+        <text class="sch-text small" x="345" y="459" text-anchor="middle">I2C</text>
 
         <!-- ===== relay + actuators (right) ===== -->
         <text class="sch-text small" x="650" y="28">ACTUATORS</text>
@@ -263,24 +276,24 @@
         <path class="sch-signal" d="M628,404 L650,404" marker-end="url(#arr-warn)"></path>
 
         <!-- ===== power (bottom) ===== -->
-        <rect class="blk blk-power" x="240" y="430" width="150" height="44" rx="5"></rect>
-        <text class="sch-text title lbl-power" x="315" y="448" text-anchor="middle">12 V supply</text>
-        <text class="sch-text small" x="315" y="463" text-anchor="middle">mains or small solar</text>
+        <rect class="blk blk-power" x="240" y="530" width="150" height="44" rx="5"></rect>
+        <text class="sch-text title lbl-power" x="315" y="548" text-anchor="middle">12 V supply</text>
+        <text class="sch-text small" x="315" y="563" text-anchor="middle">mains or small solar</text>
 
-        <rect class="blk blk-power" x="420" y="430" width="140" height="44" rx="5"></rect>
-        <text class="sch-text title lbl-power" x="490" y="448" text-anchor="middle">buck converter</text>
-        <text class="sch-text small" x="490" y="463" text-anchor="middle">12 V &rarr; 5 V</text>
+        <rect class="blk blk-power" x="420" y="530" width="140" height="44" rx="5"></rect>
+        <text class="sch-text title lbl-power" x="490" y="548" text-anchor="middle">buck converter</text>
+        <text class="sch-text small" x="490" y="563" text-anchor="middle">12 V &rarr; 5 V</text>
 
-        <path class="sch-power" d="M390,444 L420,444" marker-end="url(#arr-power)"></path>
-        <path class="sch-power" d="M490,430 L490,280" marker-end="url(#arr-power)"></path>
-        <text class="sch-text small" x="502" y="360">5 V</text>
-        <path class="sch-power" d="M315,474 L315,496 L735,496 L735,428" marker-end="url(#arr-power)"></path>
-        <text class="sch-text small" x="530" y="490" text-anchor="middle">12 V to valve &amp; pump circuits (switched by the relay contacts)</text>
+        <path class="sch-power" d="M390,544 L420,544" marker-end="url(#arr-power)"></path>
+        <path class="sch-power" d="M490,530 L490,280" marker-end="url(#arr-power)"></path>
+        <text class="sch-text small" x="502" y="420">5 V</text>
+        <path class="sch-power" d="M315,574 L315,600 L735,600 L735,428" marker-end="url(#arr-power)"></path>
+        <text class="sch-text small" x="530" y="594" text-anchor="middle">12 V to valve &amp; pump circuits (switched by the relay contacts)</text>
       </svg>
     </figure>
 
     <figcaption>
-      <b>How to read it:</b> solid gray lines are sensor data into the Pi (through an MCP3008 ADC for the analog sensors), dashed amber lines are the control signals out (Pi &rarr; relay &rarr; valves and pump), and the red lines are power. The Pi itself never touches 12&nbsp;V: it flips relay channels, and the relay contacts switch the valve and pump circuits.
+      <b>How to read it:</b> solid gray lines are sensor data into the Pi (through an MCP3008 ADC for the analog sensors), dashed amber lines are the control signals out (Pi &rarr; relay &rarr; valves and pump), and the red lines are power. The Pi itself never touches 12&nbsp;V: it flips relay channels, and the relay contacts switch the valve and pump circuits. The <b>flow meter and line-pressure sensor</b> are the same F and P instruments drawn on the water-system schematic, wired into the Pi so it can tell when the line itself is sick.
     </figcaption>
 
     <div class="logic">
@@ -291,10 +304,11 @@
         <li><b>Heat can add a run (DHT22).</b> On unusually hot, dry-air days the controller adds a short extra pulse to the driest zone.</li>
         <li><b>The tank guards the pump (level sensor).</b> The pump contactor only engages when the buffer tank needs refilling and the source has water, so the pump can never run dry.</li>
         <li><b>One zone at a time.</b> The relay opens a single zone valve per run, matching the zoning logic in the pressure planner, so a small source can still feed the whole farm.</li>
+        <li><b>It tells the farmer when something is wrong (flow + pressure sensors).</b> During a run the Pi watches the line itself: pressure falling below normal means a leak, flow falling means a clog, and either one triggers an alert to the farmer (a buzzer on the box, plus an SMS through a low-cost GSM module). One farmer with health limits no longer has to patrol 2.5 hectares of pipe to find a problem &mdash; the manpower constraint this whole deck keeps running into.</li>
       </ol>
       <p class="note">Everything runs locally on the Pi; no internet is required in the field. The run log doubles as pilot-study data: every watering, skip and tank refill is time-stamped for Muravah's dataset.</p>
     </div>
   </div>
 
-  <footer>Bill of materials: Pi Zero 2 W (US$15 list), MCP3008, DHT22, DS3231, capacitive soil probes, rain sensor, float switch, 4-channel relay, 12&nbsp;V solenoid valves, buck converter, enclosure. Budgeted at ~₱8,000 per farm in the pilot ledger. Pairs with the <a href="./drip-system-schematic.html">water-system schematic</a>, where this whole page is the single amber controller block.</footer>
+  <footer>Bill of materials: Pi Zero 2 W (US$15 list), MCP3008, DHT22, DS3231, capacitive soil probes, rain sensor, float switch, pulse flow meter, line-pressure transducer, GSM module for SMS alerts, 4-channel relay, 12&nbsp;V solenoid valves, buck converter, enclosure. Budgeted at ~₱8,000 per farm in the pilot ledger. Pairs with the <a href="./drip-system-schematic.html">water-system schematic</a>, where this whole page is the single amber controller block.</footer>
 </div>

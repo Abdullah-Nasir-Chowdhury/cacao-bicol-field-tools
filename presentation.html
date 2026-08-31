@@ -301,6 +301,28 @@
   .ledger-row.total{ border-bottom: none; border-top: 2px solid var(--ink); font-weight: 700; font-size: 1.05rem; margin-top: 0.15rem; }
   .ledger-note{ margin-top: 0.9rem; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); max-width: 76ch; line-height: 1.45; }
 
+  /* investment slides: ledger on the left, expected-return panel on the right */
+  .ledger-cols{ display: grid; grid-template-columns: 7fr 4fr; gap: 1rem 2.5rem; align-items: start; margin-top: 1rem; }
+  @media (max-width: 860px){ .ledger-cols{ grid-template-columns: 1fr; } }
+  .ledger-cols .ledger{ margin-top: 0; max-width: none; }
+  .ledger-cols .ledger-row{ font-size: 0.92rem; padding: 0.42rem 0; }
+  .ledger-row.subhead{
+    border-bottom: none; padding: 0.9rem 0 0.1rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.68rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .ledger .ledger-row.subhead:first-child{ padding-top: 0; }
+  .ledger-row.subtotal{ font-weight: 600; border-bottom: 2px solid var(--line); }
+  .ledger-row.subtotal .li-label{ color: var(--ink-soft); font-style: italic; font-weight: 500; }
+  .returns-panel{ background: var(--olive-soft); border-radius: 10px; padding: 1.1rem 1.25rem; }
+  .returns-panel h3{
+    margin: 0 0 0.3rem; font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--olive); font-weight: 600;
+  }
+  .returns-panel .big{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 1.45rem; font-weight: 600; color: var(--ink); margin: 0 0 0.7rem; }
+  .returns-panel p{ margin: 0 0 0.6rem; font-size: 0.85rem; color: var(--ink); line-height: 1.45; }
+  .returns-panel p:last-child{ margin-bottom: 0; }
+
   .refs{ list-style: none; margin: 1rem 0 0; padding: 0; counter-reset: ref; column-count: 2; column-gap: 2.5rem; }
   @media (max-width: 800px){ .refs{ column-count: 1; } }
   .refs li{ counter-increment: ref; font-size: 0.82rem; color: var(--ink); line-height: 1.45; margin-bottom: 0.7rem; padding-left: 2.1rem; position: relative; break-inside: avoid; }
@@ -563,7 +585,7 @@
     <h2 class="slide-title">The pilot study: pest and disease control</h2>
     <p class="slide-sub">Two organic-only lines of defense, run alongside the water system.</p>
     <div class="numbered-list">
-      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Pest control: deploy insects that eat the pests</h3><p>Release beneficial predators against the snails and other pests. DOST-PCAARRD is already mass-rearing red weaver ants and lynx spiders as biological control agents for cacao insect pests in the Philippines, and weaver ants have been shown to cut pest damage in cacao.<a class="cite" href="#references">[15]</a></p></div></div>
+      <div class="numbered-item"><span class="num">1</span><div class="body"><h3>Pest control: deploy predators that eat the pests</h3><p>Release beneficial predators against the snails and other pests: carnivorous snails that hunt the pest snails, plus the red weaver ants and lynx spiders DOST-PCAARRD is already mass-rearing as biological control agents for cacao in the Philippines.<a class="cite" href="#references">[15]</a></p></div></div>
       <div class="numbered-item"><span class="num">2</span><div class="body"><h3>Disease control: keep the trees watered and healthy</h3><p>Healthy, regularly watered plants are less susceptible to disease: water stress measurably raises susceptibility, and the effect reverses once regular watering resumes. The drip system and the Pi controller keep trees out of that danger zone year-round.<a class="cite" href="#references">[16]</a></p></div></div>
     </div>
     <p class="source-note">Both measures are organic-compatible, satisfying Muravah's hard rule: no synthetic pesticides.</p>
@@ -594,8 +616,8 @@
       <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The organic price premium as the return story</h3><p>Bridge capital toward organic certification: 4&times; recovery + price premium.</p></div></div>
     </div>
     <div class="budget-row">
-      <a class="budget-tile" href="#cost-95k" data-jump="cost-95k"><span class="budget-num">~₱95K</span><span class="budget-label">one-farm starter pilot</span></a>
-      <a class="budget-tile" href="#cost-1m" data-jump="cost-1m"><span class="budget-num">₱0.9–1M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></a>
+      <a class="budget-tile" href="#cost-95k" data-jump="cost-95k"><span class="budget-num">~₱100K</span><span class="budget-label">one-farm starter pilot</span></a>
+      <a class="budget-tile" href="#cost-1m" data-jump="cost-1m"><span class="budget-num">~₱1M</span><span class="budget-label">ten-farm expansion in Muravah's study</span></a>
       <a class="budget-tile" href="#cost-10m" data-jump="cost-10m"><span class="budget-num">₱10M</span><span class="budget-label">the Zambales benchmark, already funded regionally</span></a>
     </div>
     <p class="funding-note">Built from market prices. Sources to approach: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR, foundations, agri-crowdfunding, BU grants.</p>
@@ -609,7 +631,7 @@
     <div class="numbered-list">
       <div class="numbered-item"><span class="num">1</span><div class="body"><h3>The problem is specific, not vague</h3><p>Year-round pest and disease pressure: 500&nbsp;kg/yr &rarr; ~0, and 80&ndash;100% losses region-wide.</p></div></div>
       <div class="numbered-item"><span class="num">2</span><div class="body"><h3>The upside is the region's biggest lever</h3><p>A projected 4&times; recovery for Tatay, and a stable facility downstream.</p></div></div>
-      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱95K, run by Muravah and BU students.</p></div></div>
+      <div class="numbered-item"><span class="num">3</span><div class="body"><h3>The next step is small and fundable</h3><p>One row, a handful of farms, ~₱100K, run by Muravah and BU students.</p></div></div>
     </div>
   </div>
 </section>
@@ -627,20 +649,34 @@
 <section class="slide" id="cost-95k">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">Where the ₱95K starter figure comes from</h2>
+    <h2 class="slide-title">Where the ₱100K starter figure comes from</h2>
     <p class="slide-sub">One farm, one year, at 2025&ndash;26 Philippine market prices.</p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Drip starter zone, 0.25 ha: lines, emitters, filter, regulator<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱30,000</span></div>
-      <div class="ledger-row"><span class="li-label">Two 1,000&nbsp;L poly tanks (₱3,500&ndash;7,500 each) + stand and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱14,000</span></div>
-      <div class="ledger-row"><span class="li-label">Raspberry Pi controller kit: Pi Zero 2 W, soil-moisture, temperature/humidity, rain and tank-level sensors, relay + solenoid valves, enclosure and power<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱8,000</span></div>
-      <div class="ledger-row"><span class="li-label">Bio-spray inputs for a year: molasses, amino ferment, herbal materials<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱12,000</span></div>
-      <div class="ledger-row"><span class="li-label">Printed treatment calendars, checklists, ledgers</span><span class="li-amount">₱4,000</span></div>
-      <div class="ledger-row"><span class="li-label">Monitoring visits, twice monthly for a year (allowance at the ₱435/day regional wage + transport)<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱15,000</span></div>
-      <div class="ledger-row"><span class="li-label">Training day + ~15% contingency</span><span class="li-amount">₱12,000</span></div>
-      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱95,000</span></div>
+    <div class="ledger-cols">
+      <div class="ledger">
+        <div class="ledger-row subhead"><span class="li-label">Water system</span></div>
+        <div class="ledger-row"><span class="li-label">Drip starter zone, 0.25 ha: lines, emitters, filter, regulator<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱30,000</span></div>
+        <div class="ledger-row"><span class="li-label">Two 1,000&nbsp;L poly tanks + stand and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱14,000</span></div>
+        <div class="ledger-row"><span class="li-label">Raspberry Pi controller kit: sensors, relay, solenoid valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱8,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Water subtotal</span><span class="li-amount">₱52,000</span></div>
+        <div class="ledger-row subhead"><span class="li-label">Pest &amp; disease control</span></div>
+        <div class="ledger-row"><span class="li-label">Biocontrol starter colonies: carnivorous snails, weaver ants, lynx spiders<a class="cite" href="#references">[15]</a></span><span class="li-amount">₱5,000</span></div>
+        <div class="ledger-row"><span class="li-label">Bio-spray inputs for a year: molasses, amino ferment, herbs<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱12,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Pest &amp; disease subtotal</span><span class="li-amount">₱17,000</span></div>
+        <div class="ledger-row subhead"><span class="li-label">Program &amp; people</span></div>
+        <div class="ledger-row"><span class="li-label">Printed treatment calendars, checklists, ledgers</span><span class="li-amount">₱4,000</span></div>
+        <div class="ledger-row"><span class="li-label">Monitoring visits, twice monthly for a year (₱435/day wage + transport)<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱15,000</span></div>
+        <div class="ledger-row"><span class="li-label">Training day + ~15% contingency</span><span class="li-amount">₱12,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Program subtotal</span><span class="li-amount">₱31,000</span></div>
+        <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱100,000</span></div>
+      </div>
+      <div class="returns-panel">
+        <h3>Expected return</h3>
+        <p class="big">₱150K&ndash;200K / yr</p>
+        <p>With pests resolved the farm yields up to <b>2,000&nbsp;kg/yr</b>; at the ₱75&ndash;100/kg farm-gate price that is ₱150,000&ndash;200,000 of cacao a year.<a class="cite" href="#references">[1]</a></p>
+        <p><b>Payback: within the first full harvest.</b> Even a half recovery covers the ₱100K in about a year.</p>
+      </div>
     </div>
     <p class="ledger-note">Every line has a cheaper local substitute; the drip zone and the controller kit are the only equipment purchases.</p>
-    <div class="recommend-box"><b>The return:</b> with pests resolved, the farm yields up to 2,000&nbsp;kg/yr; at the ₱75&ndash;100/kg farm-gate price that is <b>₱150,000&ndash;200,000 of cacao a year</b>, so the ₱95K pilot repays within the first full harvest. Even a half recovery covers it in about a year.<a class="cite" href="#references">[1]</a></div>
     <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
@@ -648,20 +684,34 @@
 <section class="slide" id="cost-1m">
   <div class="slide-inner">
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
-    <h2 class="slide-title">Where ₱0.9&ndash;1M for ten farms comes from</h2>
+    <h2 class="slide-title">Where the ~₱1M for ten farms comes from</h2>
     <p class="slide-sub">Scaling the starter pilot inside Muravah's existing study; shared costs don't multiply by ten.</p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Ten drip starter zones<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱300,000</span></div>
-      <div class="ledger-row"><span class="li-label">Twenty tanks + stands and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱140,000</span></div>
-      <div class="ledger-row"><span class="li-label">Ten Pi controller kits with sensors and valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱80,000</span></div>
-      <div class="ledger-row"><span class="li-label">Bio-spray inputs, ten farms &times; one year<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱120,000</span></div>
-      <div class="ledger-row"><span class="li-label">Shared printing + three training sessions</span><span class="li-amount">₱45,000</span></div>
-      <div class="ledger-row"><span class="li-label">Field coordinator + student visit program, one year<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱180,000</span></div>
-      <div class="ledger-row"><span class="li-label">Data collection and monitoring materials</span><span class="li-amount">₱40,000</span></div>
-      <div class="ledger-row"><span class="li-label">~10% contingency</span><span class="li-amount">₱85,000</span></div>
-      <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱990,000</span></div>
+    <div class="ledger-cols">
+      <div class="ledger">
+        <div class="ledger-row subhead"><span class="li-label">Water systems, ten farms</span></div>
+        <div class="ledger-row"><span class="li-label">Ten drip starter zones<a class="cite" href="#references">[13]</a></span><span class="li-amount">₱300,000</span></div>
+        <div class="ledger-row"><span class="li-label">Twenty tanks + stands and fittings<a class="cite" href="#references">[12]</a></span><span class="li-amount">₱140,000</span></div>
+        <div class="ledger-row"><span class="li-label">Ten Pi controller kits with sensors and valves<a class="cite" href="#references">[14]</a></span><span class="li-amount">₱80,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Water subtotal</span><span class="li-amount">₱520,000</span></div>
+        <div class="ledger-row subhead"><span class="li-label">Pest &amp; disease control</span></div>
+        <div class="ledger-row"><span class="li-label">Biocontrol colonies for ten farms: carnivorous snails, weaver ants, lynx spiders<a class="cite" href="#references">[15]</a></span><span class="li-amount">₱40,000</span></div>
+        <div class="ledger-row"><span class="li-label">Bio-spray inputs, ten farms &times; one year<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱120,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Pest &amp; disease subtotal</span><span class="li-amount">₱160,000</span></div>
+        <div class="ledger-row subhead"><span class="li-label">Program &amp; people, shared</span></div>
+        <div class="ledger-row"><span class="li-label">Shared printing + three training sessions</span><span class="li-amount">₱45,000</span></div>
+        <div class="ledger-row"><span class="li-label">Field coordinator + student visit program, one year<a class="cite" href="#references">[11]</a></span><span class="li-amount">₱180,000</span></div>
+        <div class="ledger-row"><span class="li-label">Data collection and monitoring materials</span><span class="li-amount">₱40,000</span></div>
+        <div class="ledger-row"><span class="li-label">~8% contingency</span><span class="li-amount">₱85,000</span></div>
+        <div class="ledger-row subtotal"><span class="li-label">Program subtotal</span><span class="li-amount">₱350,000</span></div>
+        <div class="ledger-row total"><span class="li-label">Total</span><span class="li-amount">≈ ₱1,030,000</span></div>
+      </div>
+      <div class="returns-panel">
+        <h3>Expected return</h3>
+        <p class="big">₱1.5&ndash;2M / yr</p>
+        <p>If the ten farms average Tatay's recovery, that is up to <b>20,000&nbsp;kg/yr</b> at ₱75&ndash;100/kg farm-gate prices.<a class="cite" href="#references">[1]</a></p>
+        <p><b>Payback: inside the first full harvest year</b>, with the organic price premium as upside on top.</p>
+      </div>
     </div>
-    <div class="recommend-box"><b>The return:</b> if the ten farms average Tatay's recovery, that is up to 20,000&nbsp;kg/yr, worth <b>₱1.5&ndash;2M of cacao a year</b> at ₱75&ndash;100/kg farm-gate prices; the ₱990K repays inside the first full harvest year, with the organic price premium as upside on top.<a class="cite" href="#references">[1]</a></div>
     <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
@@ -671,13 +721,20 @@
     <span class="presenter-tag"><span class="dot"></span>Masa</span>
     <h2 class="slide-title">The ₱10M benchmark isn't ours to estimate</h2>
     <p class="slide-sub">It's what a comparable regional project has already raised.<a class="cite" href="#references">[1]</a></p>
-    <div class="ledger">
-      <div class="ledger-row"><span class="li-label">Zambales agrivoltaics project funding, as cited to us on the site visit<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱10,000,000</span></div>
-      <div class="ledger-row"><span class="li-label">Our one-farm ask, as a share of that proven benchmark</span><span class="li-amount">~1%</span></div>
-      <div class="ledger-row"><span class="li-label">Our ten-farm ask, as a share of that benchmark</span><span class="li-amount">~10%</span></div>
+    <div class="ledger-cols">
+      <div class="ledger">
+        <div class="ledger-row"><span class="li-label">Zambales agrivoltaics project funding, as cited to us on the site visit<a class="cite" href="#references">[1]</a></span><span class="li-amount">₱10,000,000</span></div>
+        <div class="ledger-row"><span class="li-label">Our one-farm ask (₱100K), as a share of that proven benchmark</span><span class="li-amount">1%</span></div>
+        <div class="ledger-row"><span class="li-label">Our ten-farm ask (~₱1M), as a share of that benchmark</span><span class="li-amount">~10%</span></div>
+      </div>
+      <div class="returns-panel">
+        <h3>Expected return, for scale</h3>
+        <p class="big">₱1.5&ndash;2M / yr</p>
+        <p>Unlike infrastructure spending, our ask is <b>harvest-backed</b>: ten recovered farms sell ₱1.5&ndash;2M of cacao a year.<a class="cite" href="#references">[1]</a></p>
+        <p>That returns <b>roughly 10% of this benchmark sum every year</b> from produce alone.</p>
+      </div>
     </div>
     <p class="ledger-note">Full scale could later add what the agrivoltaics precedent already pairs with farming: solar-powered irrigation and cold storage.<a class="cite" href="#references">[10]</a> We cite the benchmark to show the regional appetite, not as our own costing.</p>
-    <div class="recommend-box"><b>The return, for scale:</b> unlike infrastructure spending, our ask is harvest-backed. Ten recovered farms sell <b>₱1.5&ndash;2M of cacao a year</b>, returning roughly 10% of this benchmark sum every year from produce alone.<a class="cite" href="#references">[1]</a></div>
     <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>

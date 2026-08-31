@@ -80,8 +80,8 @@ benchmark), and a youth agritourism program.
 | 14 | Finding investors: the missing piece | Keisuke |
 | 15 | What we're leaving you with (conclusion) | Ash |
 | 16 | Thank you | Nancy |
-| i1 | Where the ₱95K starter figure comes from | Masa |
-| i2 | Where ₱0.9–1M for ten farms comes from | Masa |
+| i1 | Where the ₱100K starter figure comes from | Masa |
+| i2 | Where the ~₱1M for ten farms comes from | Masa |
 | i3 | The ₱10M benchmark isn't ours to estimate | Masa |
 
 Extras (backup slides, shown only for questions or spare time):
@@ -99,7 +99,7 @@ Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 e
 about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
 budget breakdowns (i1–i3) sit right after the thank-you: the budget tiles on Keisuke's
 slide 14 are **clickable and jump straight to them** (each has a "back to the investor slide"
-link), so they come up only when someone wants the arithmetic — they exist so the ₱95K number is
+link), so they come up only when someone wants the arithmetic — they exist so the ₱100K number is
 defensible, not to be read line by line.
 
 ---
@@ -229,38 +229,37 @@ don't rush it.
    and priced from market data, not invented from scratch. The clickable citations and the
    References page at the end of the deck are the proof; point at them if challenged.
 
-**Slide i1 — Where the ₱95K starter figure comes from (via the slide-14 tiles).** One farm, one year, at 2025–26
-Philippine market prices. Walk the ledger top to bottom, don't read every peso:
-- Drip starter zone, 0.25 ha (lines, emitters, filter, regulator): **₱30,000** [13]
-- Two 1,000 L poly tanks (₱3,500–7,500 each) plus stand and fittings: **₱14,000** [12]
-- Raspberry Pi controller kit — Pi Zero 2 W, soil-moisture, temperature/humidity, rain and
-  tank-level sensors, relay and solenoid valves, enclosure and power: **₱8,000** [14]
-- Bio-spray inputs for a year (molasses, amino ferment, herbal materials): **₱12,000** [1]
-- Printed treatment calendars, checklists, ledgers: **₱4,000**
-- Monitoring visits twice monthly for a year (allowance at the ₱435/day regional wage plus
-  transport): **₱15,000** [11]
-- Training day + ~15% contingency: **₱12,000**
-- **Total ≈ ₱95,000.** Every line has a cheaper local substitute; the drip zone and the
+**Slide i1 — Where the ₱100K starter figure comes from (via the slide-14 tiles).** One farm, one
+year, at 2025–26 Philippine market prices, now grouped with subtotals so the shape is readable at
+a glance — say the three subtotals, not every peso:
+- **Water system, subtotal ₱52,000**: drip starter zone 0.25 ha ₱30,000 [13]; two 1,000 L tanks
+  plus stand ₱14,000 [12]; Raspberry Pi controller kit with sensors, relay and valves ₱8,000 [14].
+- **Pest & disease control, subtotal ₱17,000**: biocontrol starter colonies — carnivorous snails
+  that hunt the pest snails, plus the weaver ants and lynx spiders PCAARRD mass-rears — ₱5,000
+  [15]; a year of bio-spray inputs ₱12,000 [1].
+- **Program & people, subtotal ₱31,000**: printed calendars ₱4,000; twice-monthly monitoring
+  visits ₱15,000 [11]; training day + ~15% contingency ₱12,000.
+- **Total ≈ ₱100,000.** Every line has a cheaper local substitute; the drip zone and the
   controller kit are the only equipment purchases.
-- **The return line, say it with the total**: with pests resolved the farm yields up to
-  2,000 kg/yr, and at the ₱75–100/kg farm-gate price Tatay quoted that's **₱150K–200K of cacao a
-  year** [1] — the ₱95K pilot repays within the first full harvest, and even a half recovery
-  covers it in about a year.
+- **The expected-return panel sits on the right of the slide — read it with the total**: with
+  pests resolved the farm yields up to 2,000 kg/yr, and at the ₱75–100/kg farm-gate price Tatay
+  quoted that's **₱150K–200K of cacao a year** [1] — payback within the first full harvest, and
+  even a half recovery covers the ₱100K in about a year.
 
-**Slide i2 — Where ₱0.9–1M for ten farms comes from.** Scaling the starter pilot inside
-Muravah's existing study — the key sentence is that **shared costs don't multiply by ten**:
-ten drip zones ₱300,000 [13], twenty tanks ₱140,000 [12], ten Pi controller kits ₱80,000 [14],
-bio-spray for ten farms ₱120,000 [1], shared printing plus three training sessions ₱45,000, a
-field coordinator and student visit program for a year ₱180,000 [11], data-collection materials
-₱40,000, and ~10% contingency ₱85,000 — **total ≈ ₱990,000**. The return: if the ten farms
-average Tatay's recovery that's up to 20,000 kg/yr, worth **₱1.5–2M a year** at farm-gate
-prices [1] — the expansion repays inside the first full harvest year, before counting any
-organic price premium.
+**Slide i2 — Where the ~₱1M for ten farms comes from.** Scaling the starter pilot inside
+Muravah's existing study — the key sentence is that **shared costs don't multiply by ten**. Three
+subtotals: **water ₱520,000** (ten drip zones ₱300K [13], twenty tanks ₱140K [12], ten Pi kits
+₱80K [14]); **pest & disease ₱160,000** (biocontrol colonies for ten farms ₱40K [15], bio-spray
+₱120K [1]); **program & people ₱350,000** (printing and trainings ₱45K, coordinator and student
+program ₱180K [11], data materials ₱40K, contingency ₱85K) — **total ≈ ₱1,030,000, headline
+~₱1M**. The expected-return panel on the right: if the ten farms average Tatay's recovery that's
+up to 20,000 kg/yr, worth **₱1.5–2M a year** at farm-gate prices [1] — payback inside the first
+full harvest year, before counting any organic price premium.
 
 **Slide i3 — The ₱10M benchmark isn't ours to estimate.** Be precise about what this number is:
 ₱10,000,000 is what the Zambales agrivoltaics project **actually raised**, as cited to us on the
-site visit [1] — it is not our costing. Our one-farm ask is about **1%** of that proven
-benchmark, and the ten-farm ask about **10%**. That's the point of the slide: the region has
+site visit [1] — it is not our costing. Our one-farm ask (₱100K) is **1%** of that proven
+benchmark, and the ten-farm ask (~₱1M) about **10%**. That's the point of the slide: the region has
 already moved money at this scale, and we're asking for a fraction of it. Returns framing:
 unlike infrastructure spending, our ask is harvest-backed — ten recovered farms sell ₱1.5–2M of
 cacao a year, roughly 10% of this benchmark sum returned annually from produce alone [1]. Full scale could later
@@ -318,7 +317,7 @@ from him. Three concrete ways to fund it:
    organic/export certification, where a projected 4× yield recovery plus a price premium is a
    real return case, not just a request for aid.
 
-The three budget tiles on the slide are **~₱95K** (one-farm starter), **₱0.9–1M** (ten farms
+The three budget tiles on the slide are **~₱100K** (one-farm starter), **~₱1M** (ten farms
 inside Muravah's study), and **₱10M** (the already-funded Zambales benchmark) — say clearly that
 these are built from market prices, and that **each tile is clickable** — tapping one jumps
 straight to that figure's line-by-line breakdown (i1–i3, right after the thank-you, Masa's),
@@ -375,7 +374,7 @@ numbers is exactly why the pest/disease problem deserves the room's attention.
 2. **The upside is the region's biggest lever** — a projected 4× yield recovery for Tatay, and
    stabilizing farm supply also stabilizes the processing facility downstream.
 3. **The next step is small and fundable** — a bounded pilot (one row, a handful of farms,
-   **~₱95K** built from market prices, run by Muravah and BU students), with the investor paths
+   **~₱100K** built from market prices, run by Muravah and BU students), with the investor paths
    from Keisuke's slide behind it.
 
 Close crisply and hand to Nancy for the thank-you. If you're pressed for time, beats 1 and 3 are
@@ -440,8 +439,9 @@ so water can't drain back toward the source) → filter (drip emitters clog with
 maintenance failure in real drip systems) → pressure regulator (steps pressure down to what thin
 drip line tolerates) → mainline splitting into **three zones, opened one valve at a time**, so a
 small low-pressure source can still water the whole farm. The teal dashed line is the **buffer
-tank** merging in as dry-season backup; the F and P circles are a flow meter and pressure gauge
-(pressure dropping = leak, flow dropping = clog); the amber dashed lines are **control signals,
+tank** merging in as dry-season backup; the F and P circles are a flow meter and pressure gauge whose readings now also feed the Pi
+(pressure dropping = leak, flow dropping = clog — the Pi alerts the farmer by buzzer/SMS instead
+of anyone patrolling 2.5 ha of pipe, which answers the manpower and health constraint); the amber dashed lines are **control signals,
 not water** — the Raspberry Pi opening zone valves (and the pump, in pump mode) on a schedule it
 adapts to weather and season, with rain and soil-moisture sensors able to veto a run and the
 tank-level sensor keeping the pump from running dry. One-liner for the stage: *"source → lift if
@@ -480,9 +480,10 @@ it later rather than trying to demo it live if time is short.
 tools make calculable: two organic lines of defense, both with published research behind them
 (the citations are clickable on the slide):
 1. **Pest control — deploy insects that eat the pests.** We release beneficial predators against
-   the snails and other pests. This isn't speculative: DOST-PCAARRD is **already mass-rearing red
-   weaver ants and lynx spiders** as biological control agents for cacao insect pests in the
-   Philippines, and field research shows weaver ants cut pest damage in cacao [15]. If someone
+   the snails and other pests: carnivorous snails that hunt the pest snails, plus red weaver ants
+   and lynx spiders. This isn't speculative: DOST-PCAARRD is **already mass-rearing weaver ants
+   and lynx spiders** as biological control agents for cacao insect pests in the Philippines, and
+   field research shows weaver ants cut pest damage in cacao [15]. If someone
    asks "does this fit organic?" — yes, biological control is the textbook organic answer, and
    it echoes what the rice/dairy farm already does with ducks eating snails.
 2. **Disease control — keep the trees watered and healthy.** Water stress measurably raises a
