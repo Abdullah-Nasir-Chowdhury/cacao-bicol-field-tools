@@ -241,19 +241,28 @@ Philippine market prices. Walk the ledger top to bottom, don't read every peso:
 - Training day + ~15% contingency: **₱12,000**
 - **Total ≈ ₱95,000.** Every line has a cheaper local substitute; the drip zone and the
   controller kit are the only equipment purchases.
+- **The return line, say it with the total**: with pests resolved the farm yields up to
+  2,000 kg/yr, and at the ₱75–100/kg farm-gate price Tatay quoted that's **₱150K–200K of cacao a
+  year** [1] — the ₱95K pilot repays within the first full harvest, and even a half recovery
+  covers it in about a year.
 
 **Slide e7 — Where ₱0.9–1M for ten farms comes from (Extras).** Scaling the starter pilot inside
 Muravah's existing study — the key sentence is that **shared costs don't multiply by ten**:
 ten drip zones ₱300,000 [13], twenty tanks ₱140,000 [12], ten Pi controller kits ₱80,000 [14],
 bio-spray for ten farms ₱120,000 [1], shared printing plus three training sessions ₱45,000, a
 field coordinator and student visit program for a year ₱180,000 [11], data-collection materials
-₱40,000, and ~10% contingency ₱85,000 — **total ≈ ₱990,000**.
+₱40,000, and ~10% contingency ₱85,000 — **total ≈ ₱990,000**. The return: if the ten farms
+average Tatay's recovery that's up to 20,000 kg/yr, worth **₱1.5–2M a year** at farm-gate
+prices [1] — the expansion repays inside the first full harvest year, before counting any
+organic price premium.
 
 **Slide e8 — The ₱10M benchmark isn't ours to estimate (Extras).** Be precise about what this number is:
 ₱10,000,000 is what the Zambales agrivoltaics project **actually raised**, as cited to us on the
 site visit [1] — it is not our costing. Our one-farm ask is about **1%** of that proven
 benchmark, and the ten-farm ask about **10%**. That's the point of the slide: the region has
-already moved money at this scale, and we're asking for a fraction of it. Full scale could later
+already moved money at this scale, and we're asking for a fraction of it. Returns framing:
+unlike infrastructure spending, our ask is harvest-backed — ten recovered farms sell ₱1.5–2M of
+cacao a year, roughly 10% of this benchmark sum returned annually from produce alone [1]. Full scale could later
 add what the agrivoltaics precedent already pairs with farming — solar-powered irrigation and
 cold storage [10].
 
