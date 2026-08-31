@@ -480,8 +480,13 @@ it later rather than trying to demo it live if time is short.
 tools make calculable: two organic lines of defense, both with published research behind them
 (the citations are clickable on the slide):
 1. **Pest control — deploy insects that eat the pests.** We release beneficial predators against
-   the snails and other pests: carnivorous snails that hunt the pest snails, plus red weaver ants
-   and lynx spiders. This isn't speculative: DOST-PCAARRD is **already mass-rearing weaver ants
+   the snails and other pests: carnivorous snails that actively hunt pest snails by following
+   their slime trails, plus red weaver ants and lynx spiders. On the snails, be ready for the
+   sharp question: historic releases of IMPORTED hunter snails (Euglandina rosea, Hawaii and the
+   Pacific) failed to control the pest and wiped out native snails — the IUCN condemned those
+   introductions [22]. Our answer is designed in: only locally sourced predators, in contained
+   plots, overseen by Muravah field officers — we cite the failure on the slide precisely
+   because knowing it is what makes the plan credible. This isn't speculative: DOST-PCAARRD is **already mass-rearing weaver ants
    and lynx spiders** as biological control agents for cacao insect pests in the Philippines, and
    field research shows weaver ants cut pest damage in cacao [15]. If someone
    asks "does this fit organic?" — yes, biological control is the textbook organic answer, and
