@@ -360,6 +360,11 @@
   }
   .nav-btn:hover:not(:disabled){ border-color: var(--accent); color: var(--accent-ink); }
   .nav-btn:disabled{ opacity: 0.35; cursor: default; }
+  .nav-btn.round{
+    width: 44px; min-width: 44px; height: 44px; padding: 0; border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700; font-size: 1.1rem;
+    color: var(--accent-ink); border-color: var(--accent);
+  }
   .nav-counter{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.8rem; color: var(--ink-soft); min-width: 4.5rem; text-align: center; }
 
   @media (max-width: 600px){
@@ -894,7 +899,7 @@
 </section>
 
 <div class="nav-bar">
-  <button class="nav-btn" id="nav-invest" hidden>← Investor slide</button>
+  <button class="nav-btn round" id="nav-invest" hidden title="Back to the investor slide (14)" aria-label="Back to the investor slide">i</button>
   <button class="nav-btn" id="nav-prev">← Prev</button>
   <span class="nav-counter" id="nav-counter">1 / 21</span>
   <button class="nav-btn" id="nav-next">Next →</button>
