@@ -339,8 +339,6 @@
   a.budget-tile:hover{ border-color: var(--accent); }
   .budget-num{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 1.25rem; font-weight: 600; color: var(--accent-ink); }
   .budget-label{ font-size: 0.78rem; color: var(--ink-soft); line-height: 1.35; }
-  .jump-back{ margin: 1.1rem 0 0; }
-  .jump-back a{ font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.76rem; color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
   .funding-note{ margin: 0.9rem 0 0; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); line-height: 1.45; }
 
   .bullet-list{ margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.8rem; }
@@ -607,7 +605,7 @@
 
 <section class="slide" id="investors-slide">
   <div class="slide-inner">
-    <span class="presenter-tag"><span class="dot"></span>Keisuke</span>
+    <span class="presenter-tag"><span class="dot"></span>Chow</span>
     <h2 class="slide-title">Finding investors: the missing piece</h2>
     <p class="slide-sub" style="max-width:none;">Our conclusion: a funded pilot is what's missing. The plan is our group's own, and the push comes from Muravah, Bicol&nbsp;University, and its students.</p>
     <div class="numbered-list">
@@ -677,7 +675,6 @@
       </div>
     </div>
     <p class="ledger-note">Every line has a cheaper local substitute; the drip zone and the controller kit are the only equipment purchases.</p>
-    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
 
@@ -712,7 +709,6 @@
         <p><b>Payback: inside the first full harvest year</b>, with the organic price premium as upside on top.</p>
       </div>
     </div>
-    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
 
@@ -735,7 +731,6 @@
       </div>
     </div>
     <p class="ledger-note">Full scale could later add what the agrivoltaics precedent already pairs with farming: solar-powered irrigation and cold storage.<a class="cite" href="#references">[10]</a> We cite the benchmark to show the regional appetite, not as our own costing.</p>
-    <p class="jump-back"><a href="#investors-slide" data-jump="investors-slide">&larr; Back to the investor slide</a></p>
   </div>
 </section>
 
@@ -903,6 +898,7 @@
 </section>
 
 <div class="nav-bar">
+  <button class="nav-btn" id="nav-invest" hidden>← Investor slide</button>
   <button class="nav-btn" id="nav-prev">← Prev</button>
   <span class="nav-counter" id="nav-counter">1 / 21</span>
   <button class="nav-btn" id="nav-next">Next →</button>
@@ -1540,6 +1536,8 @@
       counter.textContent = (idx + 1) + " / " + mainTotal;
     }
     progressFill.style.width = (((secPos + 1) / secLen) * 100) + "%";
+    var investBtn = document.getElementById("nav-invest");
+    if (investBtn) investBtn.hidden = !(iStart !== -1 && idx >= iStart && idx <= iEnd);
     prevBtn.disabled = idx === 0;
     nextBtn.disabled = idx === total - 1;
     var homeLink = document.getElementById("home-link");
@@ -1567,6 +1565,11 @@
     }
   });
 
+  var investBtn = document.getElementById("nav-invest");
+  investBtn.addEventListener("click", function(){
+    var target = slides.findIndex(function(s){ return s.id === "investors-slide"; });
+    if (target !== -1) show(target);
+  });
   prevBtn.addEventListener("click", function(){ show(idx - 1); });
   nextBtn.addEventListener("click", function(){ show(idx + 1); });
 

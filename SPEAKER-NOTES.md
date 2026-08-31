@@ -77,7 +77,7 @@ benchmark), and a youth agritourism program.
 | 11 | Run the pilot through a live, calculated tool | **Chow only** |
 | 12 | The pilot study: pest and disease control | **Chow** |
 | 13 | Why this works inside real constraints (feasibility) | Masa |
-| 14 | Finding investors: the missing piece | Keisuke |
+| 14 | Finding investors: the missing piece | **Chow** |
 | 15 | What we're leaving you with (conclusion) | Ash |
 | 16 | Thank you | Nancy |
 | i1 | Where the ₱100K starter figure comes from | Masa |
@@ -94,12 +94,13 @@ Extras (backup slides, shown only for questions or spare time):
 | e4 | Vertical panels waste potential output | Keisuke |
 | e5 | Solutions we probed and gathered from other farms | Keisuke |
 
-Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 extra), Keisuke 3
-(+2 extras), Ash 2, Chow 3. At roughly 30–40 seconds a slide the main deck is
+Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 extra), Keisuke 2
+(+2 extras), Ash 2, Chow 4. At roughly 30–40 seconds a slide the main deck is
 about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
-budget breakdowns (i1–i3) sit right after the thank-you: the budget tiles on Keisuke's
-slide 14 are **clickable and jump straight to them** (each has a "back to the investor slide"
-link), so they come up only when someone wants the arithmetic — they exist so the ₱100K number is
+budget breakdowns (i1–i3) sit right after the thank-you: the budget tiles on Chow's
+slide 14 are **clickable and jump straight to them**, and while an i-slide is up an
+"← Investor slide" button appears next to Prev to jump straight back — so they come up only when
+someone wants the arithmetic — they exist so the ₱100K number is
 defensible, not to be read line by line.
 
 ---
@@ -199,7 +200,7 @@ You're the data voice. Every one of your slides has a chart or a costed ledger �
 say them clearly and slowly, and don't rush past the punchline number on each slide. The three
 budget breakdowns (i1–i3) are yours because they're arithmetic, not persuasion: every line
 is priced from a cited market source. They sit right after the thank-you and are reached by
-tapping the budget tiles on Keisuke's slide 14 — be ready to walk one on demand.
+tapping the budget tiles on Chow's slide 14 — be ready to walk one on demand.
 
 **Slide 6 — Path to finished cacao: direct vs. stored.** Muravah's stated production timeline:
 flowering to pod-ready takes **6 months**, then ferment **6 days**, solar-dry **1 day to a week**,
@@ -277,10 +278,9 @@ cold storage [10].
 
 ---
 
-## Keisuke — slides 4, 5, 14 + extras e4, e5
+## Keisuke — slides 4, 5 + extras e4, e5
 
-You're the tradeoffs/philosophy voice — scope, constraints, and the funding case sit in your
-slides.
+You're the tradeoffs/philosophy voice — scope and constraints sit in your slides.
 
 **Slide 4 — Two fixable problems, not every problem (scope).** This is the honesty slide — we're
 not claiming to fix everything. **Out of scope:** typhoon and Mayon ashfall. Every source called
@@ -301,29 +301,6 @@ every solution ahead already works on another Bicol farm.
    problems to solve," and "AI is biased according to the natives." Frame this as a values
    position, not just a budget constraint — it's why every solution later in the deck is
    deliberately low-tech and human-in-the-loop.
-
-**Slide 14 — Finding investors: the missing piece.** Open by owning the conclusion: our
-investigation found that what stands between Tatay's farm and recovery is a funded pilot study.
-Be careful with attribution here: Tatay described the problems and constraints, but the
-pilot/investor plan and every proposed solution came from our group's own investigations, not
-from him. Three concrete ways to fund it:
-1. **Point to the regional funding precedent** — the Zambales solar farm secured ₱10 million for a
-   comparable-scale agri-infrastructure pilot, concrete proof that regional agri-tech investment
-   appetite exists, and a benchmark to pitch against.
-2. **Package the pilot inside Muravah's existing study** — fold it into the 500–1,000-farmer
-   production-cycle study already underway, so investors get an established NGO's track record and
-   scale behind it, not a lone farmer's ask.
-3. **Lead with the organic price-premium ROI story** — frame the ask as bridge capital toward
-   organic/export certification, where a projected 4× yield recovery plus a price premium is a
-   real return case, not just a request for aid.
-
-The three budget tiles on the slide are **~₱100K** (one-farm starter), **~₱1M** (ten farms
-inside Muravah's study), and **₱10M** (the already-funded Zambales benchmark) — say clearly that
-these are built from market prices, and that **each tile is clickable** — tapping one jumps
-straight to that figure's line-by-line breakdown (i1–i3, right after the thank-you, Masa's),
-each with a link back to this slide. Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
-foundations, agri-crowdfunding, BU grants. This is your tradeoffs lane — feel free to speak to
-the organic-vs-export-vs-income tension if asked.
 
 **Slide e4 — Vertical panels waste potential output (Extras).** Short, standalone point — don't
 over-explain it, let it land. Mounting solar panels vertically is not the efficient way to collect
@@ -375,17 +352,17 @@ numbers is exactly why the pest/disease problem deserves the room's attention.
    stabilizing farm supply also stabilizes the processing facility downstream.
 3. **The next step is small and fundable** — a bounded pilot (one row, a handful of farms,
    **~₱100K** built from market prices, run by Muravah and BU students), with the investor paths
-   from Keisuke's slide behind it.
+   from Chow's slide behind it.
 
 Close crisply and hand to Nancy for the thank-you. If you're pressed for time, beats 1 and 3 are
 the ones that must survive — the problem and the next step.
 
 ---
 
-## Chow — slides 8, 11 & 12
+## Chow — slides 8, 11, 12 & 14
 
-You're the technical voice — the Batbat numbers, the field tools, and the pilot-study slide are
-all yours, so you carry
+You're the technical voice — the Batbat numbers, the field tools, the pilot study, and the
+investor slide are all yours, so you carry
 the deck's hardest data slide and its most concrete engineering slide back to back with only Ash's
 callout and Nancy's farm photos between them. The rest of the team doesn't need to go deep on
 this material.
@@ -497,6 +474,30 @@ tools make calculable: two organic lines of defense, both with published researc
    between the water system and the disease problem: the drip system plus the Pi controller keeps
    trees out of the stress zone year-round, which is disease prevention, not just irrigation.
 Land the closing line: both measures satisfy Muravah's hard rule — no synthetic pesticides.
+
+**Slide 14 — Finding investors: the missing piece.** (Yours as well — the pilot slide flows
+straight into who pays for it.) Open by owning the conclusion: our
+investigation found that what stands between Tatay's farm and recovery is a funded pilot study.
+Be careful with attribution here: Tatay described the problems and constraints, but the
+pilot/investor plan and every proposed solution came from our group's own investigations, not
+from him. Three concrete ways to fund it:
+1. **Point to the regional funding precedent** — the Zambales solar farm secured ₱10 million for a
+   comparable-scale agri-infrastructure pilot, concrete proof that regional agri-tech investment
+   appetite exists, and a benchmark to pitch against.
+2. **Package the pilot inside Muravah's existing study** — fold it into the 500–1,000-farmer
+   production-cycle study already underway, so investors get an established NGO's track record and
+   scale behind it, not a lone farmer's ask.
+3. **Lead with the organic price-premium ROI story** — frame the ask as bridge capital toward
+   organic/export certification, where a projected 4× yield recovery plus a price premium is a
+   real return case, not just a request for aid.
+
+The three budget tiles on the slide are **~₱100K** (one-farm starter), **~₱1M** (ten farms
+inside Muravah's study), and **₱10M** (the already-funded Zambales benchmark) — say clearly that
+these are built from market prices, and that **each tile is clickable** — tapping one jumps
+straight to that figure's line-by-line breakdown (i1–i3, right after the thank-you, Masa's);
+an "← Investor slide" button beside Prev brings you straight back here. Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
+foundations, agri-crowdfunding, BU grants. If the organic-vs-export-vs-income tension comes up, that's a
+fair moment to hand to Keisuke, whose lane it is.
 
 ---
 
