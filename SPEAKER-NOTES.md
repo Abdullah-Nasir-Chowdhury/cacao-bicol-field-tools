@@ -1,7 +1,8 @@
 # Speaker Notes — Bicol Cacao Pitch
 
-Study material for the interactive presentation (`presentation.html` — 16 main slides, plus 8
-backup slides numbered e1–e8 in an Extras appendix, and a References page). This is **not a
+Study material for the interactive presentation (`presentation.html` — 16 talk slides, then the
+three budget-breakdown slides i1–i3 reached from the slide-14 tiles, the References page r1, and
+5 backup slides e1–e5 in an Extras appendix). This is **not a
 script** — nobody is expected to read from it word-for-word, and realistically no one will stick
 to a script anyway. Instead, each section below gives you the facts, numbers, and sources for
 your slides in enough depth that you can explain them in your own words, improvise if you get cut
@@ -79,27 +80,27 @@ benchmark), and a youth agritourism program.
 | 14 | Finding investors: the missing piece | Keisuke |
 | 15 | What we're leaving you with (conclusion) | Ash |
 | 16 | Thank you | Nancy |
+| i1 | Where the ₱95K starter figure comes from | Masa |
+| i2 | Where ₱0.9–1M for ten farms comes from | Masa |
+| i3 | The ₱10M benchmark isn't ours to estimate | Masa |
 
 Extras (backup slides, shown only for questions or spare time):
 
 | # | Slide | Presenter |
 |---|---|---|
-| e1 | Where the ₱95K starter figure comes from | Masa |
-| e2 | Where ₱0.9–1M for ten farms comes from | Masa |
-| e3 | The ₱10M benchmark isn't ours to estimate | Masa |
-| e4 | Rice, Dairy, Bamboo & Honey Farms (images) | Ria |
-| e5 | Solar, Wind & Agritourism (images) | Ria |
-| e6 | What the Zambales solar precedent tells us (3 charts) | Masa |
-| e7 | Vertical panels waste potential output | Keisuke |
-| e8 | Solutions we probed and gathered from other farms | Keisuke |
+| e1 | Rice, Dairy, Bamboo & Honey Farms (images) | Ria |
+| e2 | Solar, Wind & Agritourism (images) | Ria |
+| e3 | What the Zambales solar precedent tells us (3 charts) | Masa |
+| e4 | Vertical panels waste potential output | Keisuke |
+| e5 | Solutions we probed and gathered from other farms | Keisuke |
 
-Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 (+4 extras), Keisuke 4 (+2 extras), Ash 2,
-Chow 2. At roughly 30–40 seconds a slide the main deck is
+Rough load: Nancy 4 slides, Ria 2 (+2 extras), Masa 2 + the three i-slides (+1 extra), Keisuke 4
+(+2 extras), Ash 2, Chow 2. At roughly 30–40 seconds a slide the main deck is
 about a 9–10 minute talk; adjust pacing live rather than rushing to hit an exact time. The three
-budget breakdowns (e1–e3) open the Extras appendix: the budget tiles on Keisuke's slide 14 are
-**clickable and jump straight to them** (each has a "back to the investor slide" link), so they
-appear only if someone wants the arithmetic — they exist so the ₱95K number is defensible, not to
-be read line by line.
+budget breakdowns (i1–i3) sit right after the thank-you: the budget tiles on Keisuke's
+slide 14 are **clickable and jump straight to them** (each has a "back to the investor slide"
+link), so they come up only when someone wants the arithmetic — they exist so the ₱95K number is
+defensible, not to be read line by line.
 
 ---
 
@@ -145,13 +146,13 @@ the team by name: Nancy, Masa, Keisuke, Ria, Ash, Chow. Don't introduce new cont
 
 ---
 
-## Ria — slides 2, 7 + extras e4, e5
+## Ria — slides 2, 7 + extras e1, e2
 
 You're the local-context voice — from Bicol, studying at Bicol University. Your slides are the
-**field-visit slides**, and three of them (7, e4, e5) are deliberately **image-led**: one title,
+**field-visit slides**, and three of them (7, e1, e2) are deliberately **image-led**: one title,
 one subtitle, no bullet points. Let the photos carry those — narrate briefly and personally
 rather than reciting facts. Your Bicol/BU background is a genuine asset here, use it. Note that
-e4 and e5 now live in the Extras appendix — you only present them if a question or spare time
+e1 and e2 now live in the Extras appendix — you only present them if a question or spare time
 pulls them up, but know them cold anyway.
 
 **Slide 2 — Mayon Gold / Muravah Foundation.** Muravah Foundation (branded "Mayon Gold") is a
@@ -172,7 +173,7 @@ farm in the Batbat area. He's a solo operator (his children work in the cities),
 can physically do himself. Keep it to one or two sentences — the numbers come on the next slide
 (Chow's).
 
-**Slide e4 — Rice, Dairy, Bamboo & Honey Farms (image-led, Extras).** We visited **Tatay
+**Slide e1 — Rice, Dairy, Bamboo & Honey Farms (image-led, Extras).** We visited **Tatay
 Aldavis's** rice/dairy farm — a completely different farmer from Tatay in Batbat, same honorific
 ("Tatay" is a Bikol term for elder/grandpa, not a unique name), worth clarifying if anyone looks
 confused. His farm is thriving, government-supported, and runs an accredited farm school. They
@@ -182,23 +183,23 @@ stingless-bee honey producers (honey, bee, and propolis — propolis is the most
 medicinally). Throughline: proof that low-tech, organic pest control already works elsewhere in
 Bicol.
 
-**Slide e5 — Solar, Wind & Agritourism (image-led, Extras).** Covers the Zambales solar farm
+**Slide e2 — Solar, Wind & Agritourism (image-led, Extras).** Covers the Zambales solar farm
 and its agrivoltaics research (solar co-located with farming — irrigation, cold storage, fish
 hatcheries), the San Miguel Bay offshore wind project (a ₱170B+ regional renewable-energy
 investment, mentioned as context; we have no photos of it), the Neonormal Agventure taro project,
 and a youth agritourism program aimed at getting young people interested in farming again. Say
-the words "solar panels" explicitly here if e6 is coming next — Masa's chart slide builds
+the words "solar panels" explicitly here if e3 is coming next — Masa's chart slide builds
 directly on this visit.
 
 ---
 
-## Masa — slides 6, 13 + extras e1–e3, e6
+## Masa — slides 6, 13, i1–i3 + extra e3
 
 You're the data voice. Every one of your slides has a chart or a costed ledger — own the numbers,
 say them clearly and slowly, and don't rush past the punchline number on each slide. The three
-budget breakdowns (e1–e3) are yours because they're arithmetic, not persuasion: every line is
-priced from a cited market source. They sit in the Extras appendix and are reached by tapping the
-budget tiles on Keisuke's slide 14 — be ready to walk one on demand.
+budget breakdowns (i1–i3) are yours because they're arithmetic, not persuasion: every line
+is priced from a cited market source. They sit right after the thank-you and are reached by
+tapping the budget tiles on Keisuke's slide 14 — be ready to walk one on demand.
 
 **Slide 6 — Path to finished cacao: direct vs. stored.** Muravah's stated production timeline:
 flowering to pod-ready takes **6 months**, then ferment **6 days**, solar-dry **1 day to a week**,
@@ -228,7 +229,7 @@ don't rush it.
    and priced from market data, not invented from scratch. The clickable citations and the
    References page at the end of the deck are the proof; point at them if challenged.
 
-**Slide e1 — Where the ₱95K starter figure comes from (Extras, via the slide-14 tiles).** One farm, one year, at 2025–26
+**Slide i1 — Where the ₱95K starter figure comes from (via the slide-14 tiles).** One farm, one year, at 2025–26
 Philippine market prices. Walk the ledger top to bottom, don't read every peso:
 - Drip starter zone, 0.25 ha (lines, emitters, filter, regulator): **₱30,000** [13]
 - Two 1,000 L poly tanks (₱3,500–7,500 each) plus stand and fittings: **₱14,000** [12]
@@ -246,7 +247,7 @@ Philippine market prices. Walk the ledger top to bottom, don't read every peso:
   year** [1] — the ₱95K pilot repays within the first full harvest, and even a half recovery
   covers it in about a year.
 
-**Slide e2 — Where ₱0.9–1M for ten farms comes from (Extras).** Scaling the starter pilot inside
+**Slide i2 — Where ₱0.9–1M for ten farms comes from.** Scaling the starter pilot inside
 Muravah's existing study — the key sentence is that **shared costs don't multiply by ten**:
 ten drip zones ₱300,000 [13], twenty tanks ₱140,000 [12], ten Pi controller kits ₱80,000 [14],
 bio-spray for ten farms ₱120,000 [1], shared printing plus three training sessions ₱45,000, a
@@ -256,7 +257,7 @@ average Tatay's recovery that's up to 20,000 kg/yr, worth **₱1.5–2M a year**
 prices [1] — the expansion repays inside the first full harvest year, before counting any
 organic price premium.
 
-**Slide e3 — The ₱10M benchmark isn't ours to estimate (Extras).** Be precise about what this number is:
+**Slide i3 — The ₱10M benchmark isn't ours to estimate.** Be precise about what this number is:
 ₱10,000,000 is what the Zambales agrivoltaics project **actually raised**, as cited to us on the
 site visit [1] — it is not our costing. Our one-farm ask is about **1%** of that proven
 benchmark, and the ten-farm ask about **10%**. That's the point of the slide: the region has
@@ -266,18 +267,18 @@ cacao a year, roughly 10% of this benchmark sum returned annually from produce a
 add what the agrivoltaics precedent already pairs with farming — solar-powered irrigation and
 cold storage [10].
 
-**Slide e6 — What the Zambales solar precedent tells us (3 charts, Extras).**
+**Slide e3 — What the Zambales solar precedent tells us (3 charts, Extras).**
 1. *Panel efficiency* degrades gradually over a 30-year lifespan — 100% new down to about **82.5%
    at year 30** (some owners replace panels early, at 10–15 years).
 2. *Panel waste, by weight*: 75% glass, 15% aluminum, 10% other electronics/polymers — relevant to
    anyone's lifecycle-cost math for a solar-powered irrigation proposal.
 3. *Panel orientation*: an optimally tilted panel is the 100% baseline, flat gets about 85%, and a
    **vertically mounted panel only about 65%**. Say clearly that this last chart is our own general
-   engineering estimate, not a cited interview figure — it sets up Keisuke's callout on e7.
+   engineering estimate, not a cited interview figure — it sets up Keisuke's callout on e4.
 
 ---
 
-## Keisuke — slides 4, 5, 12, 14 + extras e7, e8
+## Keisuke — slides 4, 5, 12, 14 + extras e4, e5
 
 You're the tradeoffs/philosophy voice — scope, constraints, the pilot's scientific grounding,
 and the funding case sit in your slides.
@@ -336,20 +337,20 @@ from him. Three concrete ways to fund it:
 The three budget tiles on the slide are **~₱95K** (one-farm starter), **₱0.9–1M** (ten farms
 inside Muravah's study), and **₱10M** (the already-funded Zambales benchmark) — say clearly that
 these are built from market prices, and that **each tile is clickable** — tapping one jumps
-straight to that figure's line-by-line breakdown in the Extras appendix (e1–e3, Masa's), each
-with a link back to this slide. Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
+straight to that figure's line-by-line breakdown (i1–i3, right after the thank-you, Masa's),
+each with a link back to this slide. Funding sources to name if asked: DA, DOST-PCAARRD, LGU agriculture funds, corporate CSR,
 foundations, agri-crowdfunding, BU grants. This is your tradeoffs lane — feel free to speak to
 the organic-vs-export-vs-income tension if asked.
 
-**Slide e7 — Vertical panels waste potential output (Extras).** Short, standalone point — don't
+**Slide e4 — Vertical panels waste potential output (Extras).** Short, standalone point — don't
 over-explain it, let it land. Mounting solar panels vertically is not the efficient way to collect
 sunlight; a wall-mounted panel captures noticeably less irradiance than an optimally tilted one
-(per Masa's chart on e6: about 65% vs. 100%). Be upfront that this is **our own engineering
+(per Masa's chart on e3: about 65% vs. 100%). Be upfront that this is **our own engineering
 observation, not something a source told us in an interview** — a design point worth carrying
 into any agrivoltaic or solar-irrigation proposal built on the Zambales precedent. The two photos
 are our own shots of the vertical panels at the site, front and back.
 
-**Slide e8 — Solutions we probed and gathered from other farms (Extras).** This is the payoff
+**Slide e5 — Solutions we probed and gathered from other farms (Extras).** This is the payoff
 slide for "adapt, don't invent." Of 12 candidate pest/disease solutions brainstormed, only **6
 survived independent fact-checking** against the actual interview data — say that filtering
 process out loud, it's a credibility point. Three groups:
