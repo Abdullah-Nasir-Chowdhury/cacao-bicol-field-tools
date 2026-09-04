@@ -2,7 +2,7 @@
 
 **Decision tools, engineering schematics, and an interactive pitch for reviving smallholder cacao farming in Bicol, Philippines — built from primary field research.**
 
-**Live site:** <https://REPLACE-WITH-YOUR-SITE.netlify.app>
+**Live site:** <https://cacao-bicol-field-tools.netlify.app>
 
 Developed by **Team BEE · University of Tsukuba**, from interviews and site visits across Albay conducted in August 2026: the Muravah Foundation / Mayon Gold cacao NGO, a 2.5-hectare smallholder cacao farm in Batbat, a community cacao processing facility, and comparison visits to rice/dairy, bamboo, honey, and agrivoltaics operations.
 
@@ -16,12 +16,12 @@ The farm at the center of this study historically produced ~500 kg of cacao per 
 
 | Page | Live | Source |
 |---|---|---|
-| Landing page | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/) | [`index.html`](./index.html) |
-| Presentation (interactive deck) | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/presentation.html) | [`presentation.html`](./presentation.html) |
-| Drip Pressure Planner | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/drip-pressure-planner.html) | [`drip-pressure-planner.html`](./drip-pressure-planner.html) |
-| Water-System Schematic (P&ID) | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/drip-system-schematic.html) | [`drip-system-schematic.html`](./drip-system-schematic.html) |
-| Raspberry Pi Controller Schematic | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/raspberry-pi-controller.html) | [`raspberry-pi-controller.html`](./raspberry-pi-controller.html) |
-| Schematic Editor | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/schematic-editor.html) | [`schematic-editor.html`](./schematic-editor.html) |
+| Landing page | [open](https://cacao-bicol-field-tools.netlify.app/) | [`index.html`](./index.html) |
+| Presentation (interactive deck) | [open](https://cacao-bicol-field-tools.netlify.app/presentation.html) | [`presentation.html`](./presentation.html) |
+| Drip Pressure Planner | [open](https://cacao-bicol-field-tools.netlify.app/drip-pressure-planner.html) | [`drip-pressure-planner.html`](./drip-pressure-planner.html) |
+| Water-System Schematic (P&ID) | [open](https://cacao-bicol-field-tools.netlify.app/drip-system-schematic.html) | [`drip-system-schematic.html`](./drip-system-schematic.html) |
+| Raspberry Pi Controller Schematic | [open](https://cacao-bicol-field-tools.netlify.app/raspberry-pi-controller.html) | [`raspberry-pi-controller.html`](./raspberry-pi-controller.html) |
+| Schematic Editor | [open](https://cacao-bicol-field-tools.netlify.app/schematic-editor.html) | [`schematic-editor.html`](./schematic-editor.html) |
 
 Every page is a single self-contained HTML file — no framework, no build step, no runtime dependencies. Clone and open in any browser, or serve the repository root as static files (Netlify deploys it as-is; see [`netlify.toml`](./netlify.toml)).
 
