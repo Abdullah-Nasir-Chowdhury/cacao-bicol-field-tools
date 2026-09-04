@@ -6,8 +6,7 @@ that slide shows a clearly-labeled placeholder box instead (nothing breaks).
 
 Any reasonable size works (the page crops to fit with `object-fit: cover`); landscape photos
 around 1200–1600px wide look best. JPG or PNG both work — just keep the filenames below exactly
-(same extension, `.jpg`). Videos were considered for the Batbat slide and dropped — it's all
-photos now.
+(same extension, `.jpg`).
 
 | Filename | Slide | What it's for | Status |
 |---|---|---|---|

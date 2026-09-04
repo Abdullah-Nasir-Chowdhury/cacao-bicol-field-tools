@@ -1,43 +1,82 @@
-# Cacao Bicol Field Tools
+# Bicol Cacao Field Tools
 
-Field tools built from interviews with cacao farmers and processors in Bicol, Philippines (Muravah Foundation / Mayon Gold, the farmer Tatay, and a local processing facility). Water pressure — not water scarcity — came up as the concrete, solvable engineering problem, so these tools focus there.
+**Decision tools, engineering schematics, and an interactive pitch for reviving smallholder cacao farming in Bicol, Philippines — built from primary field research.**
 
-Each file is a single self-contained HTML page — no build step, no dependencies. Download and double-click to open in any browser, or view them live via the links below.
+**Live site:** <https://REPLACE-WITH-YOUR-SITE.netlify.app>
 
-## Tools
+Developed by **Team BEE · University of Tsukuba**, from interviews and site visits across Albay conducted in August 2026: the Muravah Foundation / Mayon Gold cacao NGO, a 2.5-hectare smallholder cacao farm in Batbat, a community cacao processing facility, and comparison visits to rice/dairy, bamboo, honey, and agrivoltaics operations.
 
-### [`index.html`](./index.html)
-Landing page linking to all the tools below.
+---
 
-### [`drip-pressure-planner.html`](./drip-pressure-planner.html)
-Turns a farm's size and water source into a straight answer: how many trees you can irrigate at once, whether you need a booster pump, how many irrigation zones you need, and how big a dry-season buffer tank to keep on hand. Defaults reflect Tatay's actual farm (2.5 ha, no sprinklers, unmeasured source).
+## The problem
 
-### [`drip-system-schematic.html`](./drip-system-schematic.html)
-A P&ID-style diagram (the notation water engineers use for pipe, valve, and instrument drawings) of the same drip system — source, check valve, filter, pressure regulator, zoning, and trees, with a rainwater buffer tank as backup. Toggle between a gravity-fed source and a source below the field to see the one component that changes.
+The farm at the center of this study historically produced ~500 kg of cacao per year. This season it produced approximately **zero** — pests and disease drive post-harvest losses of **80–100%** across the network, against a recoverable potential of ~2,000 kg/yr (a 4× recovery, the largest single lever in the dataset). Every proposed intervention respects two hard constraints stated by the farmers themselves: **organic inputs only**, and **low-tech, human-in-the-loop systems**.
 
-### [`schematic-editor.html`](./schematic-editor.html)
-A drag-and-drop canvas for editing either diagram above — reposition nodes, wire new connections, and add components from a palette. Each diagram autosaves separately in the browser; Export/Import moves a layout between browsers.
+## Live pages
 
-### [`presentation.html`](./presentation.html)
-The full pitch deck as a click-through, phone-friendly website — on-screen Prev/Next buttons (also arrow keys or a swipe on mobile), auto light/dark theme, and the same interactive charts as the dashboard below, embedded live in the relevant slides. Deploys straight to Netlify alongside everything else in this repo (see `netlify.toml`). Drop your own photos into [`images/`](./images/) using the filenames listed in [`images/README.md`](./images/README.md) — each slide picks them up automatically, no code changes needed. `SPEAKER-NOTES.md` has the study material for whoever presents each section.
+| Page | Live | Source |
+|---|---|---|
+| Landing page | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/) | [`index.html`](./index.html) |
+| Presentation (interactive deck) | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/presentation.html) | [`presentation.html`](./presentation.html) |
+| Drip Pressure Planner | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/drip-pressure-planner.html) | [`drip-pressure-planner.html`](./drip-pressure-planner.html) |
+| Water-System Schematic (P&ID) | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/drip-system-schematic.html) | [`drip-system-schematic.html`](./drip-system-schematic.html) |
+| Raspberry Pi Controller Schematic | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/raspberry-pi-controller.html) | [`raspberry-pi-controller.html`](./raspberry-pi-controller.html) |
+| Schematic Editor | [open](https://REPLACE-WITH-YOUR-SITE.netlify.app/schematic-editor.html) | [`schematic-editor.html`](./schematic-editor.html) |
 
-## Pitch materials
+Every page is a single self-contained HTML file — no framework, no build step, no runtime dependencies. Clone and open in any browser, or serve the repository root as static files (Netlify deploys it as-is; see [`netlify.toml`](./netlify.toml)).
 
-- [`Bicol-Cacao-Pitch.pptx`](./Bicol-Cacao-Pitch.pptx) — the same pitch as a PowerPoint file, for anywhere a live website isn't an option.
-- [`SPEAKER-NOTES.md`](./SPEAKER-NOTES.md) — who presents which section, with the facts and figures behind each slide (also embedded directly in the .pptx's Notes field).
-- [`scripts/`](./scripts/) — the same speaker notes, split into one printable PDF per presenter (`Nancy.pdf`, `Ria.pdf`, `Masa.pdf`, `Keisuke.pdf`, `Ash.pdf`, `Chow.pdf`; Masa's and Keisuke's include Japanese translations) — study material, not a verbatim script.
-- [`FIELD-NOTES.md`](./FIELD-NOTES.md) — the running research log this whole project is built from.
+## Screenshots
 
-## Slide-ready graphics
+| | |
+|---|---|
+| ![Title slide](./docs/screenshots/presentation-title.png) | ![Loss by cause, yield and income charts](./docs/screenshots/charts-batbat-numbers.png) |
+| *Presentation — title slide* | *Field data: loss by cause vs. rice and dragon fruit, yield, income* |
+| ![Path to market chart](./docs/screenshots/chart-path-to-market.png) | ![Investment breakdown](./docs/screenshots/investment-breakdown.png) |
+| *Production timeline vs. a literature benchmark* | *Costed pilot budget with subtotals and expected returns* |
+| ![Water-system schematic](./docs/screenshots/drip-system-schematic.png) | ![Controller schematic](./docs/screenshots/pi-controller-schematic.png) |
+| *P&ID water-system schematic (pump configuration)* | *Sensor-driven irrigation controller block diagram* |
 
-The two `.html` tools are interactive pages — a slide deck can't run them directly, so use these static SVGs instead. Any recent PowerPoint, Keynote, or Google Slides can insert an SVG directly (Insert → Picture / Image) and keep it as sharp vector art; if your version can't, open the file in a browser and screenshot it, or ask for a PNG export.
+![Drip pressure planner](./docs/screenshots/pressure-planner.png)
+*Drip Pressure Planner — live hydraulic sizing from farm inputs*
 
-- [`drip-system-schematic-gravity.svg`](./drip-system-schematic-gravity.svg) — the schematic, gravity-fed configuration
-- [`drip-system-schematic-pump.svg`](./drip-system-schematic-pump.svg) — the schematic, pump-assisted configuration (Tatay's case)
-- [`drip-pressure-planner-summary.svg`](./drip-pressure-planner-summary.svg) — a static results card for Tatay's farm (trees, demand, required pressure, buffer tank), for when you want the numbers on a slide instead of the live calculator
+## What each tool does
 
-For an actual live demo during the pitch, open the interactive links above in a browser tab rather than trying to embed them in the deck.
+- **Presentation** — a 16-slide interactive deck with hand-rolled SVG charts (grouped bars, range whiskers, threshold lines, line charts with animation), numbered citations that jump to a references page, budget tiles that deep-link to itemized cost breakdowns, keyboard/swipe navigation, and automatic light/dark theming. Photography from the field visits is embedded throughout.
+- **Drip Pressure Planner** — converts farm area, tree spacing, emitter hardware, pipe run, and source elevation into tree count, flow demand, required pressure, booster-pump head, zone count, and buffer-tank size. Elevation is modeled at 0.0981 bar/m; zoning uses ⌈demand ÷ source flow⌉. Assumptions and sources are stated in the page footer.
+- **Water-System Schematic** — P&ID-convention diagram of the proposed system (source → pump/gravity → check valve → filter → regulator → zoned drip lines), with a rainwater buffer tank, flow/pressure instrumentation, and a controller block issuing valve and pump signals. Toggles between gravity-fed and pump-assisted source configurations.
+- **Raspberry Pi Controller Schematic** — block diagram of the irrigation controller: soil-moisture, rain, tank-level and line-pressure sensors through an MCP3008 ADC, a pulse flow meter, DHT22 and a DS3231 RTC into a Pi Zero 2 W, driving zone solenoids and a pump contactor through a relay board. Pressure or flow anomalies (leak / clog signatures) trigger farmer alerts, replacing manual line patrols.
+- **Schematic Editor** — drag-and-drop canvas for modifying either diagram, with per-diagram autosave and layout export/import.
 
-## Background
+## Methodology
 
-Notes are from field interviews conducted in Bicol (Albay, near Mayon) in August 2026, covering cacao farming challenges: typhoons, pests and disease, water access, aging farmer populations, and post-harvest losses. Water pressure was identified as a controllable, well-defined engineering problem — unlike typhoons (unpredictable) or pest/disease pressure (a biological problem outside this scope).
+- **Primary data** — all farm-level figures (yields, losses, prices, incomes, constraints) come from the August 2026 field interviews, logged in [`FIELD-NOTES.md`](./FIELD-NOTES.md).
+- **Published research** — comparative loss rates, crop water requirements, biocontrol agents, and disease–water-stress interactions are drawn from government and peer-reviewed sources; every figure on a slide carries a numbered citation resolving to a references page with links (22 sources, including DA-HVCDP, PSA, IRRI, FAO-56, Crop Protection, and Annual Review of Phytopathology).
+- **Costing** — the pilot budgets are itemized from current Philippine market prices with subtotals per subsystem, and expected returns are computed from farm-gate prices reported in the interviews.
+
+## Repository structure
+
+```
+├── index.html                      Landing page
+├── presentation.html               Interactive pitch deck
+├── drip-pressure-planner.html      Hydraulic sizing calculator
+├── drip-system-schematic.html      P&ID water-system diagram
+├── raspberry-pi-controller.html    Irrigation controller block diagram
+├── schematic-editor.html           Diagram editor
+├── FIELD-NOTES.md                  Primary research log
+├── SPEAKER-NOTES.md                Per-presenter study material
+├── scripts/                        Printable per-presenter briefs (PDF; JP translations for two presenters)
+├── images/                         Field photography used by the deck
+├── docs/screenshots/               Screenshots used in this README
+├── Bicol-Cacao-Pitch.pptx          PowerPoint export of the pitch
+├── *.svg                           Slide-ready vector exports of the schematics
+└── netlify.toml                    Static-hosting configuration
+```
+
+## Team
+
+**Team BEE — University of Tsukuba**
+Nancy · Masa · Keisuke · Ria · Ash · Chow
+
+## License
+
+Released under the [MIT License](./LICENSE). Field photography and interview data © Team BEE 2026; please credit the team when reusing.
